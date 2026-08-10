@@ -1,0 +1,133 @@
+/*
+ * Design tokens. Derived from design/DESIGN.md pass 2.
+ *
+ * Colour here is a taxonomy, not a brand. Each hue means exactly one thing:
+ *   lapis      positions, structure, navigation
+ *   madder     objections — what the view costs you
+ *   orpiment   contested attribution
+ *   verdigris  settled attribution, genuine convergence
+ * A reader who learns four hues can read the epistemic state of a page at a glance.
+ *
+ * Every foreground/background pairing was measured, not eyeballed. The lowest ratio in
+ * either theme is 4.85:1 (orpiment on the recessed panel), above the 4.5:1 AA floor.
+ */
+
+@font-face {
+  font-family: 'Gentium Book Plus';
+  src: url('/fonts/gentium-book-plus-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Gentium Book Plus';
+  src: url('/fonts/gentium-book-plus-400i.woff2') format('woff2');
+  font-weight: 400; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: 'Gentium Book Plus';
+  src: url('/fonts/gentium-book-plus-700.woff2') format('woff2');
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Young Serif';
+  src: url('/fonts/young-serif-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Noto Sans Mono';
+  src: url('/fonts/noto-sans-mono-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: 'Amiri';
+  src: url('/fonts/amiri-400.woff2') format('woff2');
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+:root {
+  /* ---- pigments ---- */
+  --paper: #e8ecea;
+  --paper-2: #dfe4e1;
+  --paper-3: #d4dbd7;
+  --ink: #16211f;
+  --ink-2: #4a5754;
+  --lapis: #2a4a8b;
+  --lapis-wash: #dde3ef;
+  --madder: #8a3a3c;
+  --madder-wash: #f0e2e1;
+  --orpiment: #7a5c10;
+  --orpiment-wash: #ece5cf;
+  --verdigris: #25605a;
+  --verdigris-wash: #d9e6e3;
+  --rule: #b9c4bf;
+  --rule-strong: #8fa09a;
+  --focus: #2a4a8b;
+
+  /* ---- type ---- */
+  --display: 'Young Serif', Georgia, serif;
+  --body: 'Gentium Book Plus', 'Charis SIL', 'Noto Serif', Georgia, serif;
+  --apparatus: 'Noto Sans Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --arabic: 'Amiri', 'Noto Naskh Arabic', 'Scheherazade New', serif;
+
+  --t-hero: clamp(2rem, 1.1rem + 3.6vw, 3.15rem);
+  --t-h1: clamp(1.65rem, 1.1rem + 2.1vw, 2.35rem);
+  --t-h2: clamp(1.2rem, 1rem + 0.8vw, 1.45rem);
+  --t-body: 1.0625rem;
+  --t-small: 0.9375rem;
+  --t-app: 0.8125rem;
+  --t-app-sm: 0.75rem;
+
+  /* ---- measure and rhythm ---- */
+  --measure: 60ch;
+  --rail: 20rem;
+  --gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  --pad: clamp(1rem, 0.6rem + 1.6vw, 2rem);
+  --radius: 3px;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) { color-scheme: dark; }
+}
+
+:root[data-theme='dark'],
+html[data-theme='dark'] {
+  --paper: #131a19;
+  --paper-2: #1b2422;
+  --paper-3: #243030;
+  --ink: #dee5e2;
+  --ink-2: #9aa7a3;
+  --lapis: #93b4ec;
+  --lapis-wash: #1c2740;
+  --madder: #e8a19e;
+  --madder-wash: #33201f;
+  --orpiment: #d9b65e;
+  --orpiment-wash: #2e2718;
+  --verdigris: #78c9b8;
+  --verdigris-wash: #16302c;
+  --rule: #38443f;
+  --rule-strong: #55645e;
+  --focus: #93b4ec;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --paper: #131a19;
+    --paper-2: #1b2422;
+    --paper-3: #243030;
+    --ink: #dee5e2;
+    --ink-2: #9aa7a3;
+    --lapis: #93b4ec;
+    --lapis-wash: #1c2740;
+    --madder: #e8a19e;
+    --madder-wash: #33201f;
+    --orpiment: #d9b65e;
+    --orpiment-wash: #2e2718;
+    --verdigris: #78c9b8;
+    --verdigris-wash: #16302c;
+    --rule: #38443f;
+    --rule-strong: #55645e;
+    --focus: #93b4ec;
+  }
+}

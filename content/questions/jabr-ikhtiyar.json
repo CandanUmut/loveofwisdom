@@ -1,0 +1,254 @@
+{
+  "$fragment": "STUB 3 — six positions, heavy Arabic-script terminology, chosen to stress the position list, the diacritics toggle and RTL rendering. Research A.3 (q.5) names the debate and the three standard Western positions; B.2 names kasb as the Ashʿarī doctrine of acquisition. Everything the research does not supply is left as 'not yet written' — including, notably, the definitions of the three Western positions, which are famous but not in the source.",
+  "questions": [
+    {
+      "id": "Q_jabr_ikhtiyar",
+      "canonical": {
+        "en": "Do we have free will, and is it compatible with determinism?",
+        "tr": "Özgür irademiz var mı ve bu determinizmle bağdaşır mı?"
+      },
+      "plain": {
+        "en": "If everything you do follows from what came before, in what sense did you choose it?",
+        "tr": "Yaptığınız her şey daha önce olanlardan çıkıyorsa, onu hangi anlamda siz seçtiniz?"
+      },
+      "technicalName": {
+        "en": "jabr wa ikhtiyār / free will and determinism",
+        "tr": "jabr wa ikhtiyār / özgür irade ve determinizm"
+      },
+      "whyItMatters": {
+        "en": "It grounds blame, praise and punishment. If nobody could have done otherwise, it is not clear what desert means.",
+        "tr": "Suçlamanın, övmenin ve cezalandırmanın dayanağıdır. Hiç kimse başka türlü davranamayacak idiyse, hak etmenin ne anlama geldiği belirsizleşir."
+      },
+      "domain": {
+        "en": "Metaphysics",
+        "tr": "Metafizik"
+      },
+      "wikidata": null,
+      "completeness": "stub",
+      "provenance": [
+        "Research brief, Deliverable A.3 (q.5)",
+        "2020 PhilPapers Survey",
+        "Islamic kalam curriculum"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "id": "P_jabr",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Jabr — compulsion",
+        "tr": "Cebr — zorlama"
+      },
+      "shortLabel": {
+        "en": "Jabr",
+        "tr": "Cebr"
+      },
+      "sourceTerm": {
+        "sourceScript": "جبر",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "jabr",
+        "standardRendering": "compulsion"
+      },
+      "definition": {
+        "en": "Not yet written. The research names jabr as one pole of the kalām debate and does not set out the position or name a holder.",
+        "tr": "Henüz yazılmadı. Araştırma cebri, kelam tartışmasının bir kutbu olarak anar; konumu ortaya koymaz ve bir savunucu adı vermez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.5)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_ikhtiyar",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Ikhtiyār — choice",
+        "tr": "İhtiyâr — seçim"
+      },
+      "shortLabel": {
+        "en": "Ikhtiyār",
+        "tr": "İhtiyâr"
+      },
+      "sourceTerm": {
+        "sourceScript": "اختيار",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "ikhtiyār",
+        "standardRendering": "choice"
+      },
+      "definition": {
+        "en": "Not yet written. The research names ikhtiyār as the other pole and does not set out the position or name a holder.",
+        "tr": "Henüz yazılmadı. Araştırma ihtiyârı diğer kutup olarak anar; konumu ortaya koymaz ve bir savunucu adı vermez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.5)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_kasb",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Kasb — acquisition",
+        "tr": "Kesb — kazanım"
+      },
+      "shortLabel": {
+        "en": "Kasb",
+        "tr": "Kesb"
+      },
+      "sourceTerm": {
+        "sourceScript": "كسب",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "kasb",
+        "standardRendering": "acquisition"
+      },
+      "definition": {
+        "en": "The Ashʿarī doctrine of acquisition. The research identifies kasb as an Ashʿarī doctrine and translates it as \"acquisition\", noting in passing that it has no Ockhamist parallel. It does not set out what the doctrine holds, and that is not written here.",
+        "tr": "Eşʿarî kesb öğretisi. Araştırma kesbi bir Eşʿarî öğretisi olarak tanımlar ve \"kazanım\" diye çevirir; geçerken de Ockhamcı bir karşılığı olmadığını belirtir. Öğretinin ne savunduğunu ortaya koymaz ve burada da yazılmamıştır."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition-in-proponents-own-terms",
+        "arguments",
+        "objections",
+        "passages"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.2 (Intersection 1, the translation-artifact caution)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_compatibilism",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Compatibilism",
+        "tr": "Bağdaşırcılık"
+      },
+      "shortLabel": {
+        "en": "Compatibilism",
+        "tr": "Bağdaşırcılık"
+      },
+      "definition": {
+        "en": "Not yet written. The research names compatibilism as one of the three standard Western positions and gives no definition, no holder and no passage.",
+        "tr": "Henüz yazılmadı. Araştırma bağdaşırcılığı üç standart Batılı konumdan biri olarak anar; tanım, savunucu ya da metin vermez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
+          "kind": "survey"
+        }
+      ]
+    },
+    {
+      "id": "P_libertarianism",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Libertarianism (metaphysical)",
+        "tr": "Liberteryenlik (metafizik)"
+      },
+      "shortLabel": {
+        "en": "Libertarianism",
+        "tr": "Liberteryenlik"
+      },
+      "definition": {
+        "en": "Not yet written. Named by the research; no further detail given.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; başka ayrıntı verilmez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
+          "kind": "survey"
+        }
+      ]
+    },
+    {
+      "id": "P_hard_determinism",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": {
+        "en": "Hard determinism",
+        "tr": "Katı determinizm"
+      },
+      "shortLabel": {
+        "en": "Hard determinism",
+        "tr": "Katı determinizm"
+      },
+      "definition": {
+        "en": "Not yet written. Named by the research; no further detail given.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; başka ayrıntı verilmez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
+          "kind": "survey"
+        }
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "id": "H_ashari_kasb",
+      "thinker": "al_Ashari",
+      "position": "P_kasb",
+      "epistemicStatus": "uncertain",
+      "qualification": {
+        "en": "kasb is identified by the research as an Ashʿarī doctrine; whether al-Ashʿarī himself formulated it in the form the school later held is not established here",
+        "tr": "kesb, araştırma tarafından bir Eşʿarî öğretisi olarak tanımlanır; Eşʿarî'nin kendisinin bunu okulun sonradan benimsediği biçimde formüle edip etmediği burada tespit edilmemiştir"
+      },
+      "scholarlyDispute": {
+        "en": "Not yet written. The research mentions kasb only in passing, as a doctrine with no Ockhamist parallel.",
+        "tr": "Henüz yazılmadı. Araştırma kesbe yalnızca, Ockhamcı karşılığı olmayan bir öğreti olarak geçerken değinir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.2",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ]
+}

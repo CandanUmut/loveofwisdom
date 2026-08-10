@@ -1,0 +1,32 @@
+{
+  "questions":[{"id":"Q_husn_qubh","canonical":"Is the moral status of an act grounded in revelation or in reason?",
+   "plain":"Do things become right because God says so, or can we work out right and wrong ourselves?",
+   "technicalName":"husn wa qubh / divine command vs. moral rationalism",
+   "whyItMatters":"Decides whether ethics needs religion.","domain":"Ethics & moral epistemology",
+   "westernFramedMismatch":true,
+   "provenance":["Islamic kalam curriculum","PhilPapers: Meta-Ethics","SEP/IEP: Divine Command Theory"]}],
+  "positions":[
+   {"id":"P_DCT","label":"Divine Command Theory (revelation-grounded)","answersQuestion":"Q_husn_qubh",
+    "definition":"An act's moral status is constituted by God's command; acts have no intrinsic value prior to the decree."},
+   {"id":"P_rationalism","label":"Moral rationalism / ethical objectivism (reason-grounded)","answersQuestion":"Q_husn_qubh",
+    "definition":"Acts have intrinsic husn/qubh knowable by reason (aql) independently of revelation."}],
+  "holds":[
+   {"thinker":"al_Ashari","position":"P_DCT","epistemicStatus":"settled","sourcePassages":["PSG_ashari_arad"]},
+   {"thinker":"Ockham","position":"P_DCT","epistemicStatus":"contested",
+    "qualification":"denied by much recent scholarship",
+    "scholarlyDispute":"Osborne (Religious Studies 41:1, 2005, DOI 10.1017/S0034412504007218) reads Ockham as divine-command theorist; others deny.",
+    "sourcePassages":["PSG_ockham_sent"]},
+   {"thinker":"Abd_al_Jabbar","position":"P_rationalism","epistemicStatus":"settled","sourcePassages":["PSG_mutazila_intrinsic"]},
+   {"thinker":"Kant","position":"P_rationalism","epistemicStatus":"contested",
+    "qualification":"rationalism via autonomy of practical reason, not value-realism"}],
+  "equivalences":[
+   {"positionA":"P_DCT@al_Ashari","positionB":"P_DCT@Ockham","convergenceType":"genuine",
+    "evidence":"Both ground value in divine will (al-Islam.org on Ashari 'a'rad'; Osborne on Ockham 'God could assign a different moral value'); but Ashari occasionalism/kasb has no Ockhamist parallel."},
+   {"positionA":"P_rationalism@Abd_al_Jabbar","positionB":"P_rationalism@Kant","convergenceType":"translation_artifact",
+    "evidence":"Both hold reason knows objective value, but Abd al-Jabbar is a value-realist (Hourani 1971) while Kant is a constructivist."}],
+  "passages":[
+   {"id":"PSG_ashari_arad","text":"Goodness and badness of actions (husn wa qubh) are not qualities inhering in them; these are mere accidents (a'rad).",
+    "citation":"M. Abdul Hye, 'Ash'arism', A History of Muslim Philosophy vol.1, via al-islam.org","locator":"ch.11","license":"quote-fair-use"},
+   {"id":"PSG_mutazila_intrinsic","text":"human reason can independently judge the good or evil in things ... independently of the commands of the Shari'ah.",
+    "citation":"Mutahhari, An Introduction to Ilm al-Kalam, via al-islam.org","locator":"Mu'tazilah ch.","license":"quote-fair-use"}]
+}

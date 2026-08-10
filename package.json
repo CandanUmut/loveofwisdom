@@ -1,0 +1,40 @@
+{
+  "name": "loveofwisdom",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "vite",
+    "build": "npm run validate && tsc -b --noEmit && vite build",
+    "preview": "vite preview",
+    "validate": "node scripts/validate-content.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CandanUmut/loveofwisdom.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CandanUmut/loveofwisdom/issues"
+  },
+  "homepage": "https://github.com/CandanUmut/loveofwisdom#readme",
+  "private": "true",
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^5.2.0",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.6",
+    "vitest": "^3.2.7"
+  }
+}

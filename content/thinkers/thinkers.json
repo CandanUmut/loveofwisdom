@@ -1,0 +1,183 @@
+{
+  "$fragment": "Thinkers named in research Deliverables B and C. Dates appear ONLY where the research gives them: an omitted date renders as 'not recorded', never as a guess. `wikidata` is null throughout — Wikidata is the designated primary key (research F.3) and Q-IDs must be resolved against wikidata.org, not recalled. See scripts/resolve-wikidata.mjs and REPORT.md.",
+  "thinkers": [
+    {
+      "id": "al_Ashari",
+      "name": "Abū al-Ḥasan al-Ashʿarī",
+      "nameSourceScript": "أبو الحسن الأشعري",
+      "script": "Arab",
+      "died": "d. 324/936",
+      "school": "ashari",
+      "tradition": "islamic",
+      "wikidata": null,
+      "summary": {
+        "en": "Founder of the Ashʿarī school of kalām. The research records his Muʿtazilī-to-Ashʿarī turn as a career shift, which this graph carries as a property of the attribution rather than as a fact about the man.",
+        "tr": "Kelamda Eşʿarî okulunun kurucusu. Araştırma, onun Mutezilî'den Eşʿarî'ye dönüşünü bir kariyer değişimi olarak kaydeder; bu grafik bunu, kişi hakkında bir olgu olarak değil, atfın bir özelliği olarak taşır."
+      },
+      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+    },
+    {
+      "id": "al_Ghazali",
+      "name": "Abū Ḥāmid al-Ghazālī",
+      "nameSourceScript": "أبو حامد الغزالي",
+      "script": "Arab",
+      "died": "d. 505/1111",
+      "school": "ashari",
+      "tradition": "islamic",
+      "wikidata": null,
+      "summary": {
+        "en": "The research flags the popular claim that al-Ghazālī 'killed Islamic science and philosophy' as contested by specialists — a distortion to avoid reproducing.",
+        "tr": "Araştırma, Gazâlî'nin 'İslam bilimini ve felsefesini öldürdüğü' yönündeki yaygın iddianın uzmanlarca tartışmalı bulunduğunu belirtir — tekrarlanmaması gereken bir çarpıtma."
+      },
+      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+    },
+    {
+      "id": "al_Maturidi",
+      "name": "Abū Manṣūr al-Māturīdī",
+      "nameSourceScript": "أبو منصور الماتريدي",
+      "script": "Arab",
+      "died": "d. 333/944",
+      "school": "maturidi",
+      "tradition": "islamic",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1 (P3)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Abd_al_Jabbar",
+      "name": "al-Qāḍī ʿAbd al-Jabbār",
+      "nameSourceScript": "القاضي عبد الجبار",
+      "script": "Arab",
+      "died": "d. 415/1025",
+      "school": "mutazila",
+      "tradition": "islamic",
+      "wikidata": null,
+      "sources": [
+        { "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)", "kind": "monograph" }
+      ]
+    },
+    {
+      "id": "Abu_al_Hudhayl",
+      "name": "Abū al-Hudhayl al-ʿAllāf",
+      "nameSourceScript": "أبو الهذيل العلاف",
+      "script": "Arab",
+      "born": "752",
+      "died": "841",
+      "school": "mutazila",
+      "tradition": "islamic",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+    },
+    {
+      "id": "Ibn_Rushd",
+      "name": "Ibn Rushd (Averroes)",
+      "nameSourceScript": "ابن رشد",
+      "script": "Arab",
+      "school": "falsafa",
+      "tradition": "islamic",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverables A.3 (q.14) and C.1", "kind": "reference-work" }]
+    },
+    {
+      "id": "Ockham",
+      "name": "William of Ockham",
+      "script": "Latn",
+      "died": "d. 1347",
+      "school": "latin_scholastic",
+      "tradition": "latin_christian",
+      "wikidata": null,
+      "sources": [
+        { "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005)", "kind": "journal-article", "doi": "10.1017/S0034412504007218" }
+      ]
+    },
+    {
+      "id": "Aquinas",
+      "name": "Thomas Aquinas",
+      "script": "Latn",
+      "died": "d. 1274",
+      "school": "latin_scholastic",
+      "tradition": "latin_christian",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1 (P4)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Duns_Scotus",
+      "name": "John Duns Scotus",
+      "script": "Latn",
+      "school": "latin_scholastic",
+      "tradition": "latin_christian",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Augustine",
+      "name": "Augustine of Hippo",
+      "script": "Latn",
+      "tradition": "latin_christian",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Calvin",
+      "name": "John Calvin",
+      "script": "Latn",
+      "tradition": "latin_christian",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Adams",
+      "name": "Robert Merrihew Adams",
+      "script": "Latn",
+      "tradition": "modern_western",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverables B.1 and B.3 (modified divine command theory)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Kant",
+      "name": "Immanuel Kant",
+      "script": "Latn",
+      "tradition": "modern_western",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverables B.1 (P2 holders) and B.2 (Intersection 2)", "kind": "reference-work" }]
+    },
+    {
+      "id": "Plato",
+      "name": "Plato",
+      "nameSourceScript": "Πλάτων",
+      "script": "Grek",
+      "tradition": "greek",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable B.1; Plato, Euthyphro 10a (locus unverified)", "kind": "primary-text" }]
+    },
+    {
+      "id": "Confucius",
+      "name": "Confucius (Kǒngzǐ)",
+      "nameSourceScript": "孔子",
+      "script": "Hani",
+      "school": "confucian",
+      "tradition": "chinese",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverables B.1 (P5) and C.5", "kind": "reference-work" }]
+    },
+    {
+      "id": "Mencius",
+      "name": "Mencius (Mèngzǐ)",
+      "nameSourceScript": "孟子",
+      "script": "Hani",
+      "school": "confucian",
+      "tradition": "chinese",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable C.5", "kind": "reference-work" }]
+    },
+    {
+      "id": "Xunzi",
+      "name": "Xúnzǐ",
+      "nameSourceScript": "荀子",
+      "script": "Hani",
+      "school": "confucian",
+      "tradition": "chinese",
+      "wikidata": null,
+      "sources": [{ "citation": "Research brief, Deliverable C.5", "kind": "reference-work" }]
+    }
+  ]
+}

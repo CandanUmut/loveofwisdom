@@ -1,0 +1,169 @@
+{
+  "$fragment": "STUB 2 — westernFramedMismatch. Research A.3 (q.9) and A.4: the Indian pramāṇa traditions do not frame knowledge as a species of belief requiring justification; they ask which instruments yield veridical cognition. This is a reframing, not a disagreement, and the page must say so rather than showing an empty answer slot. Note that the refusing positions here are attributed to SCHOOLS, not to individuals — the research names no individual pramāṇa theorist, and none is invented.",
+  "questions": [
+    {
+      "id": "Q_sources_of_knowledge",
+      "canonical": {
+        "en": "What are the valid sources of knowledge?",
+        "tr": "Bilginin geçerli kaynakları nelerdir?"
+      },
+      "plain": {
+        "en": "What actually counts as a good enough reason to say you know something?",
+        "tr": "Bir şeyi bildiğinizi söylemek için yeterince iyi bir gerekçe olarak aslında ne sayılır?"
+      },
+      "technicalName": {
+        "en": "pramāṇa theory vs. foundationalism and coherentism",
+        "tr": "pramāṇa kuramına karşı temelcilik ve tutarlıcılık"
+      },
+      "whyItMatters": {
+        "en": "Every disagreement about what is true eventually becomes a disagreement about what would settle it.",
+        "tr": "Neyin doğru olduğuna dair her anlaşmazlık, eninde sonunda onu neyin çözeceğine dair bir anlaşmazlığa dönüşür."
+      },
+      "domain": {
+        "en": "Epistemology",
+        "tr": "Epistemoloji"
+      },
+      "wikidata": null,
+      "westernFramedMismatch": true,
+      "completeness": "stub",
+      "provenance": [
+        "Research brief, Deliverables A.3 (q.9) and A.4",
+        "PhilPapers: Epistemology"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "id": "P_foundationalism",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "label": {
+        "en": "Foundationalism",
+        "tr": "Temelcilik"
+      },
+      "shortLabel": {
+        "en": "Foundationalism",
+        "tr": "Temelcilik"
+      },
+      "definition": {
+        "en": "Not yet written. The research names foundationalism as one of the two standard Western answers and gives no definition, no holder and no passage.",
+        "tr": "Henüz yazılmadı. Araştırma temelciliği iki standart Batılı yanıttan biri olarak anar; tanım, savunucu ya da metin vermez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.9)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_coherentism",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "label": {
+        "en": "Coherentism",
+        "tr": "Tutarlıcılık"
+      },
+      "shortLabel": {
+        "en": "Coherentism",
+        "tr": "Tutarlıcılık"
+      },
+      "definition": {
+        "en": "Not yet written. Named by the research as the other standard Western answer, with no further detail.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından diğer standart Batılı yanıt olarak anılır; başka ayrıntı verilmez."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.9)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_pramana_nyaya",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "refusesQuestion": true,
+      "label": {
+        "en": "Nyāya pramāṇa theory",
+        "tr": "Nyāya pramāṇa kuramı"
+      },
+      "shortLabel": {
+        "en": "Nyāya pramāṇa",
+        "tr": "Nyāya pramāṇa"
+      },
+      "sourceTerm": {
+        "sourceScript": "प्रमाण",
+        "script": "Deva",
+        "lang": "sa",
+        "translit": "pramāṇa",
+        "standardRendering": "means of valid knowledge"
+      },
+      "definition": {
+        "en": "The question is reframed rather than answered. Nyāya does not treat knowledge (pramā) as a species of belief requiring justification against Gettier-style defeat. It asks instead which instruments — perception, inference, testimony, comparison — yield veridical cognition. Asking a pramāṇa theorist to choose between foundationalism and coherentism is asking them to answer a question they are not posing.",
+        "tr": "Soru yanıtlanmaz, yeniden çerçevelenir. Nyāya, bilgiyi (pramā), Gettier tipi bozuculara karşı gerekçelendirme gerektiren bir inanç türü olarak ele almaz. Bunun yerine hangi araçların — algı, çıkarım, tanıklık, karşılaştırma — doğru bilgi verdiğini sorar. Bir pramāṇa kuramcısından temelcilik ile tutarlıcılık arasında seçim yapmasını istemek, ondan sormadığı bir soruyu yanıtlamasını istemektir."
+      },
+      "epistemicStatus": "contested",
+      "notYetWritten": [
+        "holders",
+        "arguments",
+        "objections",
+        "passages"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.4. Marked [contested] there. The research names the schools but no individual pramāṇa theorist, so no attribution to a person is recorded.",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_pramana_mimamsa",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "refusesQuestion": true,
+      "label": {
+        "en": "Mīmāṃsā pramāṇa theory",
+        "tr": "Mīmāṃsā pramāṇa kuramı"
+      },
+      "shortLabel": {
+        "en": "Mīmāṃsā pramāṇa",
+        "tr": "Mīmāṃsā pramāṇa"
+      },
+      "sourceTerm": {
+        "sourceScript": "प्रमाण",
+        "script": "Deva",
+        "lang": "sa",
+        "translit": "pramāṇa",
+        "standardRendering": "means of valid knowledge"
+      },
+      "definition": {
+        "en": "Not yet written. The research lists Mīmāṃsā among the six āstika schools and identifies pramāṇa theory as the spine of Indian epistemology, but does not set out the Mīmāṃsā account or how it differs from the Nyāya one.",
+        "tr": "Henüz yazılmadı. Araştırma, Mīmāṃsā'yı altı āstika okulu arasında sayar ve pramāṇa kuramını Hint epistemolojisinin belkemiği olarak tanımlar; ancak Mīmāṃsā görüşünü ya da Nyāya'dan nasıl ayrıldığını ortaya koymaz."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition",
+        "holders",
+        "arguments",
+        "objections"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables A.2, A.4 and C.4",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ]
+}

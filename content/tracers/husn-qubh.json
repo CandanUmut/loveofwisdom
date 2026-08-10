@@ -1,0 +1,316 @@
+{
+  "$fragment": "Research I.3a — a commitment tracer, modelled on Battleground God's consistency instrument rather than on a personality quiz. Each item is a proposition. Each answer records what it ENTAILS and what it CONFLICTS WITH, so the output is a consistency report over Position nodes: which positions your own answers commit you to, and where two of your answers pull against each other. Nothing is scored and no result is 'yours' unless your answers entail it. Semantics: `entails` marks an answer that is a DISTINCTIVE commitment of a position; `conflictsWith` marks one incompatible with it. An answer merely consistent with a position records neither — listing those under `entails` manufactures inconsistencies that the reader never actually committed.",
+  "tracers": [
+    {
+      "id": "TRC_husn_qubh",
+      "question": "Q_husn_qubh",
+      "items": [
+        {
+          "id": "T1",
+          "prompt": {
+            "en": "If God commanded cruelty, cruelty would be obligatory.",
+            "tr": "Tanrı zulmü emretseydi, zulüm bir yükümlülük olurdu."
+          },
+          "note": {
+            "en": "This is the horn of the Euthyphro dilemma that divine command theory has to take. The research records al-Ashʿarī as the clearest example of someone who takes it without flinching.",
+            "tr": "Bu, ilahi emir teorisinin almak zorunda olduğu Euthyphron ikilemi şıkkıdır. Araştırma, bunu gözünü kırpmadan alan kişinin en açık örneği olarak Eşʿarî'yi kaydeder."
+          },
+          "options": [
+            {
+              "id": "T1a",
+              "label": {
+                "en": "Yes — nothing is above the command",
+                "tr": "Evet — emrin üzerinde hiçbir şey yoktur"
+              },
+              "entails": [
+                "P_DCT"
+              ],
+              "conflictsWith": [
+                "P_rationalism",
+                "P_natural_law"
+              ]
+            },
+            {
+              "id": "T1b",
+              "label": {
+                "en": "No — some things would stay wrong whatever was commanded",
+                "tr": "Hayır — ne emredilirse edilsin bazı şeyler yanlış kalırdı"
+              },
+              "conflictsWith": [
+                "P_DCT"
+              ]
+            },
+            {
+              "id": "T1c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T2",
+          "prompt": {
+            "en": "Someone who has never encountered any revelation can still know that gratuitous cruelty is wrong.",
+            "tr": "Hiçbir vahiyle karşılaşmamış biri, gereksiz zulmün yanlış olduğunu yine de bilebilir."
+          },
+          "options": [
+            {
+              "id": "T2a",
+              "label": {
+                "en": "Yes, and they know it as well as anyone does",
+                "tr": "Evet, üstelik bunu herkes kadar iyi bilir"
+              },
+              "conflictsWith": [
+                "P_DCT"
+              ]
+            },
+            {
+              "id": "T2b",
+              "label": {
+                "en": "No — without revelation there is nothing there to know",
+                "tr": "Hayır — vahiy olmadan bilinecek bir şey yoktur"
+              },
+              "entails": [
+                "P_DCT"
+              ],
+              "conflictsWith": [
+                "P_rationalism",
+                "P_maturidi",
+                "P_natural_law"
+              ]
+            },
+            {
+              "id": "T2c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T3",
+          "prompt": {
+            "en": "Knowing that an act is wrong, and being accountable for doing it, are the same thing.",
+            "tr": "Bir eylemin yanlış olduğunu bilmek ile onu yapmaktan sorumlu olmak aynı şeydir."
+          },
+          "note": {
+            "en": "This is the hinge the Māturīdī position turns on: it separates knowing the value of an act from being bound by it.",
+            "tr": "Mâtürîdî konumun döndüğü menteşe budur: bir eylemin değerini bilmeyi, ona bağlı olmaktan ayırır."
+          },
+          "options": [
+            {
+              "id": "T3a",
+              "label": {
+                "en": "Yes — if you can see it is wrong, you are on the hook",
+                "tr": "Evet — yanlış olduğunu görebiliyorsanız sorumlusunuzdur"
+              },
+              "conflictsWith": [
+                "P_maturidi"
+              ]
+            },
+            {
+              "id": "T3b",
+              "label": {
+                "en": "No — you can see the value of an act and still owe nothing until you are told",
+                "tr": "Hayır — bir eylemin değerini görebilir, yine de size söylenene dek hiçbir şey borçlu olmayabilirsiniz"
+              },
+              "entails": [
+                "P_maturidi"
+              ]
+            },
+            {
+              "id": "T3c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T4",
+          "prompt": {
+            "en": "There are moral facts that God did not make, and God is answerable to them.",
+            "tr": "Tanrı'nın yapmadığı ahlaki olgular vardır ve Tanrı bunlara karşı sorumludur."
+          },
+          "note": {
+            "en": "The Ashʿarī objection to moral rationalism is precisely that this posits an obligation standing over God.",
+            "tr": "Eşʿarîlerin ahlaki akılcılığa itirazı tam olarak şudur: bu, Tanrı'nın üzerinde duran bir yükümlülük varsayar."
+          },
+          "options": [
+            {
+              "id": "T4a",
+              "label": {
+                "en": "Yes",
+                "tr": "Evet"
+              },
+              "entails": [
+                "P_rationalism"
+              ],
+              "conflictsWith": [
+                "P_DCT",
+                "P_natural_law"
+              ]
+            },
+            {
+              "id": "T4b",
+              "label": {
+                "en": "No — nothing stands over God",
+                "tr": "Hayır — Tanrı'nın üzerinde hiçbir şey durmaz"
+              },
+              "conflictsWith": [
+                "P_rationalism"
+              ]
+            },
+            {
+              "id": "T4c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T5",
+          "prompt": {
+            "en": "God commands what is good because it is good — the good comes first in the explanation, but it is not independent of God.",
+            "tr": "Tanrı iyiyi, iyi olduğu için emreder — açıklamada iyi önce gelir, ama Tanrı'dan bağımsız değildir."
+          },
+          "options": [
+            {
+              "id": "T5a",
+              "label": {
+                "en": "Yes, that is the position I want",
+                "tr": "Evet, benim istediğim konum bu"
+              },
+              "entails": [
+                "P_natural_law"
+              ],
+              "conflictsWith": [
+                "P_DCT"
+              ]
+            },
+            {
+              "id": "T5b",
+              "label": {
+                "en": "No — that is trying to have it both ways",
+                "tr": "Hayır — bu, iki tarafı birden tutmaya çalışmaktır"
+              },
+              "conflictsWith": [
+                "P_natural_law"
+              ]
+            },
+            {
+              "id": "T5c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T6",
+          "prompt": {
+            "en": "\"Is it right because commanded, or commanded because right?\" is the wrong question to be asking about morality in the first place.",
+            "tr": "\"Emredildiği için mi doğru, yoksa doğru olduğu için mi emredildi?\" — ahlak hakkında en baştan sorulacak yanlış sorudur."
+          },
+          "note": {
+            "en": "Confucian ethics grounds morality in cultivated humaneness expressed through ritual propriety, and rejects the dichotomy rather than answering it. The research flags this reading as contested.",
+            "tr": "Konfüçyüsçü etik, ahlakı ritüel uygunluk yoluyla ifade edilen geliştirilmiş insanilikte temellendirir ve ikiliği yanıtlamak yerine reddeder. Araştırma bu okumayı tartışmalı olarak işaretler."
+          },
+          "options": [
+            {
+              "id": "T6a",
+              "label": {
+                "en": "Yes — the dichotomy is the mistake",
+                "tr": "Evet — asıl hata bu ikiliktir"
+              },
+              "entails": [
+                "P_confucian_reframe"
+              ],
+              "conflictsWith": [
+                "P_DCT",
+                "P_rationalism"
+              ]
+            },
+            {
+              "id": "T6b",
+              "label": {
+                "en": "No — it is a real fork and you have to pick",
+                "tr": "Hayır — bu gerçek bir çataldır ve seçmek zorundasınız"
+              },
+              "conflictsWith": [
+                "P_confucian_reframe"
+              ]
+            },
+            {
+              "id": "T6c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        },
+        {
+          "id": "T7",
+          "prompt": {
+            "en": "You could not trust that a revelation was reliable unless you already knew, before receiving it, that lying is bad.",
+            "tr": "Bir vahyin güvenilir olduğuna, onu almadan önce yalanın kötü olduğunu zaten bilmedikçe güvenemezdiniz."
+          },
+          "note": {
+            "en": "ʿAbd al-Jabbār's circularity argument, as the research states it.",
+            "tr": "ʿAbdülcebbâr'ın döngüsellik argümanı, araştırmanın ifade ettiği biçimiyle."
+          },
+          "options": [
+            {
+              "id": "T7a",
+              "label": {
+                "en": "Yes — the trust has to rest on something you already know",
+                "tr": "Evet — güven, zaten bildiğiniz bir şeye dayanmalıdır"
+              },
+              "entails": [
+                "P_rationalism"
+              ],
+              "conflictsWith": [
+                "P_DCT"
+              ]
+            },
+            {
+              "id": "T7b",
+              "label": {
+                "en": "No — the revelation can be self-authenticating",
+                "tr": "Hayır — vahiy kendi kendini doğrulayabilir"
+              },
+              "entails": [
+                "P_DCT"
+              ],
+              "conflictsWith": [
+                "P_rationalism"
+              ]
+            },
+            {
+              "id": "T7c",
+              "label": {
+                "en": "Not sure",
+                "tr": "Emin değilim"
+              },
+              "abstain": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
