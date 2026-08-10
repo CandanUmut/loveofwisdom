@@ -49,6 +49,21 @@ const ROLES = {
   'amiri': 'arabic',
 };
 
+/**
+ * Is a cmap reader available? Reading a woff2 cmap needs brotli plus a table parser,
+ * so this shells out to fontTools. Where it is missing the check reports that it was
+ * skipped rather than passing silently — and in CI, where STRICT_FONTS=1, a skip fails
+ * the build, so the guarantee is never quietly lost.
+ */
+function cmapReaderAvailable() {
+  try {
+    execFileSync('python3', ['-c', 'import fontTools'], { stdio: 'ignore' });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 function cmapOf(file) {
   const py = `
 import sys
@@ -72,6 +87,15 @@ function main() {
   if (!files.length) {
     console.error('fonts: no font files found in public/fonts.');
     process.exit(1);
+  }
+
+  const strict = process.env.STRICT_FONTS === '1';
+  if (!cmapReaderAvailable()) {
+    const msg = 'fonts: SKIPPED — python3 with fontTools is needed to read the cmaps. ' +
+      'Install it with `pip install fonttools brotli`.';
+    if (strict) { console.error(msg + ' STRICT_FONTS=1, so this is a failure.'); process.exit(1); }
+    console.warn(msg);
+    return;
   }
   let failed = false;
   const byFamily = new Map();

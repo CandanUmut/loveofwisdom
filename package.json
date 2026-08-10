@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "npm run validate && tsc -b --noEmit && vite build",
     "preview": "vite preview",
-    "validate": "node scripts/validate-content.mjs"
+    "validate": "node scripts/validate-content.mjs && node scripts/verify-fonts.mjs"
   },
   "repository": {
     "type": "git",
