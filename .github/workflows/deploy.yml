@@ -1,0 +1,71 @@
+name: Build and deploy to GitHub Pages
+
+# Pushes to main build and publish. Pull requests run the same build and checks but
+# stop short of publishing, so the deploy path is exercised on every PR rather than
+# being first tried on main.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # Font verification reads the cmap of every shipped woff2 to confirm it really
+      # contains the transliteration diacritics and the ʿayn/hamza modifier letters.
+      # That needs a brotli-capable font parser; fontTools is the one this uses.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install fonttools brotli
+
+      - run: npm ci
+
+      # `npm run build` runs content validation (schema, graph integrity, font glyph
+      # coverage) and the typecheck before Vite. STRICT_FONTS turns a skipped font
+      # check into a failure, so CI can never pass by silently not looking.
+      - name: Build
+        run: npm run build
+        env:
+          STRICT_FONTS: '1'
+
+      - name: Test
+        run: npm test
+
+      - uses: actions/configure-pages@v5
+        if: github.event_name != 'pull_request'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

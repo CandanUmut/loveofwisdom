@@ -30,6 +30,26 @@ Fonts are self-hosted in `public/fonts` and committed. To refetch and re-verify 
 bash scripts/fetch-fonts.sh
 ```
 
+`npm run validate` includes a font check that reads the `cmap` of every shipped woff2 and
+fails if a face is missing a glyph the site actually sets. It needs `pip install fonttools
+brotli`; without it the check reports that it was **skipped** rather than passing quietly,
+and `STRICT_FONTS=1` turns a skip into a failure (CI sets this).
+
+## Deploying
+
+`.github/workflows/deploy.yml` builds and publishes to GitHub Pages on every push to
+`main`. Pull requests run the identical build, validation and test steps but stop before
+publishing, so the deploy path is exercised on every PR rather than first tried on `main`.
+
+**One manual step, once:** in the repository's *Settings → Pages*, set **Source** to
+**GitHub Actions**. Until that is done the deploy job will fail with a permissions error;
+nothing in the workflow can set it.
+
+The site is served from a project subpath (`/loveofwisdom/`). Vite is configured with
+`base: './'` and the app uses hash routing, so the build is path-agnostic — it works at a
+subpath, at a domain root, and from `file://` — and no server rewrite rules are needed for
+deep links.
+
 ## Layout
 
 ```
