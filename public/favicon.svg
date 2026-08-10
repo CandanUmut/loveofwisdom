@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" fill="#e8ecea"/>
-  <path d="M16 4v24M9 11h14" stroke="#2a4a8b" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Convergence: three arrivals at a point, continuing past it as one.
+       Deliberately asymmetric so it cannot resolve into a cross, crescent,
+       star, wheel or yin-yang at favicon size. See src/components/Mark.tsx. -->
+  <rect width="32" height="32" rx="5" fill="#16211f"/>
+  <g stroke="#e8ecea" stroke-width="2.1" stroke-linecap="round" fill="none">
+    <path d="M4.5 5.5 L16.8 14.2"/>
+    <path d="M3.2 14.2 L16.2 15.6"/>
+    <path d="M7.5 26.5 L17 18.2"/>
+    <path d="M20.6 16.6 L28 18.4"/>
+  </g>
+  <circle cx="18.4" cy="16.4" r="2.6" fill="#93b4ec"/>
 </svg>

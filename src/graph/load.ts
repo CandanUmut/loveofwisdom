@@ -230,9 +230,13 @@ function checkIntegrity(g: LoadedGraph) {
   }
 
   for (const p of g.passages.values()) {
-    if (!p.placeholder && p.text === undefined && !p.locusUnverified) {
+    if (!p.placeholder && p.text === undefined && !p.locusUnverified && !p.linkOnly) {
       err('passage-without-text', `passages:${p.id}`,
-        'Passage has no text and is not flagged locusUnverified. A passage must either quote or say it could not be verified.');
+        'Passage has no text and is neither locusUnverified nor linkOnly. A passage must quote, say its locus could not be verified, or say its text is deliberately not reproduced.');
+    }
+    if (p.linkOnly && !p.url) {
+      err('link-only-without-url', `passages:${p.id}`,
+        'A link-only passage is nothing but its link. It must carry a url.');
     }
   }
 

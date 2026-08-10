@@ -1,5 +1,5 @@
 {
-  "$fragment": "Thinkers named in research Deliverables B and C. Dates appear ONLY where the research gives them: an omitted date renders as 'not recorded', never as a guess. `wikidata` is null throughout — Wikidata is the designated primary key (research F.3) and Q-IDs must be resolved against wikidata.org, not recalled. See scripts/resolve-wikidata.mjs and REPORT.md.",
+  "$fragment": "Thinkers named in the research brief and in the sources consulted in Phase 2. Dates and Wikidata Q-IDs are resolved against wikidata.org by scripts/resolve-wikidata.mjs and are never recalled from memory; a null Q-ID means unresolved, not absent.",
   "thinkers": [
     {
       "id": "al_Ashari",
@@ -9,12 +9,27 @@
       "died": "d. 324/936",
       "school": "ashari",
       "tradition": "islamic",
-      "wikidata": null,
+      "wikidata": "Q316349",
       "summary": {
         "en": "Founder of the Ashʿarī school of kalām. The research records his Muʿtazilī-to-Ashʿarī turn as a career shift, which this graph carries as a property of the attribution rather than as a fact about the man.",
         "tr": "Kelamda Eşʿarî okulunun kurucusu. Araştırma, onun Mutezilî'den Eşʿarî'ye dönüşünü bir kariyer değişimi olarak kaydeder; bu grafik bunu, kişi hakkında bir olgu olarak değil, atfın bir özelliği olarak taşır."
       },
-      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 and C.1",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q316349 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q316349",
+          "urlVerified": true
+        }
+      ],
+      "searchAliases": [
+        "Abu al-Hasan al-Ash'ari"
+      ],
+      "born": "873"
     },
     {
       "id": "al_Ghazali",
@@ -24,12 +39,24 @@
       "died": "d. 505/1111",
       "school": "ashari",
       "tradition": "islamic",
-      "wikidata": null,
+      "wikidata": "Q9546",
       "summary": {
         "en": "The research flags the popular claim that al-Ghazālī 'killed Islamic science and philosophy' as contested by specialists — a distortion to avoid reproducing.",
         "tr": "Araştırma, Gazâlî'nin 'İslam bilimini ve felsefesini öldürdüğü' yönündeki yaygın iddianın uzmanlarca tartışmalı bulunduğunu belirtir — tekrarlanmaması gereken bir çarpıtma."
       },
-      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 and C.1",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q9546 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q9546",
+          "urlVerified": true
+        }
+      ],
+      "born": "1058"
     },
     {
       "id": "al_Maturidi",
@@ -39,8 +66,20 @@
       "died": "d. 333/944",
       "school": "maturidi",
       "tradition": "islamic",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1 (P3)", "kind": "reference-work" }]
+      "wikidata": "Q12827721",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P3)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q12827721 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q12827721",
+          "urlVerified": true
+        }
+      ],
+      "born": "893"
     },
     {
       "id": "Abd_al_Jabbar",
@@ -50,10 +89,23 @@
       "died": "d. 415/1025",
       "school": "mutazila",
       "tradition": "islamic",
-      "wikidata": null,
+      "wikidata": "Q3773706",
       "sources": [
-        { "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)", "kind": "monograph" }
-      ]
+        {
+          "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)",
+          "kind": "monograph"
+        },
+        {
+          "citation": "Wikidata Q3773706 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q3773706",
+          "urlVerified": true
+        }
+      ],
+      "searchAliases": [
+        "Abd al-Jabbar ibn Ahmad"
+      ],
+      "born": "935"
     },
     {
       "id": "Abu_al_Hudhayl",
@@ -64,8 +116,23 @@
       "died": "841",
       "school": "mutazila",
       "tradition": "islamic",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverables B.1 and C.1", "kind": "reference-work" }]
+      "wikidata": "Q6834951",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 and C.1",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q6834951 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q6834951",
+          "urlVerified": true
+        }
+      ],
+      "searchAliases": [
+        "Abu-'l-Hudail al-Allaf",
+        "Abu al-Hudhayl"
+      ]
     },
     {
       "id": "Ibn_Rushd",
@@ -74,8 +141,24 @@
       "script": "Arab",
       "school": "falsafa",
       "tradition": "islamic",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverables A.3 (q.14) and C.1", "kind": "reference-work" }]
+      "wikidata": "Q39837",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables A.3 (q.14) and C.1",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q39837 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q39837",
+          "urlVerified": true
+        }
+      ],
+      "searchAliases": [
+        "Averroes"
+      ],
+      "born": "1126",
+      "died": "d. 1198"
     },
     {
       "id": "Ockham",
@@ -84,10 +167,21 @@
       "died": "d. 1347",
       "school": "latin_scholastic",
       "tradition": "latin_christian",
-      "wikidata": null,
+      "wikidata": "Q43936",
       "sources": [
-        { "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005)", "kind": "journal-article", "doi": "10.1017/S0034412504007218" }
-      ]
+        {
+          "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005)",
+          "kind": "journal-article",
+          "doi": "10.1017/S0034412504007218"
+        },
+        {
+          "citation": "Wikidata Q43936 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q43936",
+          "urlVerified": true
+        }
+      ],
+      "born": "1285"
     },
     {
       "id": "Aquinas",
@@ -96,8 +190,20 @@
       "died": "d. 1274",
       "school": "latin_scholastic",
       "tradition": "latin_christian",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1 (P4)", "kind": "reference-work" }]
+      "wikidata": "Q9438",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P4)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q9438 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q9438",
+          "urlVerified": true
+        }
+      ],
+      "born": "1225"
     },
     {
       "id": "Duns_Scotus",
@@ -105,40 +211,105 @@
       "script": "Latn",
       "school": "latin_scholastic",
       "tradition": "latin_christian",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+      "wikidata": "Q190089",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q190089 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q190089",
+          "urlVerified": true
+        }
+      ],
+      "born": "1265",
+      "died": "d. 1308"
     },
     {
       "id": "Augustine",
       "name": "Augustine of Hippo",
       "script": "Latn",
       "tradition": "latin_christian",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+      "wikidata": "Q8018",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q8018 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q8018",
+          "urlVerified": true
+        }
+      ],
+      "born": "354",
+      "died": "d. 430"
     },
     {
       "id": "Calvin",
       "name": "John Calvin",
       "script": "Latn",
       "tradition": "latin_christian",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1 (P1 holders)", "kind": "reference-work" }]
+      "wikidata": "Q37577",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q37577 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q37577",
+          "urlVerified": true
+        }
+      ],
+      "born": "1509",
+      "died": "d. 1564"
     },
     {
       "id": "Adams",
       "name": "Robert Merrihew Adams",
       "script": "Latn",
       "tradition": "modern_western",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverables B.1 and B.3 (modified divine command theory)", "kind": "reference-work" }]
+      "wikidata": "Q5254926",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 and B.3 (modified divine command theory)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q5254926 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q5254926",
+          "urlVerified": true
+        }
+      ],
+      "born": "1937",
+      "died": "d. 2024"
     },
     {
       "id": "Kant",
       "name": "Immanuel Kant",
       "script": "Latn",
       "tradition": "modern_western",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverables B.1 (P2 holders) and B.2 (Intersection 2)", "kind": "reference-work" }]
+      "wikidata": "Q9312",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 (P2 holders) and B.2 (Intersection 2)",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q9312 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q9312",
+          "urlVerified": true
+        }
+      ],
+      "born": "1724",
+      "died": "d. 1804"
     },
     {
       "id": "Plato",
@@ -146,8 +317,21 @@
       "nameSourceScript": "Πλάτων",
       "script": "Grek",
       "tradition": "greek",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable B.1; Plato, Euthyphro 10a (locus unverified)", "kind": "primary-text" }]
+      "wikidata": "Q859",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1; Plato, Euthyphro 10a (locus unverified)",
+          "kind": "primary-text"
+        },
+        {
+          "citation": "Wikidata Q859 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q859",
+          "urlVerified": true
+        }
+      ],
+      "born": "427 BCE",
+      "died": "d. 347 BCE"
     },
     {
       "id": "Confucius",
@@ -156,8 +340,21 @@
       "script": "Hani",
       "school": "confucian",
       "tradition": "chinese",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverables B.1 (P5) and C.5", "kind": "reference-work" }]
+      "wikidata": "Q4604",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 (P5) and C.5",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q4604 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q4604",
+          "urlVerified": true
+        }
+      ],
+      "born": "552 BCE",
+      "died": "d. 479 BCE"
     },
     {
       "id": "Mencius",
@@ -166,8 +363,21 @@
       "script": "Hani",
       "school": "confucian",
       "tradition": "chinese",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable C.5", "kind": "reference-work" }]
+      "wikidata": "Q188903",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable C.5",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q188903 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q188903",
+          "urlVerified": true
+        }
+      ],
+      "born": "372 BCE",
+      "died": "d. 289 BCE"
     },
     {
       "id": "Xunzi",
@@ -176,8 +386,153 @@
       "script": "Hani",
       "school": "confucian",
       "tradition": "chinese",
-      "wikidata": null,
-      "sources": [{ "citation": "Research brief, Deliverable C.5", "kind": "reference-work" }]
+      "wikidata": "Q216072",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable C.5",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Wikidata Q216072 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q216072",
+          "urlVerified": true
+        }
+      ],
+      "born": "313 BCE",
+      "died": "d. 230 BCE"
+    },
+    {
+      "id": "al_Farabi",
+      "name": "Abū Naṣr al-Fārābī",
+      "nameSourceScript": "أبو نصر الفارابي",
+      "script": "Arab",
+      "searchAliases": [
+        "Farabi",
+        "Abu Nasr al-Farabi",
+        "al-Farabi"
+      ],
+      "school": "falsafa",
+      "tradition": "islamic",
+      "wikidata": "Q160460",
+      "summary": {
+        "en": "Taught, following Aristotle, that the world has no beginning in the past. One of the two philosophers al-Ghazālī's Incoherence is aimed at.",
+        "tr": "Aristoteles'i izleyerek âlemin geçmişte bir başlangıcı olmadığını öğretti. Gazâlî'nin Tehâfüt'ünün hedef aldığı iki filozoftan biri."
+      },
+      "sources": [
+        {
+          "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy",
+          "kind": "reference-work",
+          "url": "https://plato.stanford.edu/entries/al-ghazali/",
+          "urlVerified": true
+        }
+      ]
+    },
+    {
+      "id": "Ibn_Sina",
+      "name": "Ibn Sīnā",
+      "nameSourceScript": "ابن سينا",
+      "script": "Arab",
+      "searchAliases": [
+        "Avicenna"
+      ],
+      "school": "falsafa",
+      "tradition": "islamic",
+      "wikidata": "Q8011",
+      "summary": {
+        "en": "Continued al-Fārābī's approach and developed a metaphysics and prophetology offering philosophical explanations of key Muslim tenets. The other principal target of al-Ghazālī's Incoherence.",
+        "tr": "Fârâbî'nin yaklaşımını sürdürdü ve temel İslamî inançlara felsefi açıklamalar sunan bir metafizik ile nübüvvet kuramı geliştirdi. Gazâlî'nin Tehâfüt'ünün diğer başlıca hedefi."
+      },
+      "sources": [
+        {
+          "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy",
+          "kind": "reference-work",
+          "url": "https://plato.stanford.edu/entries/al-ghazali/",
+          "urlVerified": true
+        },
+        {
+          "citation": "Wikidata Q8011 (CC0)",
+          "kind": "reference-work",
+          "url": "https://www.wikidata.org/wiki/Q8011",
+          "urlVerified": true
+        }
+      ],
+      "born": "980",
+      "died": "d. 1037"
+    },
+    {
+      "id": "Gautama_Aksapada",
+      "name": "Gautama (Akṣapāda)",
+      "nameSourceScript": "अक्षपाद गौतम",
+      "script": "Deva",
+      "searchAliases": [
+        "Aksapada Gautama"
+      ],
+      "school": "nyaya",
+      "tradition": "indian",
+      "wikidata": "Q2671506",
+      "summary": {
+        "en": "The Nyāya-sūtra, the school's oldest extant text, is attributed to him. The attribution is traditional rather than secure.",
+        "tr": "Okulun günümüze ulaşan en eski metni olan Nyāya-sūtra ona atfedilir. Atıf kesin değil, gelenekseldir."
+      },
+      "sources": [
+        {
+          "citation": "Nyāya, Internet Encyclopedia of Philosophy",
+          "kind": "reference-work",
+          "url": "https://iep.utm.edu/nyaya/",
+          "urlVerified": true
+        }
+      ]
+    },
+    {
+      "id": "Vatsyayana",
+      "name": "Vātsyāyana",
+      "nameSourceScript": "वात्स्यायन",
+      "script": "Deva",
+      "searchAliases": [
+        "Pakṣilasvāmin Vātsyāyana",
+        "Paksilasvamin Vatsyayana"
+      ],
+      "school": "nyaya",
+      "tradition": "indian",
+      "wikidata": "Q107348453",
+      "summary": {
+        "en": "Nyāya commentator. Held that what distinguishes Nyāya from the more scripturally based schools is a reflective concern with evidence, doubt and the objects of knowledge. Wikidata carries two people under this name — the Nyāya commentator Pakṣilasvāmin Vātsyāyana and the author of the Kāmasūtra. The identifier here is the commentator; whether they are the same person is disputed and is not settled by this site.",
+        "tr": "Nyāya şarihi. Nyāya'yı daha çok kutsal metne dayanan okullardan ayıran şeyin kanıt, şüphe ve bilgi nesneleri üzerine düşünümsel bir ilgi olduğunu savundu. Wikidata bu adla iki kişi barındırır — Nyāya şarihi Pakṣilasvāmin Vātsyāyana ve Kâmasûtra'nın yazarı. Buradaki kimlik şarihe aittir; aynı kişi olup olmadıkları tartışmalıdır ve bu site tarafından karara bağlanmamıştır."
+      },
+      "sources": [
+        {
+          "citation": "Nyāya, Internet Encyclopedia of Philosophy",
+          "kind": "reference-work",
+          "url": "https://iep.utm.edu/nyaya/",
+          "urlVerified": true
+        }
+      ]
+    },
+    {
+      "id": "Uddyotakara",
+      "name": "Uddyotakara",
+      "nameSourceScript": "उद्द्योतकर",
+      "script": "Deva",
+      "searchAliases": [
+        "Udyotakara",
+        "Uddyotakara"
+      ],
+      "school": "nyaya",
+      "tradition": "indian",
+      "wikidata": "Q3547724",
+      "summary": {
+        "en": "Nyāya philosopher. Held that the best kind of demonstrative reasoning deploys the pramāṇas in concert rather than one at a time.",
+        "tr": "Nyāya filozofu. En iyi burhanî akıl yürütmenin pramāṇaları teker teker değil birlikte kullandığını savundu."
+      },
+      "sources": [
+        {
+          "citation": "Nyāya, Internet Encyclopedia of Philosophy",
+          "kind": "reference-work",
+          "url": "https://iep.utm.edu/nyaya/",
+          "urlVerified": true
+        }
+      ]
     }
   ]
 }

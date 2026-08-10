@@ -1,167 +1,170 @@
 {
-  "$fragment": "STUB 2 — westernFramedMismatch. Research A.3 (q.9) and A.4: the Indian pramāṇa traditions do not frame knowledge as a species of belief requiring justification; they ask which instruments yield veridical cognition. This is a reframing, not a disagreement, and the page must say so rather than showing an empty answer slot. Note that the refusing positions here are attributed to SCHOOLS, not to individuals — the research names no individual pramāṇa theorist, and none is invented.",
+  "$fragment": "Filled in Phase 2. Reading the sources changed this page's central claim. The research brief marks the pramāṇa traditions as *reframing* the question rather than answering it; the Stanford Encyclopedia's entry on classical Indian epistemology says the opposite about the key term, that pramā matches analytic uses of 'knowledge' practically perfectly. Both readings are recorded, with sides named, and the westernFramedMismatch flag is kept but the refusal is now stated as contested rather than as the site's own view. See REPORT.md §6.",
   "questions": [
     {
       "id": "Q_sources_of_knowledge",
-      "canonical": {
-        "en": "What are the valid sources of knowledge?",
-        "tr": "Bilginin geçerli kaynakları nelerdir?"
-      },
+      "slug": "sources-of-knowledge",
+      "canonical": { "en": "What are the valid sources of knowledge?", "tr": "Bilginin geçerli kaynakları nelerdir?" },
       "plain": {
         "en": "What actually counts as a good enough reason to say you know something?",
         "tr": "Bir şeyi bildiğinizi söylemek için yeterince iyi bir gerekçe olarak aslında ne sayılır?"
       },
-      "technicalName": {
-        "en": "pramāṇa theory vs. foundationalism and coherentism",
-        "tr": "pramāṇa kuramına karşı temelcilik ve tutarlıcılık"
-      },
+      "technicalName": { "en": "pramāṇa theory vs. foundationalism and coherentism", "tr": "pramāṇa kuramına karşı temelcilik ve tutarlıcılık" },
       "whyItMatters": {
-        "en": "Every disagreement about what is true eventually becomes a disagreement about what would settle it.",
-        "tr": "Neyin doğru olduğuna dair her anlaşmazlık, eninde sonunda onu neyin çözeceğine dair bir anlaşmazlığa dönüşür."
+        "en": "Every disagreement about what is true eventually becomes a disagreement about what would settle it. This is also the question where the shape of the question is itself in dispute.",
+        "tr": "Neyin doğru olduğuna dair her anlaşmazlık, eninde sonunda onu neyin çözeceğine dair bir anlaşmazlığa dönüşür. Bu aynı zamanda, sorunun biçiminin kendisinin tartışmalı olduğu sorudur."
       },
-      "domain": {
-        "en": "Epistemology",
-        "tr": "Epistemoloji"
-      },
+      "domain": { "en": "Epistemology", "tr": "Epistemoloji" },
       "wikidata": null,
       "westernFramedMismatch": true,
       "completeness": "stub",
-      "provenance": [
-        "Research brief, Deliverables A.3 (q.9) and A.4",
-        "PhilPapers: Epistemology"
+      "provenance": ["Research brief, Deliverables A.3 (q.9) and A.4", "PhilPapers: Epistemology"],
+      "sources": [
+        { "citation": "Epistemology in Classical Indian Philosophy, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/epistemology-india/", "urlVerified": true },
+        { "citation": "Nyāya, Internet Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://iep.utm.edu/nyaya/", "urlVerified": true }
       ]
     }
   ],
+
   "positions": [
     {
-      "id": "P_foundationalism",
-      "answersQuestion": "Q_sources_of_knowledge",
-      "label": {
-        "en": "Foundationalism",
-        "tr": "Temelcilik"
-      },
-      "shortLabel": {
-        "en": "Foundationalism",
-        "tr": "Temelcilik"
-      },
-      "definition": {
-        "en": "Not yet written. The research names foundationalism as one of the two standard Western answers and gives no definition, no holder and no passage.",
-        "tr": "Henüz yazılmadı. Araştırma temelciliği iki standart Batılı yanıttan biri olarak anar; tanım, savunucu ya da metin vermez."
-      },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
-      "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.9)",
-          "kind": "reference-work"
-        }
-      ]
-    },
-    {
-      "id": "P_coherentism",
-      "answersQuestion": "Q_sources_of_knowledge",
-      "label": {
-        "en": "Coherentism",
-        "tr": "Tutarlıcılık"
-      },
-      "shortLabel": {
-        "en": "Coherentism",
-        "tr": "Tutarlıcılık"
-      },
-      "definition": {
-        "en": "Not yet written. Named by the research as the other standard Western answer, with no further detail.",
-        "tr": "Henüz yazılmadı. Araştırma tarafından diğer standart Batılı yanıt olarak anılır; başka ayrıntı verilmez."
-      },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
-      "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.9)",
-          "kind": "reference-work"
-        }
-      ]
-    },
-    {
       "id": "P_pramana_nyaya",
+      "slug": "nyaya-pramana",
       "answersQuestion": "Q_sources_of_knowledge",
       "refusesQuestion": true,
-      "label": {
-        "en": "Nyāya pramāṇa theory",
-        "tr": "Nyāya pramāṇa kuramı"
-      },
-      "shortLabel": {
-        "en": "Nyāya pramāṇa",
-        "tr": "Nyāya pramāṇa"
-      },
-      "sourceTerm": {
-        "sourceScript": "प्रमाण",
-        "script": "Deva",
-        "lang": "sa",
-        "translit": "pramāṇa",
-        "standardRendering": "means of valid knowledge"
-      },
+      "label": { "en": "Nyāya: knowledge has sources, and there are four", "tr": "Nyāya: bilginin kaynakları vardır ve dörttür" },
+      "shortLabel": { "en": "Nyāya pramāṇa", "tr": "Nyāya pramāṇa" },
+      "sourceTerm": { "sourceScript": "प्रमाण", "script": "Deva", "lang": "sa", "translit": "pramāṇa", "standardRendering": "means of valid knowledge" },
       "definition": {
-        "en": "The question is reframed rather than answered. Nyāya does not treat knowledge (pramā) as a species of belief requiring justification against Gettier-style defeat. It asks instead which instruments — perception, inference, testimony, comparison — yield veridical cognition. Asking a pramāṇa theorist to choose between foundationalism and coherentism is asking them to answer a question they are not posing.",
-        "tr": "Soru yanıtlanmaz, yeniden çerçevelenir. Nyāya, bilgiyi (pramā), Gettier tipi bozuculara karşı gerekçelendirme gerektiren bir inanç türü olarak ele almaz. Bunun yerine hangi araçların — algı, çıkarım, tanıklık, karşılaştırma — doğru bilgi verdiğini sorar. Bir pramāṇa kuramcısından temelcilik ile tutarlıcılık arasında seçim yapmasını istemek, ondan sormadığı bir soruyu yanıtlamasını istemektir."
+        "en": "A pramāṇa is a knowledge source: a process that generates veridical cognition. Nyāya recognises four — perception, inference, analogical reasoning and testimony — and asks of each whether it reliably produces pramā. The question is therefore about processes rather than about the credentials of a belief, which is why the Internet Encyclopedia describes Nyāya as a sophisticated precursor to contemporary process reliabilism.",
+        "tr": "Pramāṇa bir bilgi kaynağıdır: doğru bilgi üreten bir süreç. Nyāya bunlardan dördünü tanır — algı, çıkarım, benzetmeye dayalı akıl yürütme ve tanıklık — ve her biri için, güvenilir biçimde pramā üretip üretmediğini sorar. Dolayısıyla soru, bir inancın yeterliliğinden çok süreçlerle ilgilidir; Internet Ansiklopedisi'nin Nyāya'yı çağdaş süreç güvenilirciliğinin gelişkin bir öncülü olarak tanımlamasının nedeni budur."
       },
       "epistemicStatus": "contested",
-      "notYetWritten": [
-        "holders",
-        "arguments",
-        "objections",
-        "passages"
-      ],
+      "notYetWritten": ["objections"],
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.4. Marked [contested] there. The research names the schools but no individual pramāṇa theorist, so no attribution to a person is recorded.",
-          "kind": "reference-work"
-        }
+        { "citation": "Nyāya, Internet Encyclopedia of Philosophy — on the four pramāṇas and on Nyāya as a precursor to process reliabilism", "kind": "reference-work", "url": "https://iep.utm.edu/nyaya/", "urlVerified": true },
+        { "citation": "Epistemology in Classical Indian Philosophy, Stanford Encyclopedia of Philosophy — pramāṇa as a process of veridical-cognition generation", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/epistemology-india/", "urlVerified": true }
       ]
     },
     {
       "id": "P_pramana_mimamsa",
+      "slug": "mimamsa-pramana",
       "answersQuestion": "Q_sources_of_knowledge",
       "refusesQuestion": true,
-      "label": {
-        "en": "Mīmāṃsā pramāṇa theory",
-        "tr": "Mīmāṃsā pramāṇa kuramı"
-      },
-      "shortLabel": {
-        "en": "Mīmāṃsā pramāṇa",
-        "tr": "Mīmāṃsā pramāṇa"
-      },
-      "sourceTerm": {
-        "sourceScript": "प्रमाण",
-        "script": "Deva",
-        "lang": "sa",
-        "translit": "pramāṇa",
-        "standardRendering": "means of valid knowledge"
-      },
+      "label": { "en": "Mīmāṃsā pramāṇa theory", "tr": "Mīmāṃsā pramāṇa kuramı" },
+      "shortLabel": { "en": "Mīmāṃsā pramāṇa", "tr": "Mīmāṃsā pramāṇa" },
+      "sourceTerm": { "sourceScript": "प्रमाण", "script": "Deva", "lang": "sa", "translit": "pramāṇa", "standardRendering": "means of valid knowledge" },
       "definition": {
-        "en": "Not yet written. The research lists Mīmāṃsā among the six āstika schools and identifies pramāṇa theory as the spine of Indian epistemology, but does not set out the Mīmāṃsā account or how it differs from the Nyāya one.",
-        "tr": "Henüz yazılmadı. Araştırma, Mīmāṃsā'yı altı āstika okulu arasında sayar ve pramāṇa kuramını Hint epistemolojisinin belkemiği olarak tanımlar; ancak Mīmāṃsā görüşünü ya da Nyāya'dan nasıl ayrıldığını ortaya koymaz."
+        "en": "Not yet written. Mīmāṃsā is one of the schools that debates the list of knowledge sources and the standing of testimony in particular, but no account of its position has been written here from a source, and one is not going to be guessed at from the Nyāya list.",
+        "tr": "Henüz yazılmadı. Mīmāṃsā, bilgi kaynakları listesini ve özellikle tanıklığın konumunu tartışan okullardan biridir; ancak burada bir kaynağa dayanarak konumuna dair bir açıklama yazılmamıştır ve Nyāya listesinden tahmin de edilmeyecektir."
       },
       "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
       "sources": [
+        { "citation": "Epistemology in Classical Indian Philosophy, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/epistemology-india/", "urlVerified": true }
+      ]
+    },
+    {
+      "id": "P_foundationalism",
+      "slug": "foundationalism",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "label": { "en": "Foundationalism", "tr": "Temelcilik" },
+      "shortLabel": { "en": "Foundationalism", "tr": "Temelcilik" },
+      "definition": {
+        "en": "Not yet written. Named by the research as one of the two standard Western answers. No summary has been written from a source, and none is invented.",
+        "tr": "Henüz yazılmadı. Araştırma bunu iki standart Batılı yanıttan biri olarak anar. Bir kaynağa dayanarak özet yazılmamıştır ve uydurulmamıştır."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
+      "sources": [{ "citation": "Research brief, Deliverable A.3 (q.9)", "kind": "reference-work" }]
+    },
+    {
+      "id": "P_coherentism",
+      "slug": "coherentism",
+      "answersQuestion": "Q_sources_of_knowledge",
+      "label": { "en": "Coherentism", "tr": "Tutarlıcılık" },
+      "shortLabel": { "en": "Coherentism", "tr": "Tutarlıcılık" },
+      "definition": {
+        "en": "Not yet written. Named by the research as the other standard Western answer, with no further detail, and nothing has been added.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından diğer standart Batılı yanıt olarak, başka ayrıntı verilmeden anılır; hiçbir şey eklenmemiştir."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
+      "sources": [{ "citation": "Research brief, Deliverable A.3 (q.9)", "kind": "reference-work" }]
+    }
+  ],
+
+  "holds": [
+    {
+      "id": "H_gautama_nyaya",
+      "thinker": "Gautama_Aksapada",
+      "position": "P_pramana_nyaya",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "the Nyāya-sūtra, the school's oldest extant text, is attributed to Gautama; the attribution of the text itself is traditional",
+        "tr": "okulun günümüze ulaşan en eski metni olan Nyāya-sūtra Gautama'ya atfedilir; metnin atfı geleneksel niteliktedir"
+      },
+      "scholarlyDispute": {
+        "en": "The Internet Encyclopedia records the Nyāya-sūtra as 'attributed to' Gautama rather than as securely his. The four-pramāṇa doctrine is the school's; how much of it goes back to a single author is not established here.",
+        "tr": "Internet Ansiklopedisi, Nyāya-sūtra'yı Gautama'ya kesin biçimde ait değil, ona 'atfedilen' bir metin olarak kaydeder. Dört pramāṇa öğretisi okula aittir; bunun ne kadarının tek bir yazara dayandığı burada tespit edilmemiştir."
+      },
+      "sourcePassages": ["PSG_iep_nyaya", "PSG_nyaya_sutra_locus"]
+    },
+    {
+      "id": "H_uddyotakara_nyaya",
+      "thinker": "Uddyotakara",
+      "position": "P_pramana_nyaya",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "held that the best demonstrative reasoning deploys the pramāṇas in concert rather than singly",
+        "tr": "en iyi burhanî akıl yürütmenin pramāṇaları tek tek değil birlikte kullandığını savunmuştur"
+      },
+      "sourcePassages": ["PSG_iep_nyaya"]
+    },
+    {
+      "id": "H_vatsyayana_nyaya",
+      "thinker": "Vatsyayana",
+      "position": "P_pramana_nyaya",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "held that what distinguishes Nyāya from the more scripturally based schools is a reflective concern with evidence, doubt and the objects of knowledge",
+        "tr": "Nyāya'yı daha çok kutsal metne dayanan okullardan ayıran şeyin kanıt, şüphe ve bilgi nesneleri üzerine düşünümsel bir ilgi olduğunu savunmuştur"
+      },
+      "sourcePassages": ["PSG_iep_nyaya"]
+    }
+  ],
+
+  "arguments": [
+    {
+      "id": "ARG_sources_not_credentials",
+      "supports": "P_pramana_nyaya",
+      "label": { "en": "Ask what produced the cognition, not what licenses the belief", "tr": "İnancı neyin haklı kıldığını değil, bilgiyi neyin ürettiğini sorun" },
+      "statement": {
+        "en": "Start from the process. A cognition counts as knowledge because of the kind of process that produced it — perception, inference, analogy or testimony — and the epistemologist's job is to say which processes are knowledge-generating and under what conditions. On this approach justification can be default and unreflective: a putatively veridical cognition is in good standing until something impugns it.",
+        "tr": "Süreçten başlayın. Bir biliş, onu üreten sürecin türü sayesinde bilgi sayılır — algı, çıkarım, benzetme ya da tanıklık — ve epistemoloğun işi hangi süreçlerin ve hangi koşullarda bilgi ürettiğini söylemektir. Bu yaklaşımda gerekçelendirme varsayılan ve düşünümsüz olabilir: doğru olduğu varsayılan bir biliş, bir şey onu sarsana dek geçerli sayılır."
+      },
+      "attributedTo": ["Uddyotakara", "Vatsyayana"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_iep_nyaya"]
+    }
+  ],
+
+  "objections": [
+    {
+      "id": "OBJ_reframing_overstated",
+      "targets": "P_pramana_nyaya",
+      "strongest": true,
+      "label": { "en": "Is this really a different question, or the same one asked differently?", "tr": "Bu gerçekten farklı bir soru mu, yoksa aynı sorunun başka türlü sorulması mı?" },
+      "statement": {
+        "en": "The claim that pramāṇa theory reframes the Western question rather than answering it can be pushed too far. The Stanford Encyclopedia's entry on classical Indian epistemology notes that pramā — the result of a knowledge source — is a technical usage matching the analytic usages of 'knowledge' in English practically perfectly. If the output concept lines up that closely, the disagreement may be about which processes to count, which is a disagreement inside epistemology rather than a refusal of it.",
+        "tr": "Pramāṇa kuramının Batılı soruyu yanıtlamak yerine yeniden çerçevelediği iddiası fazla ileri götürülebilir. Stanford Ansiklopedisi'nin klasik Hint epistemolojisi maddesi, bir bilgi kaynağının sonucu olan pramā'nın, İngilizcedeki 'bilgi' kullanımlarıyla neredeyse tam olarak örtüşen teknik bir kullanım olduğunu belirtir. Çıktı kavramı bu kadar örtüşüyorsa, anlaşmazlık hangi süreçlerin sayılacağı üzerine olabilir; bu da epistemolojinin reddi değil, içindeki bir anlaşmazlıktır."
+      },
+      "epistemicStatus": "contested",
+      "sourcePassages": ["PSG_sep_epistemology_india"],
+      "standardReplies": [
         {
-          "citation": "Research brief, Deliverables A.2, A.4 and C.4",
-          "kind": "reference-work"
+          "en": "Concede the output and hold the input. Even if pramā tracks 'knowledge' closely, organising the whole field around knowledge-generating processes rather than around the justification of beliefs is a different starting point, and starting points decide which problems exist. Gettier-style defeat is a problem for one and not obviously for the other.",
+          "tr": "Çıktıyı kabul edin, girdide direnin. Pramā 'bilgi'yi yakından izlese bile, bütün alanı inançların gerekçelendirilmesi yerine bilgi üreten süreçler etrafında düzenlemek farklı bir başlangıç noktasıdır ve başlangıç noktaları hangi sorunların var olacağını belirler. Gettier tipi bozucular biri için sorundur, diğeri için açıkça değil."
         }
       ]
     }

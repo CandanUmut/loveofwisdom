@@ -1,252 +1,242 @@
 {
-  "$fragment": "STUB 3 — six positions, heavy Arabic-script terminology, chosen to stress the position list, the diacritics toggle and RTL rendering. Research A.3 (q.5) names the debate and the three standard Western positions; B.2 names kasb as the Ashʿarī doctrine of acquisition. Everything the research does not supply is left as 'not yet written' — including, notably, the definitions of the three Western positions, which are famous but not in the source.",
+  "$fragment": "Filled in Phase 2. The three kalām positions are written from the Stanford Encyclopedia's entry on Arabic and Islamic philosophy of causation, which is where the doctrine of kasb and the Muʿtazilite account of human power are set out; the entry is linked and cited, not reproduced. The three modern Western positions remain deliberately thin — see the notYetWritten fields and REPORT.md §4. Six positions with heavy Arabic-script terminology: this is the page that stresses the picker, the diacritics toggle and RTL.",
   "questions": [
     {
       "id": "Q_jabr_ikhtiyar",
-      "canonical": {
-        "en": "Do we have free will, and is it compatible with determinism?",
-        "tr": "Özgür irademiz var mı ve bu determinizmle bağdaşır mı?"
-      },
+      "slug": "jabr-wa-ikhtiyar",
+      "canonical": { "en": "Do we have free will, and is it compatible with determinism?", "tr": "Özgür irademiz var mı ve bu determinizmle bağdaşır mı?" },
       "plain": {
         "en": "If everything you do follows from what came before, in what sense did you choose it?",
         "tr": "Yaptığınız her şey daha önce olanlardan çıkıyorsa, onu hangi anlamda siz seçtiniz?"
       },
-      "technicalName": {
-        "en": "jabr wa ikhtiyār / free will and determinism",
-        "tr": "jabr wa ikhtiyār / özgür irade ve determinizm"
-      },
+      "technicalName": { "en": "jabr wa ikhtiyār / free will and determinism", "tr": "jabr wa ikhtiyār / özgür irade ve determinizm" },
       "whyItMatters": {
-        "en": "It grounds blame, praise and punishment. If nobody could have done otherwise, it is not clear what desert means.",
-        "tr": "Suçlamanın, övmenin ve cezalandırmanın dayanağıdır. Hiç kimse başka türlü davranamayacak idiyse, hak etmenin ne anlama geldiği belirsizleşir."
+        "en": "It grounds blame, praise and punishment. The kalām version of the question puts that stake plainly: if God creates every power by which you act, what is left for reward and punishment to attach to?",
+        "tr": "Suçlamanın, övmenin ve cezalandırmanın dayanağıdır. Sorunun kelamdaki biçimi bu bahsi açıkça ortaya koyar: eylediğiniz her gücü Tanrı yaratıyorsa, sevap ve cezanın bağlanacağı ne kalır?"
       },
-      "domain": {
-        "en": "Metaphysics",
-        "tr": "Metafizik"
-      },
+      "domain": { "en": "Metaphysics", "tr": "Metafizik" },
       "wikidata": null,
       "completeness": "stub",
-      "provenance": [
-        "Research brief, Deliverable A.3 (q.5)",
-        "2020 PhilPapers Survey",
-        "Islamic kalam curriculum"
+      "provenance": ["Research brief, Deliverable A.3 (q.5)", "2020 PhilPapers Survey", "Islamic kalam curriculum"],
+      "sources": [
+        { "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true },
+        { "citation": "Free Will, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/freewill/", "urlVerified": true }
       ]
     }
   ],
+
   "positions": [
     {
-      "id": "P_jabr",
-      "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Jabr — compulsion",
-        "tr": "Cebr — zorlama"
-      },
-      "shortLabel": {
-        "en": "Jabr",
-        "tr": "Cebr"
-      },
-      "sourceTerm": {
-        "sourceScript": "جبر",
-        "script": "Arab",
-        "lang": "ar",
-        "translit": "jabr",
-        "standardRendering": "compulsion"
-      },
-      "definition": {
-        "en": "Not yet written. The research names jabr as one pole of the kalām debate and does not set out the position or name a holder.",
-        "tr": "Henüz yazılmadı. Araştırma cebri, kelam tartışmasının bir kutbu olarak anar; konumu ortaya koymaz ve bir savunucu adı vermez."
-      },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
-      "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.5)",
-          "kind": "reference-work"
-        }
-      ]
-    },
-    {
       "id": "P_ikhtiyar",
+      "slug": "ikhtiyar",
       "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Ikhtiyār — choice",
-        "tr": "İhtiyâr — seçim"
-      },
-      "shortLabel": {
-        "en": "Ikhtiyār",
-        "tr": "İhtiyâr"
-      },
-      "sourceTerm": {
-        "sourceScript": "اختيار",
-        "script": "Arab",
-        "lang": "ar",
-        "translit": "ikhtiyār",
-        "standardRendering": "choice"
-      },
+      "label": { "en": "Ikhtiyār — humans produce their own acts", "tr": "İhtiyâr — insan kendi fiillerini üretir" },
+      "shortLabel": { "en": "Ikhtiyār (Muʿtazilite)", "tr": "İhtiyâr (Mutezilî)" },
+      "sourceTerm": { "sourceScript": "اختيار", "script": "Arab", "lang": "ar", "translit": "ikhtiyār", "standardRendering": "choice" },
       "definition": {
-        "en": "Not yet written. The research names ikhtiyār as the other pole and does not set out the position or name a holder.",
-        "tr": "Henüz yazılmadı. Araştırma ihtiyârı diğer kutup olarak anar; konumu ortaya koymaz ve bir savunucu adı vermez."
+        "en": "Human beings have the power to produce their own actions — thoughts, volitions and bodily movements alike. Eighth-century Muʿtazilite theologians made this an explicit exception to the general kalām account on which God produces every atom and accident, and they made it for a moral reason: unless I am the source of my acts, rewarding or punishing me for them is unjust.",
+        "tr": "İnsanlar kendi fiillerini — düşüncelerini, iradelerini ve bedensel hareketlerini — üretme gücüne sahiptir. Sekizinci yüzyıl Mutezilî kelamcıları bunu, Tanrı'nın her atomu ve arazı ürettiği genel kelam anlayışına açık bir istisna kıldılar; hem de ahlaki bir gerekçeyle: fiillerimin kaynağı ben değilsem, onlar için ödüllendirilmem ya da cezalandırılmam adaletsizdir."
       },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
+      "epistemicStatus": "settled",
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.5)",
-          "kind": "reference-work"
-        }
+        { "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy — on divine justice and human freedom in Muʿtazilite theology", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }
       ]
     },
     {
       "id": "P_kasb",
+      "slug": "kasb",
       "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Kasb — acquisition",
-        "tr": "Kesb — kazanım"
-      },
-      "shortLabel": {
-        "en": "Kasb",
-        "tr": "Kesb"
-      },
-      "sourceTerm": {
-        "sourceScript": "كسب",
-        "script": "Arab",
-        "lang": "ar",
-        "translit": "kasb",
-        "standardRendering": "acquisition"
-      },
+      "label": { "en": "Kasb — acquisition", "tr": "Kesb — kazanım" },
+      "shortLabel": { "en": "Kasb (Ashʿarī)", "tr": "Kesb (Eşʿarî)" },
+      "sourceTerm": { "sourceScript": "كسب", "script": "Arab", "lang": "ar", "translit": "kasb", "standardRendering": "acquisition" },
       "definition": {
-        "en": "The Ashʿarī doctrine of acquisition. The research identifies kasb as an Ashʿarī doctrine and translates it as \"acquisition\", noting in passing that it has no Ockhamist parallel. It does not set out what the doctrine holds, and that is not written here.",
-        "tr": "Eşʿarî kesb öğretisi. Araştırma kesbi bir Eşʿarî öğretisi olarak tanımlar ve \"kazanım\" diye çevirir; geçerken de Ockhamcı bir karşılığı olmadığını belirtir. Öğretinin ne savunduğunu ortaya koymaz ve burada da yazılmamıştır."
+        "en": "God creates the power by which a human being performs each action, and the human acquires that act. Al-Ashʿarī built this as a rival to the Muʿtazilite account, which he took to limit divine power: on his view God is in complete control of the production of every atom and accident, and the power created in me is a power for one specific act at one specific time. Al-Ghazālī later presented acquisition as a middle position — between determinists, who deny created things any power at all, and Muʿtazilites, who let human beings produce accidents.",
+        "tr": "Tanrı, insanın her fiili işlediği gücü yaratır; insan da o fiili kesbeder. Eşʿarî bunu, ilahi kudreti sınırladığını düşündüğü Mutezilî anlayışa rakip olarak kurdu: ona göre Tanrı her atomun ve arazın üretimi üzerinde tam denetim sahibidir ve bende yaratılan güç, belirli bir anda belirli bir fiile yönelik bir güçtür. Gazâlî sonradan kesbi bir orta konum olarak sundu — yaratılmışlara hiçbir güç tanımayan cebrîler ile insanın araz üretmesine izin veren Mutezile arasında."
+      },
+      "epistemicStatus": "settled",
+      "sources": [
+        { "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy — on divine omnipotence and occasionalism in al-Ashʿarī and his followers", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }
+      ]
+    },
+    {
+      "id": "P_jabr",
+      "slug": "jabr",
+      "answersQuestion": "Q_jabr_ikhtiyar",
+      "label": { "en": "Jabr — created things have no power", "tr": "Cebr — yaratılmışların gücü yoktur" },
+      "shortLabel": { "en": "Jabr (compulsion)", "tr": "Cebr (zorlama)" },
+      "sourceTerm": { "sourceScript": "جبر", "script": "Arab", "lang": "ar", "translit": "jabr", "standardRendering": "compulsion" },
+      "definition": {
+        "en": "Created things have no causal power of their own; God alone acts. The position is recorded here as al-Ghazālī characterises it when he places acquisition between the determinists and the Muʿtazilites — that is, from the outside, by an opponent.",
+        "tr": "Yaratılmış şeylerin kendilerine ait bir nedensel gücü yoktur; yalnızca Tanrı eyler. Bu konum burada, Gazâlî'nin kesbi cebrîlerle Mutezile arasına yerleştirirken yaptığı nitelemeyle kaydedilmiştir — yani dışarıdan, bir muhalifin ağzından."
       },
       "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition-in-proponents-own-terms",
-        "arguments",
-        "objections",
-        "passages"
-      ],
+      "notYetWritten": ["definition-in-proponents-own-terms", "holders", "arguments"],
       "sources": [
-        {
-          "citation": "Research brief, Deliverable B.2 (Intersection 1, the translation-artifact caution)",
-          "kind": "reference-work"
-        }
+        { "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy — al-Ghazālī, On Power, placing acquisition between the determinists and the Muʿtazilites", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }
       ]
     },
     {
       "id": "P_compatibilism",
+      "slug": "compatibilism",
       "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Compatibilism",
-        "tr": "Bağdaşırcılık"
-      },
-      "shortLabel": {
-        "en": "Compatibilism",
-        "tr": "Bağdaşırcılık"
-      },
+      "label": { "en": "Compatibilism", "tr": "Bağdaşırcılık" },
+      "shortLabel": { "en": "Compatibilism", "tr": "Bağdaşırcılık" },
       "definition": {
-        "en": "Not yet written. The research names compatibilism as one of the three standard Western positions and gives no definition, no holder and no passage.",
-        "tr": "Henüz yazılmadı. Araştırma bağdaşırcılığı üç standart Batılı konumdan biri olarak anar; tanım, savunucu ya da metin vermez."
+        "en": "Not yet written. Named by the research as one of the three standard modern Western positions. The Stanford and Internet encyclopedias both carry full treatments, linked below; writing a summary from them is the next piece of work on this page and has not been done.",
+        "tr": "Henüz yazılmadı. Araştırma bunu üç standart modern Batılı konumdan biri olarak anar. Hem Stanford hem de Internet ansiklopedisi tam incelemeler barındırır; aşağıda bağlantılıdır. Onlardan bir özet yazmak bu sayfadaki bir sonraki iştir ve yapılmamıştır."
       },
       "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
-          "kind": "survey"
-        }
+        { "citation": "Free Will, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/freewill/", "urlVerified": true },
+        { "citation": "Free Will, Internet Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://iep.utm.edu/freewill/", "urlVerified": true }
       ]
     },
     {
       "id": "P_libertarianism",
+      "slug": "libertarianism",
       "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Libertarianism (metaphysical)",
-        "tr": "Liberteryenlik (metafizik)"
-      },
-      "shortLabel": {
-        "en": "Libertarianism",
-        "tr": "Liberteryenlik"
-      },
+      "label": { "en": "Libertarianism (metaphysical)", "tr": "Liberteryenlik (metafizik)" },
+      "shortLabel": { "en": "Libertarianism", "tr": "Liberteryenlik" },
       "definition": {
-        "en": "Not yet written. Named by the research; no further detail given.",
-        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; başka ayrıntı verilmez."
+        "en": "Not yet written. Named by the research; the encyclopedia treatments are linked below and have not been summarised here.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; ansiklopedi incelemeleri aşağıda bağlantılıdır ve burada özetlenmemiştir."
       },
       "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
-          "kind": "survey"
-        }
+        { "citation": "Incompatibilist (Nondeterministic) Theories of Free Will, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/incompatibilism-theories/", "urlVerified": true }
       ]
     },
     {
       "id": "P_hard_determinism",
+      "slug": "hard-determinism",
       "answersQuestion": "Q_jabr_ikhtiyar",
-      "label": {
-        "en": "Hard determinism",
-        "tr": "Katı determinizm"
-      },
-      "shortLabel": {
-        "en": "Hard determinism",
-        "tr": "Katı determinizm"
-      },
+      "label": { "en": "Hard determinism", "tr": "Katı determinizm" },
+      "shortLabel": { "en": "Hard determinism", "tr": "Katı determinizm" },
       "definition": {
-        "en": "Not yet written. Named by the research; no further detail given.",
-        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; başka ayrıntı verilmez."
+        "en": "Not yet written. Named by the research; not summarised here. Note that it is not the same position as jabr, despite the shared translation 'determinism' — jabr is a claim about where causal power lies, not about the sufficiency of prior states.",
+        "tr": "Henüz yazılmadı. Araştırma tarafından anılır; burada özetlenmemiştir. 'Determinizm' ortak çevirisine rağmen cebr ile aynı konum olmadığına dikkat edin — cebr, önceki durumların yeterliliği hakkında değil, nedensel gücün nerede bulunduğu hakkında bir iddiadır."
       },
       "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition",
-        "holders",
-        "arguments",
-        "objections"
-      ],
+      "notYetWritten": ["definition", "holders", "arguments", "objections"],
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.5); 2020 PhilPapers Survey",
-          "kind": "survey"
-        }
+        { "citation": "Free Will, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/freewill/", "urlVerified": true }
       ]
     }
   ],
+
   "holds": [
     {
       "id": "H_ashari_kasb",
       "thinker": "al_Ashari",
       "position": "P_kasb",
-      "epistemicStatus": "uncertain",
+      "epistemicStatus": "settled",
       "qualification": {
-        "en": "kasb is identified by the research as an Ashʿarī doctrine; whether al-Ashʿarī himself formulated it in the form the school later held is not established here",
-        "tr": "kesb, araştırma tarafından bir Eşʿarî öğretisi olarak tanımlanır; Eşʿarî'nin kendisinin bunu okulun sonradan benimsediği biçimde formüle edip etmediği burada tespit edilmemiştir"
+        "en": "al-Ashʿarī and his followers used the term kasb for the created power by which a person acts",
+        "tr": "Eşʿarî ve takipçileri, kişinin eylediği yaratılmış güç için kesb terimini kullandılar"
+      },
+      "sourcePassages": ["PSG_sep_causation"]
+    },
+    {
+      "id": "H_ghazali_kasb",
+      "thinker": "al_Ghazali",
+      "position": "P_kasb",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "in On Power, presenting acquisition as a middle position between the determinists and the Muʿtazilites",
+        "tr": "Kudret Risâlesi'nde, kesbi cebrîlerle Mutezile arasında bir orta konum olarak sunarak"
+      },
+      "sourcePassages": ["PSG_sep_causation"]
+    },
+    {
+      "id": "H_abu_al_hudhayl_ikhtiyar",
+      "thinker": "Abu_al_Hudhayl",
+      "position": "P_ikhtiyar",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "as a Muʿtazilite; the source attributes the position to eighth-century Muʿtazilite theologians as a school rather than to him by name",
+        "tr": "bir Mutezilî olarak; kaynak bu konumu ona adıyla değil, sekizinci yüzyıl Mutezilî kelamcılarına bir okul olarak atfeder"
       },
       "scholarlyDispute": {
-        "en": "Not yet written. The research mentions kasb only in passing, as a doctrine with no Ockhamist parallel.",
-        "tr": "Henüz yazılmadı. Araştırma kesbe yalnızca, Ockhamcı karşılığı olmayan bir öğreti olarak geçerken değinir."
+        "en": "The attribution here is at school level. The Stanford Encyclopedia's causation entry describes what eighth-century Muʿtazilites held without singling out Abū al-Hudhayl on this point, and no source consulted here makes the individual attribution.",
+        "tr": "Buradaki atıf okul düzeyindedir. Stanford Ansiklopedisi'nin nedensellik maddesi, sekizinci yüzyıl Mutezilîlerinin ne savunduğunu anlatır ama bu noktada Ebü'l-Hüzeyl'i özel olarak ayırmaz ve burada başvurulan hiçbir kaynak bireysel atfı yapmaz."
       },
-      "sources": [
+      "sourcePassages": ["PSG_sep_causation"]
+    },
+    {
+      "id": "H_abd_al_jabbar_ikhtiyar",
+      "thinker": "Abd_al_Jabbar",
+      "position": "P_ikhtiyar",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "as a Muʿtazilite; school-level attribution, not sourced to him individually here",
+        "tr": "bir Mutezilî olarak; okul düzeyinde atıf, burada ona bireysel olarak dayandırılmamıştır"
+      },
+      "scholarlyDispute": {
+        "en": "Same caveat as for Abū al-Hudhayl: the source describes the Muʿtazilite position, not this thinker's version of it.",
+        "tr": "Ebü'l-Hüzeyl için geçerli olan aynı çekince: kaynak Mutezilî konumu anlatır, bu düşünürün o konuma ilişkin kendi biçimini değil."
+      },
+      "sourcePassages": ["PSG_sep_causation"]
+    }
+  ],
+
+  "arguments": [
+    {
+      "id": "ARG_divine_justice",
+      "supports": "P_ikhtiyar",
+      "label": { "en": "Reward and punishment must attach to something", "tr": "Sevap ve ceza bir şeye bağlanmalıdır" },
+      "statement": {
+        "en": "If I am not the source of my own acts, then rewarding or punishing me for them is unjust. The Muʿtazilites took divine justice as fixed and reasoned back from it: since God is just, and since God rewards and punishes, human beings must genuinely produce their own actions.",
+        "tr": "Fiillerimin kaynağı ben değilsem, onlar için ödüllendirilmem ya da cezalandırılmam adaletsizdir. Mutezile ilahi adaleti sabit kabul edip ondan geriye doğru akıl yürüttü: Tanrı adil olduğuna ve ödüllendirip cezalandırdığına göre, insanlar gerçekten kendi fiillerini üretiyor olmalıdır."
+      },
+      "attributedTo": ["Abd_al_Jabbar", "Abu_al_Hudhayl"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_causation"]
+    },
+    {
+      "id": "ARG_tremor",
+      "supports": "P_kasb",
+      "label": { "en": "A deliberate act is not a tremor", "tr": "İradî bir fiil bir titreme değildir" },
+      "statement": {
+        "en": "Al-Ghazālī rejects the determinist position on the ground that it cannot account for the difference between a deliberate human action and an involuntary one such as a bodily tremor. Something on the human side must differ between the two cases, and acquisition is what names it.",
+        "tr": "Gazâlî cebrî konumu, iradî bir insan fiili ile bedensel bir titreme gibi gayri iradî bir hareket arasındaki farkı açıklayamadığı gerekçesiyle reddeder. İki durum arasında insan tarafında bir şeyin farklı olması gerekir; kesb de bunu adlandırır."
+      },
+      "attributedTo": ["al_Ghazali"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_causation"]
+    }
+  ],
+
+  "objections": [
+    {
+      "id": "OBJ_limits_divine_power",
+      "targets": "P_ikhtiyar",
+      "strongest": true,
+      "label": { "en": "It limits what God controls", "tr": "Tanrı'nın denetlediği alanı sınırlar" },
+      "statement": {
+        "en": "Al-Ashʿarī persuaded many of the mutakallimūn that Muʿtazilite accounts of human action incorrectly limit divine power. If the doctrine of omnipotence requires that God be in complete control of the production of every atom and accident, then a human power that produces accidents on its own is a hole in that control.",
+        "tr": "Eşʿarî, mütekellimlerin çoğunu, insan fiiline dair Mutezilî açıklamaların ilahi kudreti yanlış biçimde sınırladığına ikna etti. Mutlak kudret öğretisi Tanrı'nın her atomun ve arazın üretimi üzerinde tam denetim sahibi olmasını gerektiriyorsa, kendi başına araz üreten bir insan gücü bu denetimde bir gediktir."
+      },
+      "attributedTo": ["al_Ashari"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_causation"]
+    },
+    {
+      "id": "OBJ_kasb_empty",
+      "targets": "P_kasb",
+      "strongest": true,
+      "label": { "en": "What is acquisition, if God does all the work?", "tr": "Bütün işi Tanrı yapıyorsa kesb nedir?" },
+      "statement": {
+        "en": "On the Ashʿarī account God creates the power, the power is for one specific act at one specific time, and the human contributes no causal production of their own. The Stanford Encyclopedia observes that this account of acquisition suggests God alone has causal power — which leaves it unclear what the acquiring adds, and so what reward and punishment are attaching to.",
+        "tr": "Eşʿarî anlayışta gücü Tanrı yaratır, güç belirli bir anda belirli bir fiile yöneliktir ve insan kendinden hiçbir nedensel üretim katmaz. Stanford Ansiklopedisi, bu kesb anlayışının nedensel gücün yalnızca Tanrı'da olduğunu îma ettiğini belirtir — bu da kesbetmenin ne kattığını ve dolayısıyla sevap ile cezanın neye bağlandığını belirsiz bırakır."
+      },
+      "epistemicStatus": "contested",
+      "sourcePassages": ["PSG_sep_causation"],
+      "standardReplies": [
         {
-          "citation": "Research brief, Deliverable B.2",
-          "kind": "reference-work"
+          "en": "Hold the line on the tremor: whatever acquisition amounts to metaphysically, it marks a real difference between acting and twitching, and that is the difference desert needs.",
+          "tr": "Titreme örneğinde diren: kesb metafizik olarak neye tekabül ederse etsin, eylemek ile seğirmek arasında gerçek bir farkı işaretler ve hak ediş için gereken fark budur."
         }
       ]
     }

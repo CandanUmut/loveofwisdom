@@ -40,7 +40,8 @@
           "citation": "Internet Encyclopedia of Philosophy, 'Divine Command Theory'",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "husn-wa-qubh"
     }
   ],
   "positions": [
@@ -72,7 +73,8 @@
           "citation": "Research brief, Deliverable B.1 (P1)",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "divine-command"
     },
     {
       "id": "P_rationalism",
@@ -102,7 +104,8 @@
           "citation": "Research brief, Deliverable B.1 (P2)",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "moral-rationalism"
     },
     {
       "id": "P_maturidi",
@@ -125,7 +128,8 @@
           "citation": "Research brief, Deliverable B.1 (P3)",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "maturidi-intermediate"
     },
     {
       "id": "P_natural_law",
@@ -148,7 +152,8 @@
           "citation": "Research brief, Deliverable B.1 (P4)",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "natural-law"
     },
     {
       "id": "P_confucian_reframe",
@@ -179,7 +184,8 @@
           "citation": "Research brief, Deliverables B.1 (P5) and A.4",
           "kind": "reference-work"
         }
-      ]
+      ],
+      "slug": "confucian-reframing"
     }
   ],
   "holds": [

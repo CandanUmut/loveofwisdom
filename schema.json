@@ -45,6 +45,7 @@
 
   "$defs": {
     "Id": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+$" },
+    "Slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Lowercase URL segment. Diacritics are stripped: husn-wa-qubh, not ḥusn-wa-qubḥ." },
 
     "HoldingRef": {
       "type": "string",
@@ -102,6 +103,7 @@
       "required": ["id", "canonical", "plain", "domain"],
       "properties": {
         "id": { "$ref": "#/$defs/Id" },
+        "slug": { "$ref": "#/$defs/Slug", "description": "URL segment. Stable and human-readable; ids are internal." },
         "canonical": { "$ref": "#/$defs/LocalizedString" },
         "plain": { "$ref": "#/$defs/LocalizedString" },
         "technicalName": { "$ref": "#/$defs/LocalizedString" },
@@ -120,6 +122,7 @@
       "required": ["id", "label", "definition"],
       "properties": {
         "id": { "$ref": "#/$defs/Id" },
+        "slug": { "$ref": "#/$defs/Slug" },
         "label": { "$ref": "#/$defs/LocalizedString" },
         "definition": { "$ref": "#/$defs/LocalizedString" },
         "answersQuestion": { "$ref": "#/$defs/Id" },
@@ -156,6 +159,10 @@
         "id": { "$ref": "#/$defs/Id" },
         "name": { "type": "string", "description": "Fully diacriticized canonical form." },
         "nameSourceScript": { "type": "string" },
+        "searchAliases": {
+          "type": "array", "items": { "type": "string" },
+          "description": "Alternative spellings for identifier resolution. The canonical diacriticized name is often not what an authority file labels the person: Wikidata has 'Abu al-Hasan al-Ash'ari', not 'Abū al-Ḥasan al-Ashʿarī'."
+        },
         "script": { "enum": ["Arab", "Deva", "Hani", "Grek", "Latn", "Hebr"] },
         "died": { "type": "string", "description": "Free text so that hijri/CE double dates ('d. 324/936') survive." },
         "born": { "type": "string" },
@@ -296,6 +303,12 @@
         "license": { "type": "string" },
         "attested": { "type": "boolean", "default": true },
         "locusUnverified": { "type": "boolean" },
+        "url": { "type": "string", "description": "A URL that was actually retrieved. Never constructed or recalled — scripts/verify-citations.mjs re-fetches every one." },
+        "urlVerified": { "type": "boolean" },
+        "linkOnly": {
+          "type": "boolean",
+          "description": "The source is cited and linked but its text is deliberately not reproduced. SEP and IEP articles are licensed for linking and fair-use quotation, not redistribution (research E.1), so where they are the evidence for an attribution they appear as link-only passages rather than as quotations."
+        },
         "tier": { "enum": ["primary", "secondary", "reference-work"] },
         "perspectiveFlag": { "type": "string" },
         "partOf": { "$ref": "#/$defs/Id" }
@@ -304,7 +317,12 @@
         {
           "$comment": "A passage with no text must say so explicitly rather than render an empty quotation.",
           "if": { "not": { "required": ["text"] } },
-          "then": { "required": ["locusUnverified"], "properties": { "locusUnverified": { "const": true } } }
+          "then": {
+            "anyOf": [
+              { "required": ["locusUnverified"], "properties": { "locusUnverified": { "const": true } } },
+              { "required": ["linkOnly", "url"], "properties": { "linkOnly": { "const": true } } }
+            ]
+          }
         }
       ]
     },
@@ -320,7 +338,12 @@
         "semanticRange": { "$ref": "#/$defs/LocalizedString" },
         "distortion": { "$ref": "#/$defs/LocalizedString", "description": "Where the standard English rendering distorts." },
         "interfaceRecommendation": { "$ref": "#/$defs/LocalizedString" },
+        "slug": { "$ref": "#/$defs/Slug" },
         "cluster": { "type": "array", "items": { "$ref": "#/$defs/Id" }, "description": "Concepts that must be shown as a unit (ren/yi/li)." },
+        "surfaceForms": {
+          "type": "array", "items": { "type": "string" },
+          "description": "Exact strings that should be auto-glossed where they appear in body text. Authored rather than inferred: matching on the transliteration alone would gloss 'li' inside 'political' and miss 'ḥusn wa qubḥ' written diacritic-light. Matched whole-word, longest-first, first occurrence per block."
+        },
         "tradition": { "$ref": "#/$defs/Id" },
         "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
       }

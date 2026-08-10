@@ -48,12 +48,14 @@ describe('diacritic-light display form', () => {
 });
 
 describe('the three stub questions', () => {
-  it('stub 1 has two positions and no intersection at all', () => {
+  it('stub 1 still has no intersection, which the empty state must explain', () => {
     const v = questionView(site, 'Q_eternity_world')!;
     expect(v.answers).toHaveLength(2);
+    // Every holder sits inside the Islamic tradition, so there is nothing to cross.
+    // This is the case the "no intersection" empty state exists for.
     expect(v.intersections).toHaveLength(0);
-    // Which is what the empty state must explain rather than look broken over.
-    expect(v.apparatus).toHaveLength(0);
+    const traditions = new Set(v.answers.flatMap((p) => p.traditions.map((t) => t.id)));
+    expect([...traditions]).toEqual(['islamic']);
   });
 
   it('stub 2 separates refusals from answers instead of leaving empty answer slots', () => {
@@ -62,8 +64,16 @@ describe('the three stub questions', () => {
     expect(v.refusals.map((p) => p.position.id).sort())
       .toEqual(['P_pramana_mimamsa', 'P_pramana_nyaya']);
     expect(v.answers.map((p) => p.position.id).sort()).toEqual(['P_coherentism', 'P_foundationalism']);
-    // The reframings carry no individual attribution, and none was invented for them.
-    for (const r of v.refusals) expect(r.holdings).toHaveLength(0);
+    // Phase 2 sourced individual Nyāya thinkers, so the reframing now carries real
+    // attributions. The two Western answers are the ones still without any — and they
+    // say so rather than being quietly filled in.
+    for (const a of v.answers) {
+      expect(a.holdings).toHaveLength(0);
+      expect(a.position.notYetWritten?.length ?? 0).toBeGreaterThan(0);
+    }
+    const nyaya = v.refusals.find((r) => r.position.id === 'P_pramana_nyaya')!;
+    expect(nyaya.holdings.length).toBeGreaterThan(0);
+    for (const h of nyaya.holdings) expect(h.passages.length).toBeGreaterThan(0);
   });
 
   it('stub 3 has six positions and keeps its Arabic source script', () => {
@@ -145,8 +155,34 @@ describe('evidence and epistemic honesty', () => {
     expect(seed.crossTraditionIntersectionCount).toBe(3);
   });
 
-  it('resolves no Wikidata Q-ID rather than guessing one', () => {
-    for (const t of site.thinkers()) expect(t.wikidata ?? null).toBeNull();
+  it('carries a well-formed Wikidata Q-ID for every thinker, or an explicit null', () => {
+    // Phase 2 resolved all of these against wikidata.org and re-verified each entity is
+    // a human whose label matches the name. What must never appear is a malformed or
+    // invented-looking identifier, so the shape is asserted rather than the presence.
+    for (const t of site.thinkers()) {
+      const id = t.wikidata ?? null;
+      if (id !== null) expect(id, `${t.id} has a malformed Q-ID`).toMatch(/^Q[1-9][0-9]*$/);
+    }
+    const resolved = site.thinkers().filter((t) => t.wikidata).length;
+    expect(resolved).toBe(site.thinkers().length);
+  });
+
+  it('never cites a URL that was not marked as verified', () => {
+    // scripts/verify-citations.mjs re-fetches these; the flag records that it was done.
+    for (const t of site.thinkers()) {
+      for (const src of t.sources ?? []) {
+        if (src.url) expect(src.urlVerified, `${t.id} cites ${src.url} unverified`).toBe(true);
+      }
+    }
+  });
+
+  it('gives every link-only passage a url, since that is all it is', () => {
+    for (const p of ['PSG_sep_ghazali', 'PSG_sep_causation', 'PSG_iep_nyaya']) {
+      const passage = site.passage(p)!;
+      expect(passage.linkOnly).toBe(true);
+      expect(passage.url).toMatch(/^https:\/\//);
+      expect(passage.text).toBeUndefined();
+    }
   });
 });
 

@@ -1,136 +1,182 @@
 {
-  "$fragment": "STUB 1 — two positions, no cross-tradition intersection, both holders inside a single tradition. Chosen to prove the intersection view degrades gracefully rather than looking broken. Research A.3 (q.14) and C.1 name the debate and both holders; neither names an argument, an objection or a passage, so none is written here.",
+  "$fragment": "Filled in Phase 2 from retrieved sources. Definitions and arguments are written here from what those sources say; their text is not reproduced. Every attribution cites a link-only passage carrying a URL that was actually fetched. The primary-text loci in al-Ghazālī's and Ibn Rushd's Tahāfut are recorded as unverified: no critical edition was consulted, so no discussion or page number is asserted.",
   "questions": [
     {
       "id": "Q_eternity_world",
-      "canonical": {
-        "en": "Is the world eternal, or created?",
-        "tr": "Âlem ezelî midir, yoksa yaratılmış mıdır?"
-      },
+      "slug": "eternity-of-the-world",
+      "canonical": { "en": "Is the world eternal, or created?", "tr": "Âlem ezelî midir, yoksa yaratılmış mıdır?" },
       "plain": {
         "en": "Has the universe always been here, or did it have a beginning?",
         "tr": "Evren hep var mıydı, yoksa bir başlangıcı mı vardı?"
       },
       "technicalName": {
-        "en": "ḥudūth al-ʿālam / the eternity of the world",
-        "tr": "ḥudūth al-ʿālam / âlemin ezelîliği"
+        "en": "ḥudūth al-ʿālam / qidam al-ʿālam — the createdness or pre-eternity of the world",
+        "tr": "ḥudūth al-ʿālam / qidam al-ʿālam — âlemin hâdis ya da kadîm oluşu"
       },
       "whyItMatters": {
-        "en": "It is the point where al-Ghazālī and the falāsifa broke with each other, and it decides whether the universe is the kind of thing that can have a cause outside it.",
-        "tr": "Gazâlî ile felâsifenin birbirinden ayrıldığı noktadır ve evrenin, dışında bir nedeni olabilecek türden bir şey olup olmadığını belirler."
+        "en": "It is the point where al-Ghazālī broke with the falāsifa, and it decides whether the universe is the kind of thing that can have a cause outside it. It is also where a philosopher and a theologian each accused the other of failing his own standard of proof.",
+        "tr": "Gazâlî'nin felâsifeden ayrıldığı noktadır ve evrenin, dışında bir nedeni olabilecek türden bir şey olup olmadığını belirler. Ayrıca bir filozofla bir kelamcının, birbirini kendi kanıt ölçütünü karşılamamakla suçladığı yerdir."
       },
-      "domain": {
-        "en": "Metaphysics",
-        "tr": "Metafizik"
-      },
+      "domain": { "en": "Metaphysics", "tr": "Metafizik" },
       "wikidata": null,
-      "completeness": "stub",
-      "provenance": [
-        "Islamic kalam curriculum",
-        "Research brief, Deliverable A.3 (q.14)"
+      "completeness": "worked",
+      "provenance": ["Islamic kalam curriculum", "Research brief, Deliverable A.3 (q.14)"],
+      "sources": [
+        { "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/al-ghazali/", "urlVerified": true },
+        { "citation": "Ibn Rushd (Averroes), Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/ibn-rushd/", "urlVerified": true }
       ]
     }
   ],
+
   "positions": [
     {
       "id": "P_world_created",
+      "slug": "created-in-time",
       "answersQuestion": "Q_eternity_world",
-      "label": {
-        "en": "The world is created in time",
-        "tr": "Âlem zaman içinde yaratılmıştır"
-      },
-      "shortLabel": {
-        "en": "Created",
-        "tr": "Yaratılmış"
-      },
+      "label": { "en": "The world came to be", "tr": "Âlem sonradan var oldu" },
+      "shortLabel": { "en": "Created in time", "tr": "Zamanda yaratılmış" },
+      "sourceTerm": { "sourceScript": "حدوث العالم", "script": "Arab", "lang": "ar", "translit": "ḥudūth al-ʿālam", "standardRendering": "the coming-to-be of the world" },
       "definition": {
-        "en": "The world began; it is not eternal. Attributed to al-Ghazālī in his dispute with the falāsifa.",
-        "tr": "Âlemin bir başlangıcı vardır; ezelî değildir. Gazâlî'ye, felâsife ile tartışmasında atfedilir."
+        "en": "The world is not pre-eternal: there was no world, and then there was one. On al-Ghazālī's account this is not merely what revelation teaches but what reason permits — he argues that an eternal world is impossible, and that the falāsifa's contrary conclusion misdescribes God.",
+        "tr": "Âlem kadîm değildir: önce âlem yoktu, sonra oldu. Gazâlî'ye göre bu yalnızca vahyin öğrettiği şey değil, aklın izin verdiği şeydir — ezelî bir âlemin imkânsız olduğunu ve felâsifenin aksi yöndeki sonucunun Tanrı'yı yanlış betimlediğini savunur."
       },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition-in-proponents-own-terms",
-        "arguments",
-        "objections",
-        "sourceTerm"
-      ],
+      "epistemicStatus": "settled",
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.14). The research names the debate and its two sides and gives no further detail; nothing beyond that is asserted here.",
-          "kind": "reference-work"
-        }
+        { "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy — on the Incoherence of the Philosophers and the world's pre-eternity", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/al-ghazali/", "urlVerified": true }
       ]
     },
     {
       "id": "P_world_eternal",
+      "slug": "eternal",
       "answersQuestion": "Q_eternity_world",
-      "label": {
-        "en": "The world is eternal",
-        "tr": "Âlem ezelîdir"
-      },
-      "shortLabel": {
-        "en": "Eternal",
-        "tr": "Ezelî"
-      },
+      "label": { "en": "The world has always existed", "tr": "Âlem her zaman var olmuştur" },
+      "shortLabel": { "en": "Pre-eternal", "tr": "Kadîm" },
+      "sourceTerm": { "sourceScript": "قدم العالم", "script": "Arab", "lang": "ar", "translit": "qidam al-ʿālam", "standardRendering": "the pre-eternity of the world" },
       "definition": {
-        "en": "The world has no beginning in time. Attributed to the falāsifa, and to Ibn Rushd in his reply to al-Ghazālī.",
-        "tr": "Âlemin zaman içinde bir başlangıcı yoktur. Felâsifeye ve Gazâlî'ye verdiği yanıtta İbn Rüşd'e atfedilir."
+        "en": "The world has no beginning in the past. Ibn Rushd follows Aristotle here, and holds it compatible with the world having a first cause: a cause can be prior in explanation without being prior in time. He distinguishes essentially ordered causes, which must have a first member, from accidentally ordered ones running back through time, which need not.",
+        "tr": "Âlemin geçmişte bir başlangıcı yoktur. İbn Rüşd bu konuda Aristoteles'i izler ve bunun, âlemin bir ilk nedene sahip olmasıyla bağdaştığını savunur: bir neden, zamanda önce gelmeden açıklamada önce gelebilir. Zorunlu olarak ilk bir üyesi bulunması gereken özsel nedensel düzenleri, zamanda geriye giden ilineksel düzenlerden ayırır."
       },
-      "epistemicStatus": "uncertain",
-      "notYetWritten": [
-        "definition-in-proponents-own-terms",
-        "arguments",
-        "objections",
-        "sourceTerm"
-      ],
+      "epistemicStatus": "settled",
       "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.14).",
-          "kind": "reference-work"
-        }
+        { "citation": "Ibn Rushd (Averroes), Stanford Encyclopedia of Philosophy — on the eternal world and on essential versus accidental causal orderings", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/ibn-rushd/", "urlVerified": true }
       ]
     }
   ],
+
   "holds": [
     {
       "id": "H_ghazali_created",
       "thinker": "al_Ghazali",
       "position": "P_world_created",
-      "epistemicStatus": "uncertain",
+      "epistemicStatus": "settled",
       "qualification": {
-        "en": "the research names al-Ghazālī as one side of this debate and gives no passage; the attribution has not been checked against a text",
-        "tr": "araştırma Gazâlî'yi bu tartışmanın bir tarafı olarak anar ve hiçbir metin vermez; atıf bir metne karşı denetlenmemiştir"
+        "en": "argued in the Incoherence of the Philosophers against al-Fārābī and Avicenna, not against Aristotelianism as such",
+        "tr": "Tehâfütü'l-felâsife'de Fârâbî ve İbn Sînâ'ya karşı savunulmuştur; genel olarak Aristotelesçiliğe karşı değil"
       },
       "scholarlyDispute": {
-        "en": "Not yet written. What al-Ghazālī's own argument was, and which of the falāsifa he was answering, is not established here.",
-        "tr": "Henüz yazılmadı. Gazâlî'nin kendi argümanının ne olduğu ve felâsifeden hangisine yanıt verdiği burada tespit edilmemiştir."
+        "en": "The Stanford Encyclopedia notes that describing the Incoherence as a 'refutation' has encouraged the mistaken assumption that al-Ghazālī opposed Aristotelianism wholesale. His target is narrower: that the falāsifa's twenty key teachings are not demonstratively proven by their own standard.",
+        "tr": "Stanford Ansiklopedisi, Tehâfüt'ü bir 'reddiye' diye nitelemenin, Gazâlî'nin Aristotelesçiliğe toptan karşı çıktığı yanlış varsayımını beslediğini belirtir. Hedefi daha dardır: felâsifenin yirmi temel öğretisinin, kendi ölçütlerine göre burhanla kanıtlanmadığı."
       },
-      "sources": [
-        {
-          "citation": "Research brief, Deliverable A.3 (q.14)",
-          "kind": "reference-work"
-        }
-      ]
+      "sourcePassages": ["PSG_sep_ghazali", "PSG_tahafut_falasifa_locus"]
     },
     {
       "id": "H_ibn_rushd_eternal",
       "thinker": "Ibn_Rushd",
       "position": "P_world_eternal",
-      "epistemicStatus": "uncertain",
+      "epistemicStatus": "settled",
       "qualification": {
-        "en": "the research names Ibn Rushd as the other side and gives no passage",
-        "tr": "araştırma İbn Rüşd'ü karşı taraf olarak anar ve hiçbir metin vermez"
+        "en": "following Aristotle, and defended against al-Ghazālī in the Incoherence of the Incoherence",
+        "tr": "Aristoteles'i izleyerek ve Tehâfütü't-tehâfüt'te Gazâlî'ye karşı savunarak"
       },
-      "scholarlyDispute": {
-        "en": "Not yet written.",
-        "tr": "Henüz yazılmadı."
+      "sourcePassages": ["PSG_sep_ibn_rushd", "PSG_tahafut_tahafut_locus"]
+    },
+    {
+      "id": "H_farabi_eternal",
+      "thinker": "al_Farabi",
+      "position": "P_world_eternal",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "taught, following Aristotle, that the world has no beginning in the past",
+        "tr": "Aristoteles'i izleyerek âlemin geçmişte bir başlangıcı olmadığını öğretmiştir"
       },
-      "sources": [
+      "sourcePassages": ["PSG_sep_ghazali"]
+    },
+    {
+      "id": "H_ibn_sina_eternal",
+      "thinker": "Ibn_Sina",
+      "position": "P_world_eternal",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "continued al-Fārābī's approach; one of the two philosophers the Incoherence is aimed at",
+        "tr": "Fârâbî'nin yaklaşımını sürdürmüştür; Tehâfüt'ün hedef aldığı iki filozoftan biridir"
+      },
+      "sourcePassages": ["PSG_sep_ghazali"]
+    }
+  ],
+
+  "arguments": [
+    {
+      "id": "ARG_no_sudden_agency",
+      "supports": "P_world_eternal",
+      "label": { "en": "A changeless cause cannot begin to act", "tr": "Değişmez bir neden eylemeye başlayamaz" },
+      "statement": {
+        "en": "If the first cause is eternal and wholly changeless, its causing must be eternal too. To say it existed unchanged for an eternity and then began to act is to posit a change in something that by hypothesis cannot change. Ibn Rushd takes that to be incoherent — so the world it causes has no beginning either.",
+        "tr": "İlk neden ezelî ve tümüyle değişmez ise, nedenselliği de ezelî olmalıdır. Onun bir ezel boyunca değişmeden var olduğunu, sonra eylemeye başladığını söylemek, varsayım gereği değişemeyen bir şeyde değişim öne sürmektir. İbn Rüşd bunu tutarsız bulur — dolayısıyla nedenlediği âlemin de bir başlangıcı yoktur."
+      },
+      "attributedTo": ["Ibn_Rushd"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_ibn_rushd"]
+    },
+    {
+      "id": "ARG_not_demonstrated",
+      "supports": "P_world_created",
+      "label": { "en": "The philosophers have not met their own standard", "tr": "Filozoflar kendi ölçütlerini karşılamadı" },
+      "statement": {
+        "en": "The falāsifa claim demonstration — burhān, the highest grade of proof they themselves define. Al-Ghazālī's Incoherence examines twenty of their key teachings and argues that none of the supporting arguments reaches that standard: they rest on premises accepted among the falāsifa but not established by reason. The world's pre-eternity is the first of the twenty.",
+        "tr": "Felâsife burhan iddia eder — kendi tanımladıkları en yüksek kanıt derecesi. Gazâlî'nin Tehâfüt'ü onların yirmi temel öğretisini inceler ve destekleyici argümanların hiçbirinin bu ölçüte ulaşmadığını savunur: bunlar felâsife arasında kabul gören, ama akılla temellendirilmemiş öncüllere dayanır. Âlemin kıdemi bu yirmi konunun ilkidir."
+      },
+      "attributedTo": ["al_Ghazali"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_ghazali"]
+    }
+  ],
+
+  "objections": [
+    {
+      "id": "OBJ_aristotle_demonstrated",
+      "targets": "P_world_created",
+      "strongest": true,
+      "label": { "en": "By al-Ghazālī's own rule, this one is settled", "tr": "Gazâlî'nin kendi kuralına göre bu konu kapanmıştır" },
+      "statement": {
+        "en": "Ibn Rushd accepts al-Ghazālī's rule that a valid demonstration licenses reading the Qurʾān allegorically — then argues that Aristotle had already demonstrated the world's pre-eternity. On al-Ghazālī's own terms that would make it a philosophical and a religious doctrine at once, and the charge against it collapses.",
+        "tr": "İbn Rüşd, geçerli bir burhanın Kur'an'ı mecazi okumaya izin verdiği yolundaki Gazâlî kuralını kabul eder — ardından Aristoteles'in âlemin kıdemini zaten kanıtladığını savunur. Gazâlî'nin kendi ölçütlerine göre bu, konuyu aynı anda felsefi ve dinî bir öğreti kılar ve ona yöneltilen suçlama çöker."
+      },
+      "attributedTo": ["Ibn_Rushd"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_ghazali", "PSG_sep_ibn_rushd"],
+      "standardReplies": [
         {
-          "citation": "Research brief, Deliverable A.3 (q.14)",
-          "kind": "reference-work"
+          "en": "Deny that the demonstration succeeds — which is what the Incoherence spends its length doing, teaching by teaching.",
+          "tr": "Burhanın başarılı olduğunu reddet — Tehâfüt'ün baştan sona, öğreti öğreti yaptığı şey budur."
+        },
+        {
+          "en": "Note what al-Ghazālī later left out. The Stanford Encyclopedia records that the world's pre-eternity is no longer raised in his later, more systematic work on the boundaries of Islam, the Decisive Criterion. What that silence means is not established here.",
+          "tr": "Gazâlî'nin sonradan neyi dışarıda bıraktığına dikkat edin. Stanford Ansiklopedisi, âlemin kıdemi konusunun, İslam'ın sınırlarına dair daha geç ve daha sistematik eseri Faysalü't-tefrika'da artık gündeme gelmediğini kaydeder. Bu sessizliğin ne anlama geldiği burada tespit edilmemiştir."
         }
       ]
+    },
+    {
+      "id": "OBJ_eternal_impossible",
+      "targets": "P_world_eternal",
+      "strongest": true,
+      "label": { "en": "An eternal world would misdescribe God", "tr": "Ezelî bir âlem Tanrı'yı yanlış betimler" },
+      "statement": {
+        "en": "Al-Ghazālī does not stop at saying the philosophers failed to prove pre-eternity. He argues that an eternal world is impossible, and that this in turn shows the falāsifa's conception of God to be wrong — a God who could only ever have acted eternally is not a God who creates.",
+        "tr": "Gazâlî, filozofların kıdemi kanıtlayamadığını söylemekle yetinmez. Ezelî bir âlemin imkânsız olduğunu ve bunun da felâsifenin Tanrı tasavvurunun yanlış olduğunu gösterdiğini savunur — yalnızca ezelî olarak eyleyebilmiş bir Tanrı, yaratan bir Tanrı değildir."
+      },
+      "attributedTo": ["al_Ghazali"],
+      "epistemicStatus": "settled",
+      "sourcePassages": ["PSG_sep_ghazali"]
     }
   ]
 }
