@@ -77,12 +77,18 @@ function SideColumn({ side }: { side: IntersectionSide }) {
           : name}
       </p>
       {holding?.thinker.nameSourceScript && (
-        <p
-          className={holding.thinker.script === 'Arab' ? 'script-arab' : undefined}
-          lang={holding.thinker.script === 'Arab' ? 'ar' : undefined}
-          dir={holding.thinker.script === 'Arab' ? 'rtl' : undefined}
-        >
-          {holding.thinker.nameSourceScript}
+        // The paragraph stays LTR and the Arabic is an inline isolate inside it. Making
+        // the block itself dir="rtl" is correct bidi but wrong layout here: it right-
+        // aligns the name to the far edge of an otherwise left-aligned column, so the
+        // script detaches from the person it names.
+        <p className="ixn__script">
+          <span
+            className={holding.thinker.script === 'Arab' ? 'script-arab' : undefined}
+            lang={holding.thinker.script === 'Arab' ? 'ar' : undefined}
+            dir={holding.thinker.script === 'Arab' ? 'rtl' : undefined}
+          >
+            {holding.thinker.nameSourceScript}
+          </span>
         </p>
       )}
       <p className="ixn__chain">

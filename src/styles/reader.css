@@ -147,6 +147,7 @@
 .ixn__join { width: 1px; align-self: stretch; background: var(--rule-strong); }
 .ixn__who { font-family: var(--display); font-size: 1.15rem; margin: 0 0 0.15rem; line-height: 1.2; }
 .ixn__who a { color: inherit; text-decoration-color: var(--rule-strong); }
+.ixn__script { margin: 0 0 0.25rem; }
 .ixn__chain { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); margin: 0 0 0.4rem; }
 .ixn__pos { margin: 0 0 0.3rem; font-size: var(--t-small); }
 .ixn__qual { font-style: italic; font-size: var(--t-small); color: var(--ink-2); margin: 0; }
