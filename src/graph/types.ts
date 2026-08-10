@@ -36,6 +36,7 @@ export interface Side {
 
 export interface Question {
   id: string;
+  slug?: string;
   canonical: LocalizedString;
   plain: LocalizedString;
   technicalName?: LocalizedString;
@@ -50,6 +51,7 @@ export interface Question {
 
 export interface Position {
   id: string;
+  slug?: string;
   label: LocalizedString;
   definition: LocalizedString;
   answersQuestion?: string;
@@ -65,6 +67,7 @@ export interface Thinker {
   id: string;
   name: string;
   nameSourceScript?: string;
+  searchAliases?: string[];
   script?: ScriptCode;
   died?: string;
   born?: string;
@@ -175,6 +178,10 @@ export interface Passage {
   license?: string;
   attested?: boolean;
   locusUnverified?: boolean;
+  url?: string;
+  urlVerified?: boolean;
+  /** Cited and linked, text deliberately not reproduced (SEP/IEP licensing). */
+  linkOnly?: boolean;
   tier?: 'primary' | 'secondary' | 'reference-work';
   perspectiveFlag?: string;
   partOf?: string;
@@ -184,6 +191,9 @@ export interface Passage {
 
 export interface Concept {
   id: string;
+  slug?: string;
+  /** Exact strings to auto-gloss in body text. Authored, not inferred. */
+  surfaceForms?: string[];
   term: ScriptTerm;
   commonRendering?: string;
   semanticRange?: LocalizedString;

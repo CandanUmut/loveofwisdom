@@ -42,12 +42,16 @@ export interface GraphQuery {
 }
 
 /** How well a claim is evidenced. Drives the apparatus mark the reader sees. */
-export type EvidenceLevel = 'quoted' | 'unverified-locus' | 'none';
+export type EvidenceLevel = 'quoted' | 'linked' | 'unverified-locus' | 'none';
 
 export function evidenceLevel(g: GraphQuery, ids: string[] | undefined): EvidenceLevel {
   const list = g.passages(ids);
   if (list.length === 0) return 'none';
-  return list.some((p) => typeof p.text === 'string' && p.text.length > 0) ? 'quoted' : 'unverified-locus';
+  if (list.some((p) => typeof p.text === 'string' && p.text.length > 0)) return 'quoted';
+  // A retrieved, resolvable link is real evidence — weaker than a quotation, because the
+  // reader has to follow it, but stronger than a locus nobody could check.
+  if (list.some((p) => p.linkOnly && p.url)) return 'linked';
+  return 'unverified-locus';
 }
 
 export class InMemoryGraph implements GraphQuery {
@@ -113,7 +117,7 @@ export class InMemoryGraph implements GraphQuery {
     if (all.length === 0) return undefined;
     const score = (o: Objection) =>
       (o.strongest ? 100 : 0) +
-      ({ quoted: 20, 'unverified-locus': 10, none: 0 } as const)[evidenceLevel(this, o.sourcePassages)] +
+      ({ quoted: 20, linked: 15, 'unverified-locus': 10, none: 0 } as const)[evidenceLevel(this, o.sourcePassages)] +
       ((o.attributedTo ?? []).length > 0 ? 5 : 0) +
       (direct.includes(o) ? 2 : 0);
     return [...all].sort((a, b) => score(b) - score(a))[0];

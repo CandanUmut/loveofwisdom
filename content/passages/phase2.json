@@ -1,0 +1,119 @@
+{
+  "$fragment": "Sources for the three questions filled in Phase 2. Every `url` here was retrieved with curl during authoring and is re-fetched by scripts/verify-citations.mjs. SEP and IEP entries appear as `linkOnly` passages: they are cited and linked, and their text is deliberately not reproduced (research E.1 — licensed for linking and fair-use quotation, not redistribution). Where a claim rests on a primary text nobody here has checked against a named edition, the passage carries `locusUnverified` and no text.",
+  "texts": [
+    { "id": "TXT_tahafut_falasifa", "title": "The Incoherence of the Philosophers", "titleSourceScript": "تهافت الفلاسفة", "author": "al_Ghazali", "numbering": "discussion" },
+    { "id": "TXT_tahafut_tahafut", "title": "The Incoherence of the Incoherence", "titleSourceScript": "تهافت التهافت", "author": "Ibn_Rushd", "numbering": "discussion / Bouyges pagination" },
+    { "id": "TXT_nyaya_sutra", "title": "Nyāya-sūtra", "titleSourceScript": "न्यायसूत्र", "author": "Gautama_Aksapada", "numbering": "book.chapter.sūtra" }
+  ],
+  "passages": [
+    {
+      "id": "PSG_sep_ghazali",
+      "citation": "Frank Griffel, 'Al-Ghazālī', The Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/al-ghazali/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_sep_ibn_rushd",
+      "citation": "Ibn Rushd (Averroes), The Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/ibn-rushd/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_sep_causation",
+      "citation": "Arabic and Islamic Philosophy of Causation, The Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_sep_epistemology_india",
+      "citation": "Epistemology in Classical Indian Philosophy, The Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/epistemology-india/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_iep_nyaya",
+      "citation": "Nyāya, The Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/nyaya/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_sep_freewill",
+      "citation": "Free Will, The Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/freewill/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_iep_freewill",
+      "citation": "Free Will, The Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/freewill/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_iep_ghazali",
+      "citation": "Al-Ghazali, The Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/al-ghazali/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+    {
+      "id": "PSG_iep_ibn_rushd",
+      "citation": "Ibn Rushd (Averroes), The Internet Encyclopedia of Philosophy",
+      "url": "https://iep.utm.edu/ibn-rushd-averroes/",
+      "urlVerified": true,
+      "linkOnly": true,
+      "tier": "reference-work",
+      "license": "linked and cited; text not reproduced"
+    },
+
+    {
+      "id": "PSG_tahafut_falasifa_locus",
+      "citation": "al-Ghazālī, Tahāfut al-falāsifa (The Incoherence of the Philosophers), discussion 1, on the world's pre-eternity",
+      "locator": "discussion 1 — locus unverified",
+      "partOf": "TXT_tahafut_falasifa",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    },
+    {
+      "id": "PSG_tahafut_tahafut_locus",
+      "citation": "Ibn Rushd, Tahāfut al-tahāfut (The Incoherence of the Incoherence), reply to discussion 1",
+      "locator": "discussion 1 — locus unverified",
+      "partOf": "TXT_tahafut_tahafut",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    },
+    {
+      "id": "PSG_nyaya_sutra_locus",
+      "citation": "Gautama, Nyāya-sūtra, on the four pramāṇas",
+      "locator": "1.1.3 — locus unverified",
+      "partOf": "TXT_nyaya_sutra",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    }
+  ]
+}

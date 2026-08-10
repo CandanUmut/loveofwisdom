@@ -3,7 +3,13 @@
   "concepts": [
     {
       "id": "akhlaq",
-      "term": { "sourceScript": "أخلاق", "script": "Arab", "lang": "ar", "translit": "akhlāq", "standardRendering": "ethics" },
+      "term": {
+        "sourceScript": "أخلاق",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "akhlāq",
+        "standardRendering": "ethics"
+      },
       "commonRendering": "ethics",
       "tradition": "islamic",
       "semanticRange": {
@@ -18,11 +24,28 @@
         "en": "Render as \"ethics (akhlāq — character, disposition)\". Do not silently equate the two.",
         "tr": "\"Etik (akhlāq — karakter, mizaç)\" biçiminde gösterin. İkisini sessizce eşitlemeyin."
       },
-      "sources": [{ "citation": "St Andrews Encyclopaedia of Theology, 'Ethics in Islam'", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "St Andrews Encyclopaedia of Theology, 'Ethics in Islam'",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "akhlāq",
+        "akhlaq",
+        "أخلاق"
+      ],
+      "slug": "akhlaq"
     },
     {
       "id": "aql",
-      "term": { "sourceScript": "عقل", "script": "Arab", "lang": "ar", "translit": "ʿaql", "standardRendering": "reason" },
+      "term": {
+        "sourceScript": "عقل",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "ʿaql",
+        "standardRendering": "reason"
+      },
       "commonRendering": "reason",
       "tradition": "islamic",
       "semanticRange": {
@@ -37,11 +60,28 @@
         "en": "Render as \"reason/intellect (ʿaql)\".",
         "tr": "\"Akıl/idrak (ʿaql)\" biçiminde gösterin."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "ʿaql",
+        "aql",
+        "عقل"
+      ],
+      "slug": "aql"
     },
     {
       "id": "nafs",
-      "term": { "sourceScript": "نفس", "script": "Arab", "lang": "ar", "translit": "nafs", "standardRendering": "soul" },
+      "term": {
+        "sourceScript": "نفس",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "nafs",
+        "standardRendering": "soul"
+      },
       "commonRendering": "soul / self",
       "tradition": "islamic",
       "semanticRange": {
@@ -56,11 +96,29 @@
         "en": "Render as \"self/soul (nafs)\" with the tripartite gloss.",
         "tr": "Üçlü açıklamayla birlikte \"benlik/ruh (nafs)\" biçiminde gösterin."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D; Qurʾān 12:53", "kind": "primary-text" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D; Qurʾān 12:53",
+          "kind": "primary-text"
+        }
+      ],
+      "surfaceForms": [
+        "nafs",
+        "نفس",
+        "al-nafs al-ammāra",
+        "nafs al-ammara"
+      ],
+      "slug": "nafs"
     },
     {
       "id": "adl",
-      "term": { "sourceScript": "عدل", "script": "Arab", "lang": "ar", "translit": "ʿadl", "standardRendering": "justice" },
+      "term": {
+        "sourceScript": "عدل",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "ʿadl",
+        "standardRendering": "justice"
+      },
       "commonRendering": "justice",
       "tradition": "islamic",
       "semanticRange": {
@@ -75,11 +133,28 @@
         "en": "Gloss as \"justice / divine justice (ʿadl)\".",
         "tr": "\"Adalet / ilahi adalet (ʿadl)\" biçiminde açıklayın."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "ʿadl",
+        "adl",
+        "عدل"
+      ],
+      "slug": "adl"
     },
     {
       "id": "dharma",
-      "term": { "sourceScript": "धर्म", "script": "Deva", "lang": "sa", "translit": "dharma", "standardRendering": "duty" },
+      "term": {
+        "sourceScript": "धर्म",
+        "script": "Deva",
+        "lang": "sa",
+        "translit": "dharma",
+        "standardRendering": "duty"
+      },
       "commonRendering": "duty / law",
       "tradition": "indian",
       "semanticRange": {
@@ -94,14 +169,33 @@
         "en": "Keep dharma untranslated with a contextual gloss. Never render it with a single word.",
         "tr": "Dharma'yı bağlamsal bir açıklamayla birlikte çevirmeden bırakın. Asla tek bir sözcükle karşılamayın."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "dharma",
+        "धर्म"
+      ],
+      "slug": "dharma"
     },
     {
       "id": "ren",
-      "term": { "sourceScript": "仁", "script": "Hani", "lang": "zh", "translit": "rén", "standardRendering": "benevolence" },
+      "term": {
+        "sourceScript": "仁",
+        "script": "Hani",
+        "lang": "zh",
+        "translit": "rén",
+        "standardRendering": "benevolence"
+      },
       "commonRendering": "benevolence / humaneness",
       "tradition": "chinese",
-      "cluster": ["yi", "li"],
+      "cluster": [
+        "yi",
+        "li"
+      ],
       "semanticRange": {
         "en": "Benevolence, humaneness — \"how two people should treat one another\". The Analects' most fundamental and hardest-to-translate term.",
         "tr": "İyilikseverlik, insanilik — \"iki insanın birbirine nasıl davranması gerektiği\". Konuşmalar'ın en temel ve çevrilmesi en zor terimi."
@@ -115,16 +209,37 @@
         "tr": "Bir açıklamayla birlikte çevirmeden bırakın ve ren/yi/li kümesini bir bütün olarak gösterin."
       },
       "sources": [
-        { "citation": "Routledge Encyclopedia of Philosophy, 'Confucian philosophy'", "kind": "reference-work" },
-        { "citation": "Encyclopedia.com, 'Ren and Yi'", "kind": "reference-work" }
-      ]
+        {
+          "citation": "Routledge Encyclopedia of Philosophy, 'Confucian philosophy'",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Encyclopedia.com, 'Ren and Yi'",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "ren",
+        "rén",
+        "仁"
+      ],
+      "slug": "ren"
     },
     {
       "id": "yi",
-      "term": { "sourceScript": "義", "script": "Hani", "lang": "zh", "translit": "yì", "standardRendering": "righteousness" },
+      "term": {
+        "sourceScript": "義",
+        "script": "Hani",
+        "lang": "zh",
+        "translit": "yì",
+        "standardRendering": "righteousness"
+      },
       "commonRendering": "rightness / righteousness",
       "tradition": "chinese",
-      "cluster": ["ren", "li"],
+      "cluster": [
+        "ren",
+        "li"
+      ],
       "semanticRange": {
         "en": "Rightness, righteousness, fairness in the exercise of authority.",
         "tr": "Doğruluk, dürüstlük, otoritenin kullanımında adillik."
@@ -137,14 +252,33 @@
         "en": "Leave untranslated with a gloss; show alongside ren and li.",
         "tr": "Bir açıklamayla birlikte çevirmeden bırakın; ren ve li ile birlikte gösterin."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "yì",
+        "義"
+      ],
+      "slug": "yi"
     },
     {
       "id": "li",
-      "term": { "sourceScript": "禮", "script": "Hani", "lang": "zh", "translit": "lǐ", "standardRendering": "etiquette" },
+      "term": {
+        "sourceScript": "禮",
+        "script": "Hani",
+        "lang": "zh",
+        "translit": "lǐ",
+        "standardRendering": "etiquette"
+      },
       "commonRendering": "ritual propriety / rites",
       "tradition": "chinese",
-      "cluster": ["ren", "yi"],
+      "cluster": [
+        "ren",
+        "yi"
+      ],
       "semanticRange": {
         "en": "Ritual propriety; the rites.",
         "tr": "Ritüel uygunluk; ayinler."
@@ -157,7 +291,17 @@
         "en": "Leave untranslated with a gloss; show alongside ren and yi.",
         "tr": "Bir açıklamayla birlikte çevirmeden bırakın; ren ve yi ile birlikte gösterin."
       },
-      "sources": [{ "citation": "Research brief, Deliverable D", "kind": "reference-work" }]
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable D",
+          "kind": "reference-work"
+        }
+      ],
+      "surfaceForms": [
+        "lǐ",
+        "禮"
+      ],
+      "slug": "li"
     }
   ]
 }

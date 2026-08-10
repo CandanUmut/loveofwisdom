@@ -3,10 +3,12 @@ import { Link, useParams } from 'react-router-dom';
 import { graph } from '../app/graph';
 import { usePrefs } from '../app/prefs';
 import { positionView, questionView } from '../graph/views';
+import { questionBySlug, questionSlug } from '../graph/slugs';
 import { evaluate, saveCommitment, type Answers } from '../lib/tracer';
 import { Sigil, ApparatusProvider, ApparatusRail } from '../components/Apparatus';
 import { EpistemicMark } from '../components/Epistemic';
-import { IntersectionCard } from './Intersections';
+import { IntersectionCard } from '../components/Intersection';
+import { PositionCard } from '../components/PositionCard';
 
 type Step = 'locate' | 'results' | 'confront' | 'join' | 'apply';
 
@@ -18,10 +20,11 @@ type Step = 'locate' | 'results' | 'confront' | 'join' | 'apply';
  *   4 apply     the position translated into an ordinary decision
  */
 export function TracerPage() {
-  const { id = '' } = useParams();
+  const { slug = '' } = useParams();
   const { s, t, d } = usePrefs();
 
-  const qv = questionView(graph, id);
+  const question = questionBySlug(graph, slug);
+  const qv = question ? questionView(graph, question.id) : undefined;
   const tracer = qv?.tracer;
 
   const [step, setStep] = useState<Step>('locate');
@@ -56,7 +59,7 @@ export function TracerPage() {
   return (
     <article className="tracer">
       <p className="hero__kicker">
-        <Link to={`/questions/${qv.question.id}`}>{t(qv.question.canonical)}</Link>
+        <Link to={`/questions/${questionSlug(qv.question)}`}>{t(qv.question.canonical)}</Link>
       </p>
 
       <ol className="tracer__steps">
@@ -289,7 +292,7 @@ export function TracerPage() {
             </div>
           ) : (
             pv.intersections.map((iv) => (
-              <IntersectionCard key={iv.equivalence.id ?? iv.a.ref + iv.b.ref} view={iv} reveal />
+              <IntersectionCard key={iv.equivalence.id ?? iv.a.ref + iv.b.ref} view={iv} />
             ))
           )}
 
@@ -335,6 +338,11 @@ export function TracerPage() {
             </p>
           )}
 
+          <section style={{ marginTop: '2rem' }} aria-labelledby="card-heading">
+            <h2 className="section-label" id="card-heading">{s.cardCopy}</h2>
+            <PositionCard view={pv} />
+          </section>
+
           <p className="hero__actions">
             <button
               type="button" className="btn btn--primary"
@@ -349,7 +357,7 @@ export function TracerPage() {
             >
               {s.tracerDone}
             </button>
-            <Link className="btn" to="/yours">{s.navYours}</Link>
+            <Link className="btn" to="/positions/mine">{s.navYours}</Link>
           </p>
           <p aria-live="polite">{saved ? s.tracerSaved : ''}</p>
         </section>

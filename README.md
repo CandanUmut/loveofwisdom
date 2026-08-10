@@ -11,8 +11,9 @@ grounded in revelation or in reason?), three deliberately awkward stubs, and the
 interaction that takes a reader from locating their own position, to the strongest
 objection to it, to the tradition they have joined, to what it asks of them on a Tuesday.
 
-See [`REPORT.md`](REPORT.md) for the build report and [`design/DESIGN.md`](design/DESIGN.md)
-for the design plan and its self-critique.
+See [`PHASE2.md`](PHASE2.md) for the current build report, [`REPORT.md`](REPORT.md) for the
+Phase 1 one, and [`design/DESIGN.md`](design/DESIGN.md) for the design plan and its
+self-critique.
 
 ## Running it
 
@@ -22,6 +23,10 @@ npm run dev        # vite dev server
 npm run validate   # schema + graph integrity + font glyph coverage
 npm test           # acceptance, consistency and behaviour suites
 npm run build      # validate, typecheck, static build to dist/
+
+# Needs network; not part of the build:
+node scripts/verify-citations.mjs --strict   # re-fetch every cited URL
+node scripts/resolve-wikidata.mjs --verify   # re-check every Q-ID against Wikidata
 ```
 
 Fonts are self-hosted in `public/fonts` and committed. To refetch and re-verify them:
@@ -50,6 +55,26 @@ The site is served from a project subpath (`/loveofwisdom/`). Vite is configured
 subpath, at a domain root, and from `file://` — and no server rewrite rules are needed for
 deep links.
 
+## Routes
+
+```
+/                                 Home — a question, then a worked intersection
+/questions                        Index, grouped by domain
+/questions/:slug                  Framing: what is asked, why, how to read it
+/questions/:slug/:position        A position in the reading column
+/questions/:slug/compare?a=&b=    Two positions side by side
+/questions/:slug/locate           The four-step interaction
+/intersections                    Cross-tradition convergences
+/thinkers/:slug                   Positions held, qualifications visible
+/terms  ·  /terms/:slug           Terminology index and entries
+/positions/mine                   The personal map
+/search?q=                        Plain-language search
+/about                            Editorial stance and the integrity report
+```
+
+Phase 1 URLs still resolve: `/positions/:id` redirects under its question, `/yours`
+reaches the personal map.
+
 ## Layout
 
 ```
@@ -64,8 +89,10 @@ content/                 flat JSON, loaded at build time — no CMS, no runtime 
   _acceptance/           the verbatim research F.5 seed, used only as a test fixture
 schema.json              the content contract, with the CIDOC-CRM / SKOS mapping
 src/graph/               loader, query interface, view projections
-src/components/          apparatus rail, epistemic marks, the confluence
-src/pages/               home, question, position, intersections, thinker, terms, tracer
+src/components/          reader panes, position picker, apparatus, intersection cards,
+                         inline term glosses, the mark
+src/pages/               home, questions index, question + position, compare, search,
+                         intersections, thinker, terms, tracer, personal map
 scripts/                 content validation, font verification, Wikidata resolution
 tests/                   acceptance (F.5), seed consistency, behaviour
 ```
@@ -89,8 +116,12 @@ These are enforced by `npm run validate` and by the test suite, not just by conv
   `translation_artifact` — and a statement of where the two part ways. A "genuine"
   convergence with no divergence is flagged: it would be an identity claim.
 - **Wikidata Q-IDs are the primary key for people.** They are resolved against
-  wikidata.org (`scripts/resolve-wikidata.mjs`) or left `null`. They are never recalled
-  from memory. They are all currently `null` — see `REPORT.md`.
+  wikidata.org (`scripts/resolve-wikidata.mjs`) or left `null`, never recalled from
+  memory. All 22 are currently resolved, and `--verify` re-fetches each entity to confirm
+  it is a human whose label matches the name.
+- **Every cited URL has been retrieved.** `scripts/verify-citations.mjs` re-fetches them
+  all and additionally compares each page's title against the citation, so a URL that
+  resolves to the wrong page fails rather than passing as "reachable".
 - **Encyclopedia text is linked and cited, never ingested.** No SEP or IEP article text
   exists in this repository.
 

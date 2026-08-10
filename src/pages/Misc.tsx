@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { graph } from '../app/graph';
 import { usePrefs } from '../app/prefs';
 import { conceptView, thinkerView } from '../graph/views';
+import { conceptSlug, positionPath, questionSlug, thinkerBySlug, conceptBySlug } from '../graph/slugs';
 import { EpistemicMark, FallbackNote, NotYetWritten } from '../components/Epistemic';
 import { CoverageNote, ScriptTerm } from '../components/pieces';
 import { clearCommitments, loadCommitments, type Commitment } from '../lib/tracer';
@@ -10,15 +11,16 @@ import { clearCommitments, loadCommitments, type Commitment } from '../lib/trace
 /* ------------------------------- thinker ------------------------------- */
 
 export function Thinker() {
-  const { id = '' } = useParams();
+  const { slug = '' } = useParams();
   const { s, t, d } = usePrefs();
-  const view = thinkerView(graph, id);
-  if (!view) return <p className="empty">No thinker with id <code>{id}</code>.</p>;
+  const found = thinkerBySlug(graph, slug);
+  const view = found ? thinkerView(graph, found.id) : undefined;
+  if (!view) return <p className="empty" style={{ marginTop: '2rem' }}>No thinker named <code>{slug}</code>.</p>;
 
   const { thinker, tradition, school } = view;
 
   return (
-    <article>
+    <article className="page">
       <header style={{ marginBottom: '2rem' }}>
         <h1 className="hero__q" style={{ maxWidth: '20ch' }}>{d(thinker.name)}</h1>
         {thinker.nameSourceScript && (
@@ -61,7 +63,7 @@ export function Thinker() {
             {view.holdings.map((h) => (
               <li key={h.holds.id ?? h.position.id} style={{ display: 'block' }}>
                 <p style={{ margin: 0 }}>
-                  <Link to={`/positions/${h.position.id}`} style={{ fontWeight: 700 }}>
+                  <Link to={positionPath(graph, h.position)} style={{ fontWeight: 700 }}>
                     {t(h.position.label)}
                   </Link>
                   {' '}
@@ -75,7 +77,7 @@ export function Thinker() {
                 </p>
                 {h.question && (
                   <p className="prose-note" style={{ margin: '0.2rem 0 0' }}>
-                    <Link to={`/questions/${h.question.id}`}>{t(h.question.canonical)}</Link>
+                    <Link to={`/questions/${questionSlug(h.question)}`}>{t(h.question.canonical)}</Link>
                   </p>
                 )}
                 {h.holds.careerPhase && <p className="holder__qual">{t(h.holds.careerPhase)}</p>}
@@ -113,14 +115,14 @@ export function Terms() {
   const { s, t } = usePrefs();
   const concepts = graph.concepts();
   return (
-    <article>
-      <h1 className="hero__q" style={{ maxWidth: '20ch' }}>{s.termsTitle}</h1>
+    <article className="page">
+      <h1 className="hero__q">{s.termsTitle}</h1>
       <p className="lede" style={{ marginBottom: '2rem' }}>{s.termsBlurb}</p>
       <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gap: '1rem' }}>
         {concepts.map((c) => (
           <li key={c.id} className="panel" style={{ margin: 0 }}>
             <h2 className="position__title" style={{ marginTop: 0 }}>
-              <Link to={`/terms/${c.id}`}><ScriptTerm term={c.term} showRendering={false} /></Link>
+              <Link to={`/terms/${conceptSlug(c)}`}><ScriptTerm term={c.term} showRendering={false} /></Link>
             </h2>
             <p className="prose-note">{s.usuallyRendered}: {c.commonRendering ?? '—'}</p>
             {c.distortion && <p>{t(c.distortion)}</p>}
@@ -132,15 +134,16 @@ export function Terms() {
 }
 
 export function Concept() {
-  const { id = '' } = useParams();
+  const { slug = '' } = useParams();
   const { s, t, text } = usePrefs();
-  const view = conceptView(graph, id);
-  if (!view) return <p className="empty">No term with id <code>{id}</code>.</p>;
+  const found = conceptBySlug(graph, slug);
+  const view = found ? conceptView(graph, found.id) : undefined;
+  if (!view) return <p className="empty" style={{ marginTop: '2rem' }}>No term named <code>{slug}</code>.</p>;
   const { concept, cluster, tradition } = view;
   const rtl = concept.term.script === 'Arab';
 
   return (
-    <article>
+    <article className="page">
       <header style={{ marginBottom: '2rem' }}>
         <p className="hero__kicker"><Link to="/terms">{s.termsTitle}</Link></p>
         <h1 className="hero__q" style={{ maxWidth: '20ch' }}>
@@ -189,7 +192,7 @@ export function Concept() {
             <ul className="holders">
               {cluster.map((c) => (
                 <li key={c.id}>
-                  <Link to={`/terms/${c.id}`}><ScriptTerm term={c.term} /></Link>
+                  <Link to={`/terms/${conceptSlug(c)}`}><ScriptTerm term={c.term} /></Link>
                 </li>
               ))}
             </ul>
@@ -219,8 +222,8 @@ export function YourPositions() {
   useEffect(() => setItems(loadCommitments()), []);
 
   return (
-    <article>
-      <h1 className="hero__q" style={{ maxWidth: '20ch' }}>{s.yoursTitle}</h1>
+    <article className="page">
+      <h1 className="hero__q">{s.yoursTitle}</h1>
       <p className="lede" style={{ marginBottom: '2rem' }}>{s.yoursBlurb}</p>
 
       {items.length === 0 ? (
@@ -236,11 +239,11 @@ export function YourPositions() {
                 <li key={c.position} className="panel" style={{ margin: 0 }}>
                   {q && (
                     <p className="prose-note">
-                      <Link to={`/questions/${q.id}`}>{t(q.canonical)}</Link>
+                      <Link to={`/questions/${questionSlug(q)}`}>{t(q.canonical)}</Link>
                     </p>
                   )}
                   <h2 className="position__title">
-                    <Link to={`/positions/${p.id}`}>{t(p.label)}</Link>
+                    <Link to={positionPath(graph, p)}>{t(p.label)}</Link>
                   </h2>
                   <p className="prose-note">
                     {s.yoursCommitted}: {new Date(c.committedAt).toLocaleDateString()}
@@ -284,7 +287,7 @@ export function About() {
   for (const i of issues) byCode.set(i.code, (byCode.get(i.code) ?? 0) + 1);
 
   return (
-    <article style={{ maxWidth: '46rem' }}>
+    <article className="page" style={{ maxWidth: '46rem' }}>
       <h1 className="hero__q" style={{ maxWidth: '20ch' }}>How this is built</h1>
 
       <div className="stack">

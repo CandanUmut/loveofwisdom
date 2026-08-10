@@ -1,0 +1,186 @@
+{
+  "$fragment": "Terms added in Phase 2 so that no non-English word appears in content without an entry. `surfaceForms` lists the exact strings the inline glosser matches; matching is whole-word and diacritic-insensitive, so one form covers both the light and full display modes. Where a semantic range could not be written from a source it is left out and the term page says so — the entry still earns its place by carrying the script and the transliteration.",
+  "concepts": [
+    {
+      "id": "husn_qubh",
+      "slug": "husn-wa-qubh",
+      "term": { "sourceScript": "حسن وقبح", "script": "Arab", "lang": "ar", "translit": "ḥusn wa qubḥ", "standardRendering": "good and bad" },
+      "commonRendering": "goodness and badness",
+      "tradition": "islamic",
+      "surfaceForms": ["ḥusn wa qubḥ", "husn wa qubh", "ḥusn/qubḥ", "husn/qubh", "حسن وقبح"],
+      "semanticRange": {
+        "en": "The pair names the moral value of an act — its being good or bad — and by extension the whole dispute about where that value comes from. Ashʿarī writers deny that ḥusn and qubḥ are qualities inhering in acts, treating them instead as accidents; Muʿtazilī writers hold that acts carry them intrinsically.",
+        "tr": "Bu çift, bir eylemin ahlaki değerini — iyi ya da kötü oluşunu — ve dolayısıyla bu değerin nereden geldiğine dair bütün tartışmayı adlandırır. Eşʿarî yazarlar ḥusn ve qubḥ'un eylemlerde içkin nitelikler olduğunu reddedip onları araz sayar; Mutezilî yazarlar ise eylemlerin bunları özsel olarak taşıdığını savunur."
+      },
+      "distortion": {
+        "en": "Rendering the pair as \"right and wrong\" imports a deontic vocabulary the debate is precisely about. Much of the dispute turns on whether the value of an act and the obligation to do it are the same thing, and an English word that fuses them settles the question in advance.",
+        "tr": "Bu çifti \"doğru ve yanlış\" diye çevirmek, tartışmanın tam da konusu olan deontik bir söz dağarını beraberinde getirir. Anlaşmazlığın büyük kısmı, bir eylemin değeri ile onu yapma yükümlülüğünün aynı şey olup olmadığı üzerinedir; bu ikisini kaynaştıran bir İngilizce sözcük soruyu peşinen karara bağlar."
+      },
+      "interfaceRecommendation": { "en": "Keep the pair untranslated with a gloss: \"ḥusn wa qubḥ (the good and bad of an act)\".", "tr": "Çifti bir açıklamayla birlikte çevirmeden bırakın: \"ḥusn wa qubḥ (bir eylemin iyi ve kötüsü)\"." },
+      "sources": [{ "citation": "Research brief, Deliverables B.1 and D", "kind": "reference-work" }]
+    },
+    {
+      "id": "kasb",
+      "slug": "kasb",
+      "term": { "sourceScript": "كسب", "script": "Arab", "lang": "ar", "translit": "kasb", "standardRendering": "acquisition" },
+      "commonRendering": "acquisition",
+      "tradition": "islamic",
+      "surfaceForms": ["kasb", "كسب"],
+      "semanticRange": {
+        "en": "The term al-Ashʿarī and his followers used for the power by which a human being performs an action — a power God creates, for one specific act at one specific time, which the human then acquires. Al-Ghazālī presents acquisition as a middle position between denying created things any power and letting humans produce accidents outright.",
+        "tr": "Eşʿarî ve takipçilerinin, insanın bir fiili işlediği güç için kullandıkları terim — Tanrı'nın belirli bir anda belirli bir fiil için yarattığı ve insanın sonra kesbettiği bir güç. Gazâlî kesbi, yaratılmışlara hiç güç tanımamak ile insanın doğrudan araz üretmesine izin vermek arasında bir orta konum olarak sunar."
+      },
+      "distortion": {
+        "en": "\"Acquisition\" is a bare calque and carries none of the doctrinal weight. It also invites the assumption that something is transferred; what is at issue is whether the human contributes any causal production at all.",
+        "tr": "\"Kazanım\" düz bir öyküntüdür ve öğretisel ağırlığın hiçbirini taşımaz. Ayrıca bir şeyin devredildiği varsayımını davet eder; oysa mesele, insanın herhangi bir nedensel üretime katkıda bulunup bulunmadığıdır."
+      },
+      "interfaceRecommendation": { "en": "Render as \"kasb (acquisition)\" and explain on first use.", "tr": "\"Kesb (kazanım)\" biçiminde gösterin ve ilk kullanımda açıklayın." },
+      "sources": [{ "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }]
+    },
+    {
+      "id": "jabr",
+      "slug": "jabr",
+      "term": { "sourceScript": "جبر", "script": "Arab", "lang": "ar", "translit": "jabr", "standardRendering": "compulsion" },
+      "commonRendering": "compulsion, determinism",
+      "tradition": "islamic",
+      "surfaceForms": ["jabr", "جبر"],
+      "semanticRange": {
+        "en": "Compulsion: the view, as its opponents describe it, that created things have no causal power of their own. Al-Ghazālī places it at one end of a range with the Muʿtazilites at the other and acquisition in between.",
+        "tr": "Cebr: muhaliflerinin tarif ettiği biçimiyle, yaratılmış şeylerin kendilerine ait nedensel bir gücü olmadığı görüşü. Gazâlî onu bir uçta, Mutezile'yi öbür uçta, kesbi de aralarında konumlandırır."
+      },
+      "distortion": {
+        "en": "Translating jabr as \"determinism\" invites the reader to import the modern debate about whether prior states fix later ones. Jabr is a claim about where causal power lies, not about the sufficiency of antecedent conditions, and the two can come apart.",
+        "tr": "Cebri \"determinizm\" diye çevirmek, okuru önceki durumların sonrakileri belirleyip belirlemediğine dair modern tartışmayı içeri taşımaya davet eder. Cebr, öncül koşulların yeterliliği hakkında değil, nedensel gücün nerede bulunduğu hakkında bir iddiadır ve ikisi ayrışabilir."
+      },
+      "interfaceRecommendation": { "en": "Render as \"jabr (compulsion)\" and never as a bare \"determinism\".", "tr": "\"Cebr (zorlama)\" biçiminde gösterin, asla düz \"determinizm\" olarak değil." },
+      "sources": [{ "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }]
+    },
+    {
+      "id": "ikhtiyar",
+      "slug": "ikhtiyar",
+      "term": { "sourceScript": "اختيار", "script": "Arab", "lang": "ar", "translit": "ikhtiyār", "standardRendering": "choice" },
+      "commonRendering": "choice, free will",
+      "tradition": "islamic",
+      "surfaceForms": ["ikhtiyār", "ikhtiyar", "اختيار"],
+      "semanticRange": {
+        "en": "Choice — the pole of the kalām debate opposite jabr, and the term under which Muʿtazilite theologians defended the claim that human beings genuinely produce their own acts.",
+        "tr": "Seçim — kelam tartışmasında cebrin karşı kutbu ve Mutezilî kelamcıların, insanların gerçekten kendi fiillerini ürettiği iddiasını savundukları terim."
+      },
+      "distortion": {
+        "en": "\"Free will\" imports a modern package — alternative possibilities, sourcehood, moral responsibility — that the Arabic term does not itself carry. The Muʿtazilite argument runs through divine justice, not through the ability to have done otherwise.",
+        "tr": "\"Özgür irade\", Arapça terimin kendisinin taşımadığı modern bir paketi — alternatif imkânlar, kaynaklık, ahlaki sorumluluk — beraberinde getirir. Mutezilî argüman, başka türlü davranabilme yetisinden değil, ilahi adaletten geçer."
+      },
+      "interfaceRecommendation": { "en": "Render as \"ikhtiyār (choice)\".", "tr": "\"İhtiyâr (seçim)\" biçiminde gösterin." },
+      "sources": [{ "citation": "Arabic and Islamic Philosophy of Causation, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/arabic-islamic-causation/", "urlVerified": true }]
+    },
+    {
+      "id": "burhan",
+      "slug": "burhan",
+      "term": { "sourceScript": "برهان", "script": "Arab", "lang": "ar", "translit": "burhān", "standardRendering": "demonstration" },
+      "commonRendering": "demonstration, proof",
+      "tradition": "islamic",
+      "surfaceForms": ["burhān", "burhan", "برهان"],
+      "semanticRange": {
+        "en": "Demonstration in the strict Aristotelian sense: proof from necessary premises, the highest epistemological standard the falāsifa set for themselves. Al-Ghazālī's strategy in the Incoherence is to hold them to it rather than to reject it.",
+        "tr": "Katı Aristotelesçi anlamda burhan: zorunlu öncüllerden kanıt; felâsifenin kendileri için koyduğu en yüksek epistemolojik ölçüt. Gazâlî'nin Tehâfüt'teki stratejisi bu ölçütü reddetmek değil, onları ona bağlı kalmaya zorlamaktır."
+      },
+      "distortion": {
+        "en": "\"Proof\" in ordinary English is much weaker and covers any convincing argument. Reading burhān that loosely makes al-Ghazālī's charge look like mere disagreement rather than the technical accusation it is.",
+        "tr": "Gündelik İngilizcede \"kanıt\" çok daha zayıftır ve ikna edici her argümanı kapsar. Burhân'ı bu kadar gevşek okumak, Gazâlî'nin suçlamasını, olduğu teknik itham yerine sıradan bir görüş ayrılığı gibi gösterir."
+      },
+      "interfaceRecommendation": { "en": "Render as \"demonstration (burhān)\" and keep the technical sense visible.", "tr": "\"Burhan (demonstrasyon)\" biçiminde gösterin ve teknik anlamı görünür tutun." },
+      "sources": [{ "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/al-ghazali/", "urlVerified": true }]
+    },
+    {
+      "id": "falsafa",
+      "slug": "falsafa",
+      "term": { "sourceScript": "فلسفة", "script": "Arab", "lang": "ar", "translit": "falsafa", "standardRendering": "philosophy" },
+      "commonRendering": "philosophy",
+      "tradition": "islamic",
+      "surfaceForms": ["falsafa", "falāsifa", "falasifa", "فلسفة"],
+      "semanticRange": {
+        "en": "The Arabic Aristotelian and Neoplatonic tradition, and — as falāsifa, its practitioners — the specific movement al-Ghazālī addresses. It is a school with commitments, not a synonym for thinking philosophically.",
+        "tr": "Arap Aristotelesçi ve Yeni-Platoncu gelenek ve — felâsife olarak, onun mensupları — Gazâlî'nin muhatap aldığı belirli hareket. Felsefî düşünmenin eşanlamlısı değil, taahhütleri olan bir okuldur."
+      },
+      "distortion": {
+        "en": "Translating falsafa as \"philosophy\" makes al-Ghazālī's critique read as an attack on philosophy itself. It is an attack on a particular school's claim to have demonstrated particular theses.",
+        "tr": "Felsefe'yi (falsafa) \"philosophy\" diye çevirmek, Gazâlî'nin eleştirisini felsefenin kendisine saldırı gibi okutur. Oysa bu, belirli bir okulun belirli tezleri kanıtladığı iddiasına yönelik bir saldırıdır."
+      },
+      "interfaceRecommendation": { "en": "Keep falsafa and falāsifa untranslated; gloss on first use.", "tr": "Falsafa ve felâsifeyi çevirmeden bırakın; ilk kullanımda açıklayın." },
+      "sources": [{ "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/al-ghazali/", "urlVerified": true }]
+    },
+    {
+      "id": "kalam",
+      "slug": "kalam",
+      "term": { "sourceScript": "كلام", "script": "Arab", "lang": "ar", "translit": "kalām", "standardRendering": "theology" },
+      "commonRendering": "theology",
+      "tradition": "islamic",
+      "surfaceForms": ["kalām", "kalam", "mutakallimūn", "mutakallimun", "كلام"],
+      "semanticRange": {
+        "en": "Dialectical theology, argued rather than expounded; its practitioners are the mutakallimūn. Literally \"speech\".",
+        "tr": "Diyalektik kelam: açıklanan değil, tartışılan bir ilahiyat; mensupları mütekellimlerdir. Sözlük anlamı \"söz\"dür."
+      },
+      "distortion": {
+        "en": "The research brief flags that kalām does not map cleanly onto \"theology\": kalām is dialectical and apologetic in method, and the English word suggests systematic exposition of doctrine instead.",
+        "tr": "Araştırma, kelamın \"teoloji\"ye tam oturmadığını belirtir: kelam yöntem bakımından diyalektik ve savunmacıdır; İngilizce sözcük ise bunun yerine doktrinin sistematik açıklamasını çağrıştırır."
+      },
+      "interfaceRecommendation": { "en": "Render as \"kalām (dialectical theology)\".", "tr": "\"Kelam (diyalektik ilahiyat)\" biçiminde gösterin." },
+      "sources": [{ "citation": "Research brief, Deliverable C.1", "kind": "reference-work" }]
+    },
+    {
+      "id": "pramana",
+      "slug": "pramana",
+      "term": { "sourceScript": "प्रमाण", "script": "Deva", "lang": "sa", "translit": "pramāṇa", "standardRendering": "means of valid knowledge" },
+      "commonRendering": "means of valid knowledge",
+      "tradition": "indian",
+      "cluster": ["prama"],
+      "surfaceForms": ["pramāṇa", "pramana", "pramāṇas", "pramanas", "प्रमाण"],
+      "semanticRange": {
+        "en": "A knowledge source: a process that generates veridical cognition. Nyāya recognises four — perception, inference, analogical reasoning and testimony. The word is used such that the truth of the resulting cognition is implied: a process that yields a false belief is not a pramāṇa that went wrong, it is not a pramāṇa.",
+        "tr": "Bir bilgi kaynağı: doğru bilgi üreten bir süreç. Nyāya bunlardan dördünü tanır — algı, çıkarım, benzetmeye dayalı akıl yürütme ve tanıklık. Sözcük, ortaya çıkan bilginin doğruluğunu îma edecek biçimde kullanılır: yanlış bir inanç veren süreç, yanlış giden bir pramāṇa değildir; pramāṇa değildir."
+      },
+      "distortion": {
+        "en": "\"Means of valid knowledge\" is serviceable but heavy, and \"source of knowledge\" in English does not carry the built-in success condition. Treating a pramāṇa as merely a way of forming beliefs loses what makes the theory a reliabilism.",
+        "tr": "\"Geçerli bilgi aracı\" işlevseldir ama ağırdır ve İngilizcede \"bilgi kaynağı\" içerilmiş başarı koşulunu taşımaz. Pramāṇa'yı yalnızca inanç oluşturmanın bir yolu saymak, kuramı bir güvenilircilik yapan şeyi kaybettirir."
+      },
+      "interfaceRecommendation": { "en": "Keep pramāṇa untranslated with the gloss \"knowledge source\".", "tr": "Pramāṇa'yı \"bilgi kaynağı\" açıklamasıyla çevirmeden bırakın." },
+      "sources": [
+        { "citation": "Epistemology in Classical Indian Philosophy, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/epistemology-india/", "urlVerified": true },
+        { "citation": "Nyāya, Internet Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://iep.utm.edu/nyaya/", "urlVerified": true }
+      ]
+    },
+    {
+      "id": "prama",
+      "slug": "prama",
+      "term": { "sourceScript": "प्रमा", "script": "Deva", "lang": "sa", "translit": "pramā", "standardRendering": "knowledge" },
+      "commonRendering": "knowledge",
+      "tradition": "indian",
+      "cluster": ["pramana"],
+      "surfaceForms": ["pramā", "prama", "प्रमा"],
+      "semanticRange": {
+        "en": "The result of a knowledge source — the veridical cognition a pramāṇa produces. The Stanford Encyclopedia describes this as a technical usage matching the analytic uses of \"knowledge\" in English practically perfectly, which is why the claim that Indian epistemology refuses the Western question needs care.",
+        "tr": "Bir bilgi kaynağının sonucu — bir pramāṇa'nın ürettiği doğru biliş. Stanford Ansiklopedisi bunu, İngilizcedeki \"bilgi\" kullanımlarıyla neredeyse tam örtüşen teknik bir kullanım olarak tanımlar; Hint epistemolojisinin Batılı soruyu reddettiği iddiasının dikkat gerektirmesinin nedeni budur."
+      },
+      "interfaceRecommendation": { "en": "Render as \"pramā (knowledge)\" and note the near-match rather than hiding it.", "tr": "\"Pramā (bilgi)\" biçiminde gösterin ve yakın örtüşmeyi gizlemek yerine belirtin." },
+      "sources": [{ "citation": "Epistemology in Classical Indian Philosophy, Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/epistemology-india/", "urlVerified": true }]
+    },
+    {
+      "id": "hudooth_qidam",
+      "slug": "hudooth-and-qidam",
+      "term": { "sourceScript": "حدوث / قدم", "script": "Arab", "lang": "ar", "translit": "ḥudūth / qidam", "standardRendering": "origination / pre-eternity" },
+      "commonRendering": "coming-to-be and pre-eternity",
+      "tradition": "islamic",
+      "surfaceForms": ["ḥudūth al-ʿālam", "hudūth al-ʿālam", "hudooth al-alam", "qidam al-ʿālam", "qidam al-alam", "ḥudūth", "hudūth", "qidam"],
+      "semanticRange": {
+        "en": "The paired terms of the dispute over the world's beginning: ḥudūth, coming-to-be after not being, against qidam, having no beginning in the past.",
+        "tr": "Âlemin başlangıcı tartışmasının ikili terimleri: yokken sonradan var olma anlamında ḥudūth ile geçmişte başlangıcı bulunmama anlamında qidam."
+      },
+      "distortion": {
+        "en": "\"Eternity\" in English covers both timelessness and everlastingness. Qidam is the second: not outside time, but without a first moment in it.",
+        "tr": "İngilizcede \"eternity\" hem zaman dışılığı hem de hep var oluşu kapsar. Kıdem ikincisidir: zamanın dışında değil, zaman içinde ilk bir anı olmayan."
+      },
+      "interfaceRecommendation": { "en": "Show the pair together; never render qidam simply as \"eternal\" without the gloss.", "tr": "Çifti birlikte gösterin; kıdemi açıklamasız biçimde yalnızca \"ezelî\" diye çevirmeyin." },
+      "sources": [{ "citation": "Frank Griffel, 'Al-Ghazālī', Stanford Encyclopedia of Philosophy", "kind": "reference-work", "url": "https://plato.stanford.edu/entries/al-ghazali/", "urlVerified": true }]
+    }
+  ]
+}
