@@ -1,0 +1,73 @@
+{
+  "$fragment": "Traditions and schools. Coverage flags are taken from research Deliverable C and are surfaced in the UI so thin coverage is never mistaken for completeness.",
+  "traditions": [
+    {
+      "id": "islamic",
+      "label": { "en": "Islamic", "tr": "İslam" },
+      "dir": "rtl",
+      "coverageFlag": "moderate-to-good",
+      "coverageNote": {
+        "en": "Moderate-to-good in English for kalām and falsafa; thin for post-classical school philosophy (Mullā Ṣadrā and later) and for living Ottoman and Qom scholastic continuations.",
+        "tr": "Kelam ve felsefe için İngilizcede orta-iyi düzeyde; klasik sonrası okul felsefesi (Molla Sadrâ ve sonrası) ile yaşayan Osmanlı ve Kum skolastik devamlılıkları için zayıf."
+      }
+    },
+    {
+      "id": "greek",
+      "label": { "en": "Greek and Hellenistic", "tr": "Yunan ve Helenistik" },
+      "dir": "ltr",
+      "coverageFlag": "excellent",
+      "coverageNote": {
+        "en": "Excellent. Canonical numbering exists throughout — Stephanus for Plato, Bekker for Aristotle, Diels–Kranz for the Presocratics.",
+        "tr": "Mükemmel. Baştan sona kanonik numaralandırma mevcut — Platon için Stephanus, Aristoteles için Bekker, Sokrates öncesi için Diels–Kranz."
+      }
+    },
+    {
+      "id": "latin_christian",
+      "label": { "en": "Latin Christian scholastic", "tr": "Latin Hristiyan skolastiği" },
+      "dir": "ltr",
+      "coverageFlag": "excellent"
+    },
+    {
+      "id": "modern_western",
+      "label": { "en": "Modern and contemporary Western", "tr": "Modern ve çağdaş Batı" },
+      "dir": "ltr",
+      "coverageFlag": "excellent"
+    },
+    {
+      "id": "chinese",
+      "label": { "en": "Chinese", "tr": "Çin" },
+      "dir": "ltr",
+      "coverageFlag": "good"
+    },
+    {
+      "id": "indian",
+      "label": { "en": "Indian", "tr": "Hint" },
+      "dir": "ltr",
+      "coverageFlag": "good",
+      "coverageNote": {
+        "en": "Good for the major schools in English. Thin and often polemical for Cārvāka, which survives mainly through its opponents' quotations.",
+        "tr": "Başlıca okullar için İngilizcede iyi. Büyük ölçüde muhaliflerinin alıntıları yoluyla günümüze ulaşan Cārvāka için zayıf ve çoğu zaman polemik yüklü."
+      }
+    }
+  ],
+  "schools": [
+    { "id": "mutazila", "label": { "en": "Muʿtazila", "tr": "Mutezile" }, "within": "islamic",
+      "sourceTerm": { "sourceScript": "المعتزلة", "script": "Arab", "lang": "ar", "translit": "al-Muʿtazila" } },
+    { "id": "ashari", "label": { "en": "Ashʿarī school", "tr": "Eşʿarî okulu" }, "within": "islamic",
+      "sourceTerm": { "sourceScript": "الأشاعرة", "script": "Arab", "lang": "ar", "translit": "al-Ashāʿira" } },
+    { "id": "maturidi", "label": { "en": "Māturīdī school", "tr": "Mâtürîdî okulu" }, "within": "islamic",
+      "sourceTerm": { "sourceScript": "الماتريدية", "script": "Arab", "lang": "ar", "translit": "al-Māturīdiyya" } },
+    { "id": "falsafa", "label": { "en": "Falsafa", "tr": "Felsefe" }, "within": "islamic",
+      "sourceTerm": { "sourceScript": "فلسفة", "script": "Arab", "lang": "ar", "translit": "falsafa" } },
+    { "id": "latin_scholastic", "label": { "en": "Latin scholastic", "tr": "Latin skolastiği" }, "within": "latin_christian" },
+    { "id": "confucian", "label": { "en": "Confucian", "tr": "Konfüçyüsçü" }, "within": "chinese",
+      "sourceTerm": { "sourceScript": "儒家", "script": "Hani", "lang": "zh", "translit": "rújiā" } },
+    { "id": "nyaya", "label": { "en": "Nyāya", "tr": "Nyāya" }, "within": "indian",
+      "sourceTerm": { "sourceScript": "न्याय", "script": "Deva", "lang": "sa", "translit": "nyāya" } },
+    { "id": "mimamsa", "label": { "en": "Mīmāṃsā", "tr": "Mīmāṃsā" }, "within": "indian",
+      "sourceTerm": { "sourceScript": "मीमांसा", "script": "Deva", "lang": "sa", "translit": "mīmāṃsā" } },
+    { "id": "carvaka", "label": { "en": "Cārvāka / Lokāyata", "tr": "Cārvāka / Lokāyata" }, "within": "indian",
+      "sourceTerm": { "sourceScript": "चार्वाक", "script": "Deva", "lang": "sa", "translit": "cārvāka" } },
+    { "id": "buddhist_indian", "label": { "en": "Indian Buddhist", "tr": "Hint Budizmi" }, "within": "indian" }
+  ]
+}

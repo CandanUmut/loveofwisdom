@@ -1,0 +1,136 @@
+{
+  "$fragment": "STUB 1 — two positions, no cross-tradition intersection, both holders inside a single tradition. Chosen to prove the intersection view degrades gracefully rather than looking broken. Research A.3 (q.14) and C.1 name the debate and both holders; neither names an argument, an objection or a passage, so none is written here.",
+  "questions": [
+    {
+      "id": "Q_eternity_world",
+      "canonical": {
+        "en": "Is the world eternal, or created?",
+        "tr": "Âlem ezelî midir, yoksa yaratılmış mıdır?"
+      },
+      "plain": {
+        "en": "Has the universe always been here, or did it have a beginning?",
+        "tr": "Evren hep var mıydı, yoksa bir başlangıcı mı vardı?"
+      },
+      "technicalName": {
+        "en": "ḥudūth al-ʿālam / the eternity of the world",
+        "tr": "ḥudūth al-ʿālam / âlemin ezelîliği"
+      },
+      "whyItMatters": {
+        "en": "It is the point where al-Ghazālī and the falāsifa broke with each other, and it decides whether the universe is the kind of thing that can have a cause outside it.",
+        "tr": "Gazâlî ile felâsifenin birbirinden ayrıldığı noktadır ve evrenin, dışında bir nedeni olabilecek türden bir şey olup olmadığını belirler."
+      },
+      "domain": {
+        "en": "Metaphysics",
+        "tr": "Metafizik"
+      },
+      "wikidata": null,
+      "completeness": "stub",
+      "provenance": [
+        "Islamic kalam curriculum",
+        "Research brief, Deliverable A.3 (q.14)"
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "id": "P_world_created",
+      "answersQuestion": "Q_eternity_world",
+      "label": {
+        "en": "The world is created in time",
+        "tr": "Âlem zaman içinde yaratılmıştır"
+      },
+      "shortLabel": {
+        "en": "Created",
+        "tr": "Yaratılmış"
+      },
+      "definition": {
+        "en": "The world began; it is not eternal. Attributed to al-Ghazālī in his dispute with the falāsifa.",
+        "tr": "Âlemin bir başlangıcı vardır; ezelî değildir. Gazâlî'ye, felâsife ile tartışmasında atfedilir."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition-in-proponents-own-terms",
+        "arguments",
+        "objections",
+        "sourceTerm"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.14). The research names the debate and its two sides and gives no further detail; nothing beyond that is asserted here.",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_world_eternal",
+      "answersQuestion": "Q_eternity_world",
+      "label": {
+        "en": "The world is eternal",
+        "tr": "Âlem ezelîdir"
+      },
+      "shortLabel": {
+        "en": "Eternal",
+        "tr": "Ezelî"
+      },
+      "definition": {
+        "en": "The world has no beginning in time. Attributed to the falāsifa, and to Ibn Rushd in his reply to al-Ghazālī.",
+        "tr": "Âlemin zaman içinde bir başlangıcı yoktur. Felâsifeye ve Gazâlî'ye verdiği yanıtta İbn Rüşd'e atfedilir."
+      },
+      "epistemicStatus": "uncertain",
+      "notYetWritten": [
+        "definition-in-proponents-own-terms",
+        "arguments",
+        "objections",
+        "sourceTerm"
+      ],
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.14).",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "id": "H_ghazali_created",
+      "thinker": "al_Ghazali",
+      "position": "P_world_created",
+      "epistemicStatus": "uncertain",
+      "qualification": {
+        "en": "the research names al-Ghazālī as one side of this debate and gives no passage; the attribution has not been checked against a text",
+        "tr": "araştırma Gazâlî'yi bu tartışmanın bir tarafı olarak anar ve hiçbir metin vermez; atıf bir metne karşı denetlenmemiştir"
+      },
+      "scholarlyDispute": {
+        "en": "Not yet written. What al-Ghazālī's own argument was, and which of the falāsifa he was answering, is not established here.",
+        "tr": "Henüz yazılmadı. Gazâlî'nin kendi argümanının ne olduğu ve felâsifeden hangisine yanıt verdiği burada tespit edilmemiştir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.14)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_ibn_rushd_eternal",
+      "thinker": "Ibn_Rushd",
+      "position": "P_world_eternal",
+      "epistemicStatus": "uncertain",
+      "qualification": {
+        "en": "the research names Ibn Rushd as the other side and gives no passage",
+        "tr": "araştırma İbn Rüşd'ü karşı taraf olarak anar ve hiçbir metin vermez"
+      },
+      "scholarlyDispute": {
+        "en": "Not yet written.",
+        "tr": "Henüz yazılmadı."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable A.3 (q.14)",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ]
+}

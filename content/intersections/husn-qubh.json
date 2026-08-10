@@ -1,0 +1,84 @@
+{
+  "$fragment": "The three cross-tradition intersections of research B.2. The `evidence` strings on the first two are byte-identical with research F.5. Intersection 3 relates a dilemma to a debate rather than a position to a position — see REPORT.md, where that gap in the F.5 data model and the decision taken about it are recorded.",
+  "equivalences": [
+    {
+      "id": "INT_ashari_ockham",
+      "question": "Q_husn_qubh",
+      "title": { "en": "al-Ashʿarī and Ockham", "tr": "Eşʿarî ve Ockham" },
+      "positionA": "P_DCT@al_Ashari",
+      "positionB": "P_DCT@Ockham",
+      "convergenceType": "genuine",
+      "evidence": "Both ground value in divine will (al-Islam.org on Ashari 'a'rad'; Osborne on Ockham 'God could assign a different moral value'); but Ashari occasionalism/kasb has no Ockhamist parallel.",
+      "convergesOn": {
+        "en": "Both ground moral value in divine will rather than in properties intrinsic to acts. And they independently generate the same bullet-biting structure: the research records al-Ashʿarī as \"the best example of a thoroughgoing bullet-biter\", with Ockham coming \"close … but even he seems to have wavered.\"",
+        "tr": "Her ikisi de ahlaki değeri, eylemlere içkin niteliklere değil, ilahi iradeye dayandırır. Ayrıca birbirlerinden bağımsız olarak aynı 'kurşun ısırma' yapısını üretirler: araştırma Eşʿarî'yi \"tam anlamıyla kurşun ısıran birinin en iyi örneği\" olarak kaydeder; Ockham ise buna \"yaklaşır … ama onun bile tereddüt etmiş göründüğü\" belirtilir."
+      },
+      "partsWaysOn": {
+        "en": "Ashʿarī occasionalism and the doctrine of kasb (acquisition) have no Ockhamist parallel, and Ockham is operating inside a natural-law-saturated context that he is reacting against rather than one he inherited. The convergence is structural; the theological frameworks are not the same thing.",
+        "tr": "Eşʿarî okkazyonalizmi ve kesb (kazanım) öğretisinin Ockhamcı bir karşılığı yoktur; Ockham ise devraldığı değil, tepki gösterdiği doğal hukukla dolu bir bağlamın içinde çalışır. Yakınsama yapısaldır; teolojik çerçeveler aynı şey değildir."
+      },
+      "verdict": {
+        "en": "Genuine convergence on the core metaethical claim; superficial to equate the fuller systems.",
+        "tr": "Temel metaetik iddia bakımından gerçek bir yakınsama; sistemlerin bütününü eşitlemek ise yüzeysel olur."
+      },
+      "transmissionLink": "uncertain",
+      "epistemicStatus": "contested",
+      "sources": [
+        { "citation": "M. Abdul Hye, 'Ashʿarism', A History of Muslim Philosophy vol. 1, via al-islam.org", "kind": "reference-work", "perspectiveFlag": "Shīʿī-inflected source" },
+        { "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005)", "kind": "journal-article", "doi": "10.1017/S0034412504007218" },
+        { "citation": "1000-Word Philosophy, on divine command theory", "kind": "reference-work" }
+      ]
+    },
+    {
+      "id": "INT_mutazila_kant",
+      "question": "Q_husn_qubh",
+      "title": { "en": "ʿAbd al-Jabbār and Kant", "tr": "ʿAbdülcebbâr ve Kant" },
+      "positionA": "P_rationalism@Abd_al_Jabbar",
+      "positionB": "P_rationalism@Kant",
+      "convergenceType": "translation_artifact",
+      "evidence": "Both hold reason knows objective value, but Abd al-Jabbar is a value-realist (Hourani 1971) while Kant is a constructivist.",
+      "convergesOn": {
+        "en": "Both hold that reason apprehends moral truth independently of divine command.",
+        "tr": "Her ikisi de aklın, ilahi emirden bağımsız olarak ahlaki hakikati kavradığını savunur."
+      },
+      "partsWaysOn": {
+        "en": "ʿAbd al-Jabbār grounds objective value in a realist ontology of acts; Kant grounds obligation in the self-legislation of practical reason. ʿAbd al-Jabbār is closer to moral realism and intuitionism than to Kantian constructivism.",
+        "tr": "ʿAbdülcebbâr nesnel değeri eylemlerin realist bir ontolojisine dayandırır; Kant ise yükümlülüğü pratik aklın kendi kendine yasa koymasına dayandırır. ʿAbdülcebbâr, Kantçı inşacılıktan çok ahlaki realizme ve sezgiciliğe yakındır."
+      },
+      "verdict": {
+        "en": "Genuine agreement that reason knows objective moral value — but the shared label \"rationalism\" is doing the work, and it conceals a realist/constructivist divide. Calling these the same position is an artifact of the English word, not a finding about the two thinkers.",
+        "tr": "Aklın nesnel ahlaki değeri bildiği konusunda gerçek bir mutabakat var — ancak işi gören, paylaşılan \"akılcılık\" etiketidir ve bu etiket realist/inşacı ayrımını gizler. Bunları aynı konum saymak, iki düşünür hakkında bir bulgu değil, İngilizce sözcüğün yarattığı bir yapıntıdır."
+      },
+      "transmissionLink": "uncertain",
+      "epistemicStatus": "settled",
+      "sources": [
+        { "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)", "kind": "monograph" }
+      ]
+    },
+    {
+      "id": "INT_euthyphro_husn_qubh",
+      "question": "Q_husn_qubh",
+      "title": { "en": "The Euthyphro and the ḥusn wa qubḥ debate", "tr": "Euthyphron ve ḥusn wa qubḥ tartışması" },
+      "positionA": "OBJ_euthyphro",
+      "positionB": "Q_husn_qubh",
+      "traditions": ["greek", "islamic"],
+      "convergenceType": "genuine",
+      "evidence": "The same dilemma — is the good good because God wills it, or willed because good? — structures both Plato's Euthyphro and the Muʿtazilī/Ashʿarī dispute, apparently independently. That the structures match is settled; any transmission link between them is not established.",
+      "convergesOn": {
+        "en": "Not two positions but two debates. The identical fork — is the good good because God wills it, or willed because it is good? — organises Plato's Euthyphro and the Muʿtazilī/Ashʿarī dispute alike.",
+        "tr": "İki konum değil, iki tartışma. Aynı çatal — iyi, Tanrı öyle dilediği için mi iyidir, yoksa iyi olduğu için mi dilenmiştir? — hem Platon'un Euthyphron'unu hem de Mutezilî/Eşʿarî tartışmasını aynı biçimde düzenler."
+      },
+      "partsWaysOn": {
+        "en": "The Greek debate is set inside a polytheistic frame in which gods can disagree with one another, which is one of the dilemma's premises there and is not available in the kalām setting. The research establishes the match of structures and nothing about the content of the two disputes beyond it.",
+        "tr": "Yunan tartışması, tanrıların birbiriyle anlaşmazlığa düşebildiği çoktanrılı bir çerçeve içinde kurulur; bu, orada ikilemin öncüllerinden biridir ve kelam bağlamında mevcut değildir. Araştırma yalnızca yapıların örtüştüğünü tespit eder; iki tartışmanın içeriği hakkında bunun ötesinde bir şey söylemez."
+      },
+      "verdict": {
+        "en": "Genuine and historically striking. That the structures match is settled. Whether there was any transmission between them is not established — treat the resemblance as independent arrival unless someone shows otherwise.",
+        "tr": "Gerçek ve tarihsel olarak çarpıcı. Yapıların örtüştüğü yerleşiktir. Aralarında bir aktarım olup olmadığı tespit edilmemiştir — biri aksini gösterene kadar bu benzerliği bağımsız bir varış olarak değerlendirin."
+      },
+      "transmissionLink": "uncertain",
+      "epistemicStatus": "settled",
+      "sources": [{ "citation": "Research brief, Deliverable B.2 (Intersection 3)", "kind": "reference-work" }]
+    }
+  ]
+}

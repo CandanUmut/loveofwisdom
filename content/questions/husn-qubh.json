@@ -1,0 +1,577 @@
+{
+  "$fragment": "The fully-worked seed question. All of research Deliverable B goes in: positions P1–P5, holders with their qualifications and epistemic statuses, arguments and objections with named sources. Q_husn_qubh, P_DCT and P_rationalism are byte-identical with research F.5 on every field F.5 supplies.",
+  "questions": [
+    {
+      "id": "Q_husn_qubh",
+      "canonical": {
+        "en": "Is the moral status of an act grounded in revelation or in reason?",
+        "tr": "Bir eylemin ahlaki değeri vahye mi yoksa akla mı dayanır?"
+      },
+      "plain": {
+        "en": "Do things become right because God says so, or can we work out right and wrong ourselves?",
+        "tr": "Bir şey Tanrı öyle dediği için mi doğru olur, yoksa doğruyu ve yanlışı kendimiz bulabilir miyiz?"
+      },
+      "technicalName": {
+        "en": "ḥusn wa qubḥ / divine command vs. moral rationalism",
+        "tr": "ḥusn wa qubḥ / ilahi emir ile ahlaki akılcılık"
+      },
+      "whyItMatters": {
+        "en": "Decides whether ethics needs religion.",
+        "tr": "Ahlakın dine ihtiyaç duyup duymadığını belirler."
+      },
+      "domain": {
+        "en": "Ethics & moral epistemology",
+        "tr": "Etik ve ahlak epistemolojisi"
+      },
+      "wikidata": null,
+      "westernFramedMismatch": true,
+      "completeness": "worked",
+      "provenance": [
+        "Islamic kalam curriculum",
+        "PhilPapers: Meta-Ethics",
+        "SEP/IEP: Divine Command Theory"
+      ],
+      "sources": [
+        {
+          "citation": "Stanford Encyclopedia of Philosophy, 'Divine Command Theory'",
+          "kind": "reference-work"
+        },
+        {
+          "citation": "Internet Encyclopedia of Philosophy, 'Divine Command Theory'",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ],
+  "positions": [
+    {
+      "id": "P_DCT",
+      "label": {
+        "en": "Divine Command Theory (revelation-grounded)",
+        "tr": "İlahi Emir Teorisi (vahye dayalı)"
+      },
+      "shortLabel": {
+        "en": "Divine command",
+        "tr": "İlahi emir"
+      },
+      "answersQuestion": "Q_husn_qubh",
+      "definition": {
+        "en": "An act's moral status is constituted by God's command; acts have no intrinsic value prior to the decree.",
+        "tr": "Bir eylemin ahlaki değeri Tanrı'nın emriyle kurulur; eylemler, hüküm öncesinde içkin bir değere sahip değildir."
+      },
+      "epistemicStatus": "settled",
+      "sourceTerm": {
+        "sourceScript": "حسن وقبح",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "ḥusn wa qubḥ",
+        "standardRendering": "goodness and badness"
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_rationalism",
+      "label": {
+        "en": "Moral rationalism / ethical objectivism (reason-grounded)",
+        "tr": "Ahlaki akılcılık / etik nesnelcilik (akla dayalı)"
+      },
+      "shortLabel": {
+        "en": "Moral rationalism",
+        "tr": "Ahlaki akılcılık"
+      },
+      "answersQuestion": "Q_husn_qubh",
+      "definition": {
+        "en": "Acts have intrinsic ḥusn/qubḥ knowable by reason (ʿaql) independently of revelation.",
+        "tr": "Eylemler, vahiyden bağımsız olarak akıl (ʿaql) yoluyla bilinebilen içkin bir ḥusn/qubḥ taşır."
+      },
+      "epistemicStatus": "settled",
+      "sourceTerm": {
+        "sourceScript": "عقل",
+        "script": "Arab",
+        "lang": "ar",
+        "translit": "ʿaql",
+        "standardRendering": "reason"
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P2)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_maturidi",
+      "label": {
+        "en": "Māturīdī intermediate position",
+        "tr": "Mâtürîdî ara konum"
+      },
+      "shortLabel": {
+        "en": "Māturīdī intermediate",
+        "tr": "Mâtürîdî ara konum"
+      },
+      "answersQuestion": "Q_husn_qubh",
+      "definition": {
+        "en": "Reason can know the moral value of acts, but obligation — the reward or punishment that attaches to them — comes only through revelation.",
+        "tr": "Akıl, eylemlerin ahlaki değerini bilebilir; ancak yükümlülük — yani buna bağlanan sevap ya da ceza — yalnızca vahiy yoluyla gelir."
+      },
+      "epistemicStatus": "contested",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P3)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_natural_law",
+      "label": {
+        "en": "Natural law / intellectualist theism",
+        "tr": "Doğal hukuk / entelektüalist teizm"
+      },
+      "shortLabel": {
+        "en": "Natural law",
+        "tr": "Doğal hukuk"
+      },
+      "answersQuestion": "Q_husn_qubh",
+      "definition": {
+        "en": "Morality is grounded in God's nature and intellect rather than in arbitrary will: God commands the good because it is good.",
+        "tr": "Ahlak, keyfi bir iradeye değil, Tanrı'nın doğasına ve aklına dayanır: Tanrı iyiyi, iyi olduğu için emreder."
+      },
+      "epistemicStatus": "contested",
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P4)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "P_confucian_reframe",
+      "label": {
+        "en": "Confucian relational-virtue reframing",
+        "tr": "Konfüçyüsçü ilişkisel-erdem yeniden çerçevelemesi"
+      },
+      "shortLabel": {
+        "en": "Confucian reframing",
+        "tr": "Konfüçyüsçü yeniden çerçeveleme"
+      },
+      "answersQuestion": "Q_husn_qubh",
+      "refusesQuestion": true,
+      "definition": {
+        "en": "Morality is grounded in cultivated humaneness (ren) expressed through ritual propriety (li) and rightness (yi) — neither revealed nor derived from abstract reason. The dichotomy the question offers is rejected rather than answered.",
+        "tr": "Ahlak, ritüel uygunluk (li) ve doğruluk (yi) yoluyla ifade edilen, geliştirilmiş insanilik (ren) üzerine kuruludur — ne vahyedilmiş ne de soyut akıldan türetilmiştir. Sorunun sunduğu ikilik yanıtlanmaz, reddedilir."
+      },
+      "epistemicStatus": "contested",
+      "sourceTerm": {
+        "sourceScript": "仁",
+        "script": "Hani",
+        "lang": "zh",
+        "translit": "rén",
+        "standardRendering": "benevolence / humaneness"
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 (P5) and A.4",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ],
+  "holds": [
+    {
+      "id": "H_ashari_dct",
+      "thinker": "al_Ashari",
+      "position": "P_DCT",
+      "epistemicStatus": "settled",
+      "careerPhase": {
+        "en": "post-conversion: the research records al-Ashʿarī's Muʿtazilī-to-Ashʿarī turn, so this attribution belongs to the later phase of his career.",
+        "tr": "dönüşüm sonrası: araştırma, Eşʿarî'nin Mutezilî'den Eşʿarî'ye geçişini kaydeder; dolayısıyla bu atıf, kariyerinin son dönemine aittir."
+      },
+      "sourcePassages": [
+        "PSG_ashari_arad",
+        "PSG_ashari_authority"
+      ]
+    },
+    {
+      "id": "H_ockham_dct",
+      "thinker": "Ockham",
+      "position": "P_DCT",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "denied by much recent scholarship",
+        "tr": "yakın dönem araştırmaların çoğu tarafından reddedilmektedir"
+      },
+      "scholarlyDispute": {
+        "en": "Osborne (Religious Studies 41:1, 2005, DOI 10.1017/S0034412504007218) reads Ockham as a divine-command theorist; others deny it. Osborne himself records that the thesis 'is denied by much recent scholarship'.",
+        "tr": "Osborne (Religious Studies 41:1, 2005, DOI 10.1017/S0034412504007218) Ockham'ı ilahi emir teorisyeni olarak okur; başkaları bunu reddeder. Osborne'un kendisi de bu tezin 'yakın dönem araştırmaların çoğu tarafından reddedildiğini' kaydeder."
+      },
+      "sides": [
+        {
+          "who": "Osborne (2005)",
+          "reading": {
+            "en": "Ockham 'holds that the ultimate ground of a moral judgement's truth is a divine command, rather than natural or non-natural properties'.",
+            "tr": "Ockham, 'bir ahlaki yargının doğruluğunun nihai temelinin, doğal ya da doğal olmayan özellikler değil, ilahi bir emir olduğunu savunur'."
+          },
+          "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005), DOI 10.1017/S0034412504007218"
+        },
+        {
+          "who": "Much recent scholarship",
+          "reading": {
+            "en": "Denies that Ockham was a divine-command theorist at all. The research does not name the individual scholars on this side.",
+            "tr": "Ockham'ın hiç ilahi emir teorisyeni olmadığını savunur. Araştırma bu taraftaki tek tek araştırmacıları adlandırmaz."
+          },
+          "citation": "Reported by Osborne (2005) as the majority recent view; individual authors not identified in the research brief."
+        }
+      ],
+      "sourcePassages": [
+        "PSG_ockham_sent",
+        "PSG_osborne_ockham",
+        "PSG_osborne_loving_god",
+        "PSG_osborne_denied"
+      ]
+    },
+    {
+      "id": "H_ghazali_dct",
+      "thinker": "al_Ghazali",
+      "position": "P_DCT",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "on the standard reading",
+        "tr": "standart okumaya göre"
+      },
+      "scholarlyDispute": {
+        "en": "The research records the school-level attribution as settled but flags how thoroughgoing any individual was as contested. For al-Ghazālī the attribution is carried by 'the standard reading' rather than by a quoted passage.",
+        "tr": "Araştırma, okul düzeyindeki atfı yerleşik sayar; ancak herhangi bir kişinin bu görüşü ne ölçüde benimsediğini tartışmalı olarak işaretler. Gazâlî için atıf, alıntılanan bir metne değil, 'standart okumaya' dayanır."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_scotus_dct",
+      "thinker": "Duns_Scotus",
+      "position": "P_DCT",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "a version of the view, per the research; scope not specified",
+        "tr": "araştırmaya göre görüşün bir versiyonu; kapsamı belirtilmemiş"
+      },
+      "scholarlyDispute": {
+        "en": "The research lists Scotus among those holding 'versions' of the view without specifying which version or how far it extends.",
+        "tr": "Araştırma, Scotus'u görüşün 'versiyonlarını' savunanlar arasında sayar; ancak hangi versiyon olduğunu ya da ne kadar ileri gittiğini belirtmez."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_augustine_dct",
+      "thinker": "Augustine",
+      "position": "P_DCT",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "a version of the view, per the research; scope not specified",
+        "tr": "araştırmaya göre görüşün bir versiyonu; kapsamı belirtilmemiş"
+      },
+      "scholarlyDispute": {
+        "en": "Listed by the research among holders of 'versions' of the view. No passage and no scope are given.",
+        "tr": "Araştırma tarafından görüşün 'versiyonlarını' savunanlar arasında sayılır. Ne bir metin ne de bir kapsam verilmiştir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_calvin_dct",
+      "thinker": "Calvin",
+      "position": "P_DCT",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "a version of the view, per the research; scope not specified",
+        "tr": "araştırmaya göre görüşün bir versiyonu; kapsamı belirtilmemiş"
+      },
+      "scholarlyDispute": {
+        "en": "Listed by the research among holders of 'versions' of the view. No passage and no scope are given.",
+        "tr": "Araştırma tarafından görüşün 'versiyonlarını' savunanlar arasında sayılır. Ne bir metin ne de bir kapsam verilmiştir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P1 holders)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_adams_dct",
+      "thinker": "Adams",
+      "position": "P_DCT",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "modified divine command theory, not the unrestricted version",
+        "tr": "sınırsız versiyon değil, değiştirilmiş ilahi emir teorisi"
+      },
+      "scholarlyDispute": {
+        "en": "The research is explicit that naïve, unrestricted divine command theory is widely regarded as decisively objected-to, and that most theistic philosophers now hold Adams' modified version instead.",
+        "tr": "Araştırma açıkça belirtir: saf, sınırsız ilahi emir teorisi büyük ölçüde kesin biçimde itiraz edilmiş sayılır ve teist filozofların çoğu bunun yerine Adams'ın değiştirilmiş versiyonunu benimser."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 and B.3",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_abd_al_jabbar_rationalism",
+      "thinker": "Abd_al_Jabbar",
+      "position": "P_rationalism",
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_mutazila_intrinsic",
+        "PSG_mutazila_intrinsic_goods"
+      ],
+      "sources": [
+        {
+          "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)",
+          "kind": "monograph"
+        }
+      ]
+    },
+    {
+      "id": "H_abu_al_hudhayl_rationalism",
+      "thinker": "Abu_al_Hudhayl",
+      "position": "P_rationalism",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "as a Muʿtazilī; the research attributes the position to the school and names him as an example rather than quoting him.",
+        "tr": "bir Mutezilî olarak; araştırma bu konumu okula atfeder ve onu alıntılamak yerine örnek olarak anar."
+      },
+      "sourcePassages": [
+        "PSG_mutazila_intrinsic"
+      ]
+    },
+    {
+      "id": "H_kant_rationalism",
+      "thinker": "Kant",
+      "position": "P_rationalism",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "rationalism via autonomy of practical reason, not value-realism",
+        "tr": "değer realizmi değil, pratik aklın özerkliği yoluyla akılcılık"
+      },
+      "scholarlyDispute": {
+        "en": "Filing Kant under the same label as ʿAbd al-Jabbār is what the research calls a translation artifact: ʿAbd al-Jabbār grounds objective value in a realist ontology of acts, whereas Kant grounds obligation in the self-legislation of practical reason.",
+        "tr": "Kant'ı ʿAbdülcebbâr ile aynı etiket altında toplamak, araştırmanın çeviri yapıntısı dediği şeydir: ʿAbdülcebbâr nesnel değeri eylemlerin realist bir ontolojisine dayandırırken, Kant yükümlülüğü pratik aklın kendi kendine yasa koymasına dayandırır."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.2 (Intersection 2)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_maturidi_intermediate",
+      "thinker": "al_Maturidi",
+      "position": "P_maturidi",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "contested on exact scope",
+        "tr": "tam kapsamı tartışmalı"
+      },
+      "scholarlyDispute": {
+        "en": "Scholarship distinguishes ontological value-cognition from deontic bindingness; how far al-Māturīdī himself drew that line is disputed. The research does not name the parties.",
+        "tr": "Araştırmacılar, ontolojik değer bilgisi ile deontik bağlayıcılığı birbirinden ayırır; Mâtürîdî'nin bu ayrımı ne ölçüde çizdiği tartışmalıdır. Araştırma tarafları adlandırmaz."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P3)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_aquinas_natural_law",
+      "thinker": "Aquinas",
+      "position": "P_natural_law",
+      "epistemicStatus": "settled",
+      "qualification": {
+        "en": "the research characterises him as emphasising God's intellect rather than God's will",
+        "tr": "araştırma onu, Tanrı'nın iradesinden çok aklını vurgulayan biri olarak niteler"
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P4). No passage from Aquinas is quoted in the research and none is invented here.",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_ibn_rushd_natural_law",
+      "thinker": "Ibn_Rushd",
+      "position": "P_natural_law",
+      "epistemicStatus": "uncertain",
+      "qualification": {
+        "en": "on certain readings of the falāsifa; the research attributes the position to 'certain readings' and names no reading in particular",
+        "tr": "felâsifenin bazı okumalarına göre; araştırma bu konumu 'bazı okumalara' atfeder ve hiçbirini özel olarak adlandırmaz"
+      },
+      "scholarlyDispute": {
+        "en": "The research says only that 'certain readings of the falāsifa' place them here. Which readings, and which falāsifa, is not established.",
+        "tr": "Araştırma yalnızca 'felâsifenin bazı okumalarının' onları buraya yerleştirdiğini söyler. Hangi okumalar ve hangi filozoflar olduğu tespit edilmemiştir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverable B.1 (P4)",
+          "kind": "reference-work"
+        }
+      ]
+    },
+    {
+      "id": "H_confucius_reframe",
+      "thinker": "Confucius",
+      "position": "P_confucian_reframe",
+      "epistemicStatus": "contested",
+      "qualification": {
+        "en": "the reframing is attributed to Confucian ethics as a tradition rather than to Confucius on the strength of a quoted passage",
+        "tr": "yeniden çerçeveleme, alıntılanan bir metne dayanarak Konfüçyüs'e değil, bir gelenek olarak Konfüçyüsçü etiğe atfedilir"
+      },
+      "scholarlyDispute": {
+        "en": "The research flags this as contested and gives no passage. Reading a tradition as 'rejecting' a question it never posed is itself an interpretive act.",
+        "tr": "Araştırma bunu tartışmalı olarak işaretler ve hiçbir metin vermez. Bir geleneği, hiç sormadığı bir soruyu 'reddediyor' diye okumak da başlı başına yorumsal bir edimdir."
+      },
+      "sources": [
+        {
+          "citation": "Research brief, Deliverables B.1 (P5) and A.4",
+          "kind": "reference-work"
+        }
+      ]
+    }
+  ],
+  "arguments": [
+    {
+      "id": "ARG_omnipotence",
+      "supports": "P_DCT",
+      "label": {
+        "en": "The omnipotence argument",
+        "tr": "Mutlak kudret argümanı"
+      },
+      "statement": {
+        "en": "A maximally powerful God must be the source of moral value, because — as the 1000-Word Philosophy summary frames it — \"Something that can make things right or wrong by will is more powerful than something that can't.\"",
+        "tr": "Azami güçte bir Tanrı, ahlaki değerin kaynağı olmalıdır; çünkü — 1000-Word Philosophy özetinin ifadesiyle — \"İradesiyle bir şeyi doğru ya da yanlış kılabilen, kılamayandan daha güçlüdür.\""
+      },
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_1000wp_omnipotence"
+      ]
+    },
+    {
+      "id": "ARG_moral_knowledge_precedes",
+      "supports": "P_rationalism",
+      "label": {
+        "en": "Moral knowledge precedes revelation",
+        "tr": "Ahlaki bilgi vahiyden önce gelir"
+      },
+      "statement": {
+        "en": "We must already know that lying is bad in order to trust that a truthful God's revelation is reliable. Grounding all value in command is therefore circular.",
+        "tr": "Doğru sözlü bir Tanrı'nın vahyinin güvenilir olduğuna güvenebilmek için, yalanın kötü olduğunu önceden bilmemiz gerekir. Bu nedenle, bütün değeri emre dayandırmak döngüseldir."
+      },
+      "attributedTo": [
+        "Abd_al_Jabbar"
+      ],
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_mughni_locus"
+      ],
+      "sources": [
+        {
+          "citation": "George F. Hourani, Islamic Rationalism: The Ethics of ʿAbd al-Jabbâr (Oxford: Clarendon Press, 1971)",
+          "kind": "monograph"
+        }
+      ]
+    },
+    {
+      "id": "ARG_ashari_reason_limited",
+      "supports": "P_DCT",
+      "label": {
+        "en": "Reason judges value but cannot bind",
+        "tr": "Akıl değeri yargılar ama bağlayamaz"
+      },
+      "statement": {
+        "en": "The Ashʿarī position is not that reason is worthless. Ashʿarīs accept \"rational good and evil\" in the senses of perfection and suitability, and deny only reason's power to establish obligation. The research flags the claim that Ashʿarīs reject reason entirely as a popular-summary distortion.",
+        "tr": "Eşʿarî konum, aklın değersiz olduğu iddiası değildir. Eşʿarîler, kemal ve uygunluk anlamlarında \"akli iyi ve kötü\"yü kabul eder; yalnızca aklın yükümlülük kurma gücünü reddederler. Araştırma, Eşʿarîlerin aklı tümüyle reddettiği iddiasını popüler bir özet çarpıtması olarak işaretler."
+      },
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_icr_ashari_reason"
+      ]
+    }
+  ],
+  "objections": [
+    {
+      "id": "OBJ_euthyphro",
+      "targets": "P_DCT",
+      "strongest": true,
+      "label": {
+        "en": "The Euthyphro dilemma, and the horrible-commands objection",
+        "tr": "Euthyphron ikilemi ve korkunç emirler itirazı"
+      },
+      "statement": {
+        "en": "Is the good good because God wills it, or willed because it is good? Take the first horn and morality is arbitrary: divine command theory implies that if God commanded cruelty, cruelty would be obligatory — which most find a reductio. Take the second and the good is prior to the command, which gives up the theory.",
+        "tr": "İyi, Tanrı öyle dilediği için mi iyidir, yoksa iyi olduğu için mi dilenmiştir? İlk şıkkı seçerseniz ahlak keyfileşir: ilahi emir teorisi, Tanrı zulmü emretseydi zulmün yükümlülük olacağını ima eder — çoğu kişi bunu bir saçmaya indirgeme sayar. İkincisini seçerseniz iyi, emirden önce gelir; bu da teoriden vazgeçmek olur."
+      },
+      "attributedTo": [
+        "Plato"
+      ],
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_euthyphro_10a",
+        "PSG_1000wp_bulletbiter"
+      ],
+      "standardReplies": [
+        {
+          "en": "Bite the bullet. The research records that al-Ashʿarī \"stands out as the best example of a thoroughgoing bullet-biter\", while Ockham \"comes close … but even he seems to have wavered.\"",
+          "tr": "Kurşunu ısır. Araştırma, Eşʿarî'nin \"tam anlamıyla kurşun ısıran birinin en iyi örneği olarak öne çıktığını\", Ockham'ın ise \"buna yaklaştığını … ama onun bile tereddüt etmiş göründüğünü\" kaydeder."
+        },
+        {
+          "en": "Retreat to a modified divine command theory (Adams), which restricts the commands in question to those of a loving God. The research is careful that naïve divine command theory is \"abandoned in its naïve form\" rather than refuted — in philosophy, \"refuted\" is almost always \"widely regarded as decisively objected-to\".",
+          "tr": "Değiştirilmiş bir ilahi emir teorisine (Adams) çekil; bu teori söz konusu emirleri sevgi dolu bir Tanrı'nınkilerle sınırlar. Araştırma dikkatlidir: saf ilahi emir teorisi çürütülmüş değil, \"saf biçiminde terk edilmiştir\" — felsefede \"çürütüldü\", neredeyse her zaman \"kesin biçimde itiraz edilmiş sayılıyor\" demektir."
+        }
+      ]
+    },
+    {
+      "id": "OBJ_sovereignty",
+      "targets": "P_rationalism",
+      "strongest": true,
+      "label": {
+        "en": "The Ashʿarī sovereignty objection",
+        "tr": "Eşʿarî egemenlik itirazı"
+      },
+      "statement": {
+        "en": "Intrinsic values that hold independently of God constrain divine omnipotence, and posit an obligation standing over God. If goodness and badness were qualities inhering in acts, God would be answerable to them.",
+        "tr": "Tanrı'dan bağımsız olarak geçerli olan içkin değerler, ilahi mutlak kudreti sınırlar ve Tanrı'nın üzerinde duran bir yükümlülük varsayar. İyilik ve kötülük eylemlerde içkin nitelikler olsaydı, Tanrı onlara karşı sorumlu olurdu."
+      },
+      "attributedTo": [
+        "al_Ashari"
+      ],
+      "epistemicStatus": "settled",
+      "sourcePassages": [
+        "PSG_ashari_arad",
+        "PSG_ashari_authority"
+      ]
+    }
+  ]
+}

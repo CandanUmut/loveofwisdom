@@ -1,0 +1,344 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: var(--t-body);
+  line-height: 1.62;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'kern' 1, 'liga' 1;
+}
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; line-height: 1.14; margin: 0; letter-spacing: -0.008em; }
+p { margin: 0 0 0.85em; }
+p:last-child { margin-bottom: 0; }
+a { color: var(--lapis); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+button { font: inherit; color: inherit; }
+[hidden] { display: none !important; }
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--paper); color: var(--ink);
+  padding: 0.6rem 1rem; border: 1px solid var(--rule-strong);
+}
+.skip:focus { left: 0.5rem; top: 0.5rem; }
+
+/* ============ shell ============ */
+.shell { max-width: 78rem; margin: 0 auto; padding: 0 var(--pad) 5rem; }
+
+.masthead {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.5rem;
+  padding: 1rem 0 0.85rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 2rem;
+}
+.masthead__name {
+  font-family: var(--display); font-size: 1.15rem; letter-spacing: -0.01em;
+  color: var(--ink); text-decoration: none;
+}
+.masthead__name:hover { color: var(--lapis); }
+.masthead nav { display: flex; flex-wrap: wrap; gap: 1.1rem; }
+.masthead nav a {
+  font-family: var(--apparatus); font-size: var(--t-app);
+  color: var(--ink-2); text-decoration: none;
+}
+.masthead nav a:hover, .masthead nav a[aria-current='page'] { color: var(--lapis); text-decoration: underline; }
+.masthead__prefs { margin-inline-start: auto; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+.toggle { display: flex; align-items: center; gap: 0.35rem; }
+.toggle > span {
+  font-family: var(--apparatus); font-size: var(--t-app-sm);
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2);
+}
+.toggle__group { display: flex; border: 1px solid var(--rule-strong); border-radius: var(--radius); overflow: hidden; }
+.toggle__group button {
+  font-family: var(--apparatus); font-size: var(--t-app-sm);
+  background: transparent; border: 0; padding: 0.2rem 0.5rem; cursor: pointer; color: var(--ink-2);
+}
+.toggle__group button + button { border-inline-start: 1px solid var(--rule); }
+.toggle__group button[aria-pressed='true'] { background: var(--lapis); color: var(--paper); }
+
+/* ============ folio: text column + keyed apparatus rail ============ */
+.folio {
+  display: grid;
+  /* The text column is sized to the measure, not to the leftover space: a critical
+     edition's margin sits a gutter away from the text block, not at the far edge. */
+  grid-template-columns: minmax(0, var(--measure)) var(--rail);
+  justify-content: start; gap: var(--gap); align-items: start;
+}
+.folio__text { min-width: 0; }
+/* No passages cited yet: there is no margin to key into, so the rail is dropped rather
+   than left as an empty column. The stub questions are entirely in this state. */
+.folio--solo { grid-template-columns: minmax(0, var(--measure)); }
+.folio__rail {
+  position: sticky; top: 1rem;
+  border-inline-start: 1px solid var(--rule);
+  padding-inline-start: 1.25rem;
+  font-size: var(--t-small);
+}
+@media (max-width: 62rem) {
+  .folio { grid-template-columns: minmax(0, 1fr); }
+  .folio__rail { position: static; border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--rule); padding-top: 1.25rem; }
+  .folio__text { max-width: none; }
+}
+
+.section-label {
+  font-family: var(--apparatus); font-size: var(--t-app-sm);
+  text-transform: uppercase; letter-spacing: 0.11em; color: var(--ink-2);
+  margin: 0 0 0.75rem;
+}
+
+/* ============ sigla: the keyed link between text and margin ============ */
+.sigil {
+  font-family: var(--apparatus); font-size: 0.7em; vertical-align: super; line-height: 1;
+  background: transparent; border: 0; padding: 0 0.1em; cursor: pointer;
+  color: var(--lapis); text-decoration: none;
+}
+.sigil:hover, .sigil.is-active { background: var(--lapis-wash); border-radius: 2px; }
+
+.apparatus__entry {
+  display: grid; grid-template-columns: 1.6rem 1fr; gap: 0.4rem;
+  padding: 0.55rem 0; border-top: 1px solid var(--rule);
+  scroll-margin-top: 5rem;
+}
+.apparatus__entry:first-child { border-top: 0; }
+.apparatus__entry.is-active { background: var(--lapis-wash); }
+.apparatus__sigil { font-family: var(--apparatus); font-size: var(--t-app); color: var(--lapis); }
+.apparatus__body { min-width: 0; }
+.apparatus__quote { font-style: italic; margin: 0 0 0.3rem; }
+.apparatus__cite {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); line-height: 1.45;
+  color: var(--ink-2); overflow-wrap: anywhere;
+}
+.apparatus__meta {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2);
+  display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem;
+}
+
+/* ============ epistemic marks — daggers, not pills ============ */
+.emark {
+  font-family: var(--apparatus); font-size: var(--t-app-sm);
+  display: inline-flex; align-items: baseline; gap: 0.3rem;
+  background: transparent; border: 0; padding: 0; cursor: pointer;
+  text-align: start;
+}
+.emark__glyph { font-size: 1.05em; }
+.emark--contested { color: var(--orpiment); }
+.emark--uncertain { color: var(--ink-2); }
+.emark--settled { color: var(--verdigris); }
+.emark__word { text-transform: lowercase; letter-spacing: 0.03em; }
+
+.sides { margin: 0.5rem 0 0; padding: 0; list-style: none; border-inline-start: 2px solid var(--orpiment); }
+.sides li { padding: 0.35rem 0 0.35rem 0.75rem; }
+.sides__who { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--orpiment); display: block; }
+.sides__cite { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); display: block; margin-top: 0.2rem; }
+
+/* ============ positions ============ */
+.position {
+  border-top: 1px solid var(--rule-strong);
+  padding: 1.5rem 0;
+}
+.position__num {
+  font-family: var(--apparatus); font-size: var(--t-app); color: var(--ink-2);
+  letter-spacing: 0.08em;
+}
+.position__title { font-size: var(--t-h2); margin: 0.25rem 0 0.5rem; }
+.position__title a { color: inherit; text-decoration-color: var(--rule-strong); }
+.position__def { margin-bottom: 1rem; }
+.position--refusal { border-inline-start: 3px solid var(--madder); padding-inline-start: 1rem; }
+
+.holders { list-style: none; margin: 0; padding: 0; }
+.holders li {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.4rem 0.6rem;
+  padding: 0.4rem 0; border-top: 1px dotted var(--rule);
+}
+.holders li:first-child { border-top: 0; }
+.holder__name { font-weight: 700; }
+.holder__dates, .holder__school {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2);
+}
+.holder__qual { font-style: italic; color: var(--ink-2); font-size: var(--t-small); flex-basis: 100%; }
+
+/* ============ the confluence — signature element ============ */
+.confluence { margin: 0; }
+/* Cap the diagram near its intrinsic size. Left to fill the card, the 480-unit viewBox
+   scales its 11px labels up past the card title and the diagram reads as a banner. */
+.confluence svg { display: block; width: 100%; max-width: 32rem; margin: 0 auto; height: auto; overflow: visible; }
+.confluence__stem { stroke: var(--lapis); stroke-width: 1.5; fill: none; }
+.confluence__stem--dashed { stroke-dasharray: 4 3; }
+.confluence__seam { stroke: var(--madder); stroke-width: 1.5; }
+.confluence__label {
+  font-family: var(--apparatus); font-size: 11px; fill: var(--ink);
+}
+.confluence__label--muted { fill: var(--ink-2); }
+.confluence__node { fill: var(--paper); stroke: var(--lapis); stroke-width: 1.5; }
+.confluence__joint { fill: var(--verdigris); }
+.confluence__joint--artifact { fill: var(--madder); }
+.confluence__joint--superficial { fill: var(--ink-2); }
+
+.intersection {
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  background: var(--paper-2); padding: 1.15rem 1.25rem; margin-bottom: 1.25rem;
+  max-width: 54rem;
+}
+.intersection__verdict {
+  font-family: var(--apparatus); font-size: var(--t-app-sm);
+  text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;
+}
+.intersection--genuine .intersection__verdict { color: var(--verdigris); }
+.intersection--superficial .intersection__verdict { color: var(--ink-2); }
+.intersection--translation_artifact .intersection__verdict { color: var(--madder); }
+.intersection__title { font-size: var(--t-h2); margin-bottom: 0.6rem; }
+.intersection__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem 1.5rem; margin-top: 1rem; }
+@media (max-width: 44rem) { .intersection__grid { grid-template-columns: 1fr; } }
+.intersection__cell h4 {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink-2); margin-bottom: 0.25rem;
+}
+.intersection__cell--parts { border-inline-start: 2px solid var(--madder); padding-inline-start: 0.75rem; }
+.intersection__cell--converges { border-inline-start: 2px solid var(--verdigris); padding-inline-start: 0.75rem; }
+
+.graph-table { width: 100%; border-collapse: collapse; font-size: var(--t-small); margin-top: 0.75rem; }
+.graph-table caption { text-align: start; font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); padding-bottom: 0.4rem; }
+.graph-table th, .graph-table td { text-align: start; padding: 0.35rem 0.6rem 0.35rem 0; border-top: 1px solid var(--rule); vertical-align: top; }
+.graph-table th { font-family: var(--apparatus); font-size: var(--t-app-sm); font-weight: 400; color: var(--ink-2); text-transform: uppercase; letter-spacing: 0.07em; }
+
+/* ============ panels ============ */
+.panel { border: 1px solid var(--rule-strong); border-radius: var(--radius); padding: 1.15rem 1.25rem; margin: 1.5rem 0; background: var(--paper-2); }
+.panel--refusal { border-color: var(--madder); background: var(--madder-wash); }
+.panel--editorial { border-style: dashed; }
+.panel__label {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--ink-2); margin-bottom: 0.5rem;
+}
+.panel--refusal .panel__label { color: var(--madder); }
+
+.empty {
+  font-family: var(--apparatus); font-size: var(--t-app);
+  color: var(--ink-2); border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius); padding: 0.6rem 0.8rem; background: transparent;
+}
+.empty--compact { border: 0; padding: 0.2rem 0; }
+/* Two adjacent empty states are one gap, not two. */
+.empty + .empty { border-top-style: none; margin-top: -0.3rem; }
+.empty a { color: var(--lapis); }
+
+/* ============ objection — the cost ============ */
+.objection { border-inline-start: 3px solid var(--madder); padding-inline-start: 1rem; margin: 1.25rem 0; }
+.objection__label { font-family: var(--apparatus); font-size: var(--t-app-sm); text-transform: uppercase; letter-spacing: 0.1em; color: var(--madder); }
+.objection__title { font-size: var(--t-h2); margin: 0.2rem 0 0.5rem; }
+
+/* ============ script and terms ============ */
+.script-arab { font-family: var(--arabic); font-size: 1.2em; line-height: 1.9; direction: rtl; unicode-bidi: isolate; }
+.script-deva, .script-hani, .script-grek { font-size: 1.1em; unicode-bidi: isolate; }
+.translit { font-style: italic; }
+.term-gloss { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); }
+
+/* ============ index locorum (home) ============ */
+.hero { padding: 1rem 0 2.5rem; border-bottom: 1px solid var(--rule-strong); margin-bottom: 2rem; }
+/* No text-transform here: the kicker carries content (domain, technical name), and
+   uppercasing content applies the *document* locale's casing rules to it — under
+   lang="tr" the English "Will" comes out "WİLL". Chrome labels may uppercase; content
+   may not. Letterspacing and size carry the same hierarchy without touching the letters. */
+.hero__kicker { font-family: var(--apparatus); font-size: var(--t-app); letter-spacing: 0.06em; color: var(--ink-2); }
+.hero__q { font-size: var(--t-hero); margin: 0.5rem 0 0.75rem; max-width: 22ch; }
+.hero__q a { color: inherit; text-decoration: none; }
+.hero__q a:hover { color: var(--lapis); }
+.hero__plain { font-size: 1.2rem; max-width: 46ch; color: var(--ink-2); }
+.hero__actions { margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block; font-family: var(--apparatus); font-size: var(--t-app);
+  padding: 0.55rem 1rem; border: 1px solid var(--lapis); border-radius: var(--radius);
+  color: var(--lapis); text-decoration: none; background: transparent; cursor: pointer;
+}
+.btn:hover { background: var(--lapis); color: var(--paper); }
+.btn--primary { background: var(--lapis); color: var(--paper); }
+.btn--primary:hover { background: transparent; color: var(--lapis); }
+.btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+.index { width: 100%; border-collapse: collapse; }
+.index caption { text-align: start; padding-bottom: 0.75rem; }
+.index th, .index td { text-align: start; padding: 0.7rem 0.75rem 0.7rem 0; border-top: 1px solid var(--rule); vertical-align: top; }
+.index colgroup + thead th:first-child { width: 34%; }
+.index td.num { width: 1%; }
+.index td.trads { max-width: 22rem; white-space: normal; }
+.index thead th {
+  font-family: var(--apparatus); font-size: var(--t-app-sm); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-2);
+  border-top: 0; border-bottom: 1px solid var(--rule-strong);
+}
+.index td.num { font-family: var(--apparatus); font-size: var(--t-app); white-space: nowrap; }
+.index__q { font-family: var(--display); font-size: 1.05rem; }
+.index__q a { color: inherit; text-decoration-color: var(--rule-strong); }
+.index__domain { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); display: block; margin-top: 0.2rem; }
+.index__flag { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--madder); display: block; margin-top: 0.2rem; }
+.ledger { font-family: var(--apparatus); font-size: var(--t-app-sm); white-space: nowrap; }
+.ledger__unsourced { color: var(--orpiment); }
+/* Wide tables scroll inside their own container rather than widening the page, and
+   keep their table semantics while doing it. The stacked-card alternative reads well on
+   a phone but `display: block` strips the table roles from the accessibility tree, and
+   the sourcing ledger only makes sense read as columns. */
+.table-scroll { overflow-x: auto; max-width: 100%; }
+.table-scroll:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.table-scroll > table { min-width: 34rem; }
+@media (max-width: 52rem) {
+  .index colgroup, .index col { display: none; }
+  .index td.trads { max-width: 16rem; }
+}
+
+/* ============ tracer ============ */
+.tracer { max-width: none; }
+/* Cap the reading elements, not the article: the confront step embeds a full folio
+   (text column + apparatus rail) and a 44rem cap would crush both columns. */
+.tracer__progress, .tracer__prompt, .tracer__note, .tracer__options,
+.tracer > section > .empty, .tracer > section > .hits, .tracer > section > textarea,
+.tracer > section > label, .tracer > section > .panel { max-width: 44rem; }
+.tracer__progress { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); letter-spacing: 0.08em; }
+.tracer__prompt { font-size: var(--t-h1); margin: 0.75rem 0 1rem; }
+.tracer__note { color: var(--ink-2); font-size: var(--t-small); border-inline-start: 2px solid var(--rule-strong); padding-inline-start: 0.75rem; margin-bottom: 1.25rem; }
+.tracer__options { display: grid; gap: 0.6rem; }
+.tracer__option {
+  display: block; width: 100%; text-align: start; cursor: pointer;
+  border: 1px solid var(--rule-strong); border-radius: var(--radius);
+  background: var(--paper-2); padding: 0.85rem 1rem; font-size: var(--t-body);
+}
+.tracer__option:hover { border-color: var(--lapis); background: var(--lapis-wash); }
+.tracer__option[aria-pressed='true'] { border-color: var(--lapis); border-inline-start-width: 4px; background: var(--lapis-wash); }
+.tracer__steps { display: flex; gap: 0.5rem; list-style: none; padding: 0; margin: 0 0 2rem; flex-wrap: wrap; }
+.tracer__steps li { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); }
+.tracer__steps li[aria-current='step'] { color: var(--lapis); }
+.tracer__steps li + li::before { content: '·'; margin-inline-end: 0.5rem; color: var(--rule-strong); }
+
+.hits { border: 1px solid var(--orpiment); background: var(--orpiment-wash); border-radius: var(--radius); padding: 1rem 1.15rem; margin: 1.25rem 0; }
+.hits__label { font-family: var(--apparatus); font-size: var(--t-app-sm); text-transform: uppercase; letter-spacing: 0.1em; color: var(--orpiment); margin-bottom: 0.5rem; }
+
+/* ============ reduced motion ============ */
+.reveal-stem { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); animation: draw 900ms cubic-bezier(0.2, 0.7, 0.3, 1) forwards; }
+.reveal-joint { opacity: 0; animation: fade 500ms ease 850ms forwards; }
+.reveal-label { opacity: 0; animation: fade 500ms ease 1050ms forwards; }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes fade { to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-delay: 0ms !important; transition-duration: 0.001ms !important; }
+  .reveal-stem { stroke-dashoffset: 0; }
+  .reveal-joint, .reveal-label { opacity: 1; }
+}
+
+.visually-hidden {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.stack > * + * { margin-top: 1.5rem; }
+.lede { font-size: 1.15rem; color: var(--ink-2); max-width: 52ch; }
+.prose-note { font-family: var(--apparatus); font-size: var(--t-app-sm); color: var(--ink-2); }

@@ -1,0 +1,75 @@
+{
+  "$fragment": "Research I.3d — translating a position into an ordinary decision. These scenarios are written by the editors as pedagogical constructions. They are not historical claims and no thinker is quoted as having discussed them; the implications are derived from the position definitions above and are labelled as editorial wherever they appear.",
+  "cases": [
+    {
+      "id": "CASE_promise_nobody_sees",
+      "question": "Q_husn_qubh",
+      "editorial": true,
+      "title": {
+        "en": "A promise nobody will know you broke",
+        "tr": "Kimsenin bozduğunuzu bilmeyeceği bir söz"
+      },
+      "scenario": {
+        "en": "You promised to help a colleague move on Saturday. Something better comes up. They would never find out it was a choice rather than an accident, and they would not be badly stuck without you. You are deciding whether breaking the promise is wrong, and why.",
+        "tr": "Cumartesi günü bir iş arkadaşınızın taşınmasına yardım edeceğinize söz verdiniz. Daha iyi bir şey çıktı. Bunun bir kaza değil bir tercih olduğunu asla öğrenemeyecekler ve siz olmadan da çok zor durumda kalmayacaklar. Sözü bozmanın yanlış olup olmadığına ve neden öyle olduğuna karar veriyorsunuz."
+      },
+      "implications": [
+        {
+          "position": "P_DCT",
+          "implication": {
+            "en": "If it is wrong, it is wrong because it is forbidden — not because of what it does to your colleague. The harm is real, but it is not what the wrongness consists in.",
+            "tr": "Eğer yanlışsa, yasaklandığı için yanlıştır — iş arkadaşınıza yaptığı şey yüzünden değil. Zarar gerçektir, ama yanlışlığı oluşturan şey o değildir."
+          },
+          "cost": {
+            "en": "You cannot point at the betrayal itself as the reason. Asked why it would be wrong, your honest answer is that it has been forbidden, and you have to be willing to say that in front of the person you let down.",
+            "tr": "İhanetin kendisini gerekçe olarak gösteremezsiniz. Neden yanlış olacağı sorulduğunda dürüst yanıtınız, bunun yasaklanmış olmasıdır — ve bunu, hayal kırıklığına uğrattığınız kişinin yüzüne karşı söylemeye razı olmalısınız."
+          }
+        },
+        {
+          "position": "P_rationalism",
+          "implication": {
+            "en": "You can settle this without consulting revelation. The betrayal and the broken trust are what the wrongness consists in, and reason can see that they are.",
+            "tr": "Bunu vahye başvurmadan çözebilirsiniz. Yanlışlığı oluşturan şey, ihanet ve zedelenen güvendir; akıl da bunu görebilir."
+          },
+          "cost": {
+            "en": "You owe an account of how reason knows this that does not reduce to reporting your upbringing. And if a tradition tells you otherwise, you have to be willing to say it is mistaken.",
+            "tr": "Aklın bunu nasıl bildiğine dair, yetiştirilme tarzınızı aktarmaya indirgenmeyen bir açıklama borçlusunuz. Ve bir gelenek size aksini söylüyorsa, onun yanıldığını söylemeye razı olmalısınız."
+          }
+        },
+        {
+          "position": "P_maturidi",
+          "implication": {
+            "en": "You can work out by yourself that breaking it is bad. Whether you are accountable for it — whether anything hangs on it — is a separate question, and that answer comes through revelation.",
+            "tr": "Sözü bozmanın kötü olduğunu kendiniz çıkarabilirsiniz. Bundan sorumlu olup olmadığınız — buna bağlı bir şeyin olup olmadığı — ayrı bir sorudur ve o yanıt vahiy yoluyla gelir."
+          },
+          "cost": {
+            "en": "Knowing and being bound come apart. You have to be comfortable saying you can see clearly that something is bad while holding that nothing follows from that alone.",
+            "tr": "Bilmek ile bağlı olmak birbirinden ayrılır. Bir şeyin kötü olduğunu açıkça gördüğünüzü söylerken, bundan tek başına hiçbir şeyin çıkmadığını savunmakta rahat olmalısınız."
+          }
+        },
+        {
+          "position": "P_natural_law",
+          "implication": {
+            "en": "It is wrong because it runs against the good — and the good is what God's own nature is, not what God happened to decree. The command tracks the wrongness; it does not create it.",
+            "tr": "Yanlıştır, çünkü iyiye aykırıdır — ve iyi, Tanrı'nın tesadüfen buyurduğu şey değil, bizzat kendi doğasıdır. Emir, yanlışlığı izler; onu yaratmaz."
+          },
+          "cost": {
+            "en": "You have to say what makes the act bad without appealing to the command, while still holding that God grounds it. That is a narrow path, and the Euthyphro is waiting on both sides of it.",
+            "tr": "Emre başvurmadan eylemi kötü kılan şeyin ne olduğunu söylemeniz, ama yine de temelinde Tanrı'nın bulunduğunu savunmanız gerekir. Bu dar bir yoldur ve Euthyphron her iki yanında da beklemektedir."
+          }
+        },
+        {
+          "position": "P_confucian_reframe",
+          "implication": {
+            "en": "The question is not which rule governs the case. It is what kind of person keeps promises when nobody is watching, and what this particular relationship asks of you.",
+            "tr": "Soru, olayı hangi kuralın yönettiği değildir. Kimse bakmıyorken sözünü tutanın nasıl bir insan olduğu ve bu belirli ilişkinin sizden ne istediğidir."
+          },
+          "cost": {
+            "en": "You give up a general decision procedure. There is no rule to appeal to when you and someone else read the same relationship differently.",
+            "tr": "Genel bir karar yordamından vazgeçersiniz. Siz ve bir başkası aynı ilişkiyi farklı okuduğunuzda başvurulacak bir kural yoktur."
+          }
+        }
+      ]
+    }
+  ]
+}

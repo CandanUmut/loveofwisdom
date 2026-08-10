@@ -1,0 +1,113 @@
+{
+  "$fragment": "Every passage displayed on the ḥusn wa qubḥ question. PSG_ashari_arad and PSG_mutazila_intrinsic are byte-identical to research F.5 so that the seed acceptance fixture and the site content cannot drift (tests/consistency.seed.test.ts enforces this). Passages with no `text` are loci the research explicitly could not verify (Open Questions Register #4) — they render as 'locus not verified', never as a quotation.",
+  "texts": [
+    { "id": "TXT_euthyphro", "title": "Euthyphro", "titleSourceScript": "Εὐθύφρων", "author": "Plato", "numbering": "Stephanus", "license": "public-domain (Greek source text)" },
+    { "id": "TXT_ockham_sent", "title": "Commentary on the Sentences", "author": "Ockham", "numbering": "book / question" },
+    { "id": "TXT_mughni", "title": "al-Mughnī", "titleSourceScript": "المغني", "author": "Abd_al_Jabbar", "numbering": "volume / page (print edition)" }
+  ],
+  "passages": [
+    {
+      "id": "PSG_ashari_arad",
+      "text": "Goodness and badness of actions (husn wa qubh) are not qualities inhering in them; these are mere accidents (a'rad).",
+      "citation": "M. Abdul Hye, 'Ash'arism', A History of Muslim Philosophy vol.1, via al-islam.org",
+      "locator": "ch.11",
+      "license": "quote-fair-use",
+      "tier": "reference-work",
+      "perspectiveFlag": "al-islam.org is Shīʿī-inflected; the research flags source perspective as content, not metadata."
+    },
+    {
+      "id": "PSG_mutazila_intrinsic",
+      "text": "human reason can independently judge the good or evil in things ... independently of the commands of the Shari'ah.",
+      "citation": "Mutahhari, An Introduction to Ilm al-Kalam, via al-islam.org",
+      "locator": "Mu'tazilah ch.",
+      "license": "quote-fair-use",
+      "tier": "reference-work",
+      "perspectiveFlag": "al-islam.org is Shīʿī-inflected; the research flags source perspective as content, not metadata."
+    },
+    {
+      "id": "PSG_ashari_authority",
+      "text": "revelation and not reason is the real authority",
+      "citation": "M. Abdul Hye, 'Ashʿarism', A History of Muslim Philosophy vol. 1, via al-islam.org",
+      "locator": "ch. 11",
+      "license": "quote-fair-use",
+      "tier": "reference-work",
+      "perspectiveFlag": "al-islam.org is Shīʿī-inflected."
+    },
+    {
+      "id": "PSG_mutazila_intrinsic_goods",
+      "text": "truthfulness, trustworthiness, chastity … are intrinsically good … falsehood, treachery, indecency … intrinsically evil",
+      "citation": "al-islam.org's summary of Muṭahharī, on the Muʿtazilī position",
+      "license": "quote-fair-use",
+      "tier": "reference-work",
+      "perspectiveFlag": "al-islam.org is Shīʿī-inflected."
+    },
+    {
+      "id": "PSG_osborne_ockham",
+      "text": "holds that the ultimate ground of a moral judgement's truth is a divine command, rather than natural or non-natural properties",
+      "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005), DOI 10.1017/S0034412504007218",
+      "license": "quote-fair-use",
+      "tier": "secondary"
+    },
+    {
+      "id": "PSG_osborne_loving_god",
+      "text": "God could assign a different moral value … even to loving God.",
+      "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005), DOI 10.1017/S0034412504007218",
+      "license": "quote-fair-use",
+      "tier": "secondary"
+    },
+    {
+      "id": "PSG_osborne_denied",
+      "text": "this thesis is denied by much recent scholarship",
+      "citation": "T. Osborne, 'Ockham as a Divine-Command Theorist', Religious Studies 41:1 (2005), DOI 10.1017/S0034412504007218",
+      "license": "quote-fair-use",
+      "tier": "secondary"
+    },
+    {
+      "id": "PSG_ockham_sent",
+      "citation": "William of Ockham, Commentary on the Sentences II, q. 19",
+      "locator": "Sent. II q.19",
+      "partOf": "TXT_ockham_sent",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    },
+    {
+      "id": "PSG_euthyphro_10a",
+      "citation": "Plato, Euthyphro 10a",
+      "locator": "Stephanus 10a",
+      "partOf": "TXT_euthyphro",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    },
+    {
+      "id": "PSG_mughni_locus",
+      "citation": "al-Qāḍī ʿAbd al-Jabbār, al-Mughnī",
+      "partOf": "TXT_mughni",
+      "tier": "primary",
+      "locusUnverified": true,
+      "attested": false
+    },
+    {
+      "id": "PSG_1000wp_omnipotence",
+      "text": "Something that can make things right or wrong by will is more powerful than something that can't.",
+      "citation": "1000-Word Philosophy, on divine command theory",
+      "license": "quote-fair-use",
+      "tier": "reference-work"
+    },
+    {
+      "id": "PSG_1000wp_bulletbiter",
+      "text": "Al-ʿAshari stands out as the best example of a thoroughgoing bullet-biter … William of Ockham comes close … but even he seems to have wavered.",
+      "citation": "1000-Word Philosophy, on divine command theory",
+      "license": "quote-fair-use",
+      "tier": "reference-work"
+    },
+    {
+      "id": "PSG_icr_ashari_reason",
+      "text": "rational good and evil",
+      "citation": "Islam and Civilisational Renewal, study on the Ashʿarī treatment of reason",
+      "license": "quote-fair-use",
+      "tier": "secondary"
+    }
+  ]
+}

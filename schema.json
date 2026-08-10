@@ -1,0 +1,395 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://loveofwisdom.local/schema.json",
+  "title": "PhilosophyPlatformGraph",
+  "description": "Content contract for the comparative philosophy platform. Lifted from research Deliverable F.5 and extended. Every content file under /content is a *fragment*: an object carrying any subset of the top-level collections. Fragments are merged into one graph at build time. The verbatim F.5 seed instance is itself a valid fragment.",
+
+  "x-ontologyMapping": {
+    "$comment": "Research F.3. We do not publish RDF in the MVP, but the mapping is carried here so the store choice stays reversible (F.3, J.3).",
+    "upperOntology": "CIDOC-CRM (ISO 21127) for historical entities; SKOS for the concept thesaurus and question taxonomy; schema.org for public-facing structured-data markup only.",
+    "Thinker": { "crm": "E21 Person", "identifiers": ["wikidata (primary key)", "viaf (authority control)"], "schemaOrg": "Person" },
+    "School": { "crm": "E74 Group" },
+    "Tradition": { "crm": "E74 Group", "skos": "skos:Concept in the tradition scheme" },
+    "Text": { "crm": "E73 Information Object", "schemaOrg": "CreativeWork" },
+    "Passage": { "crm": "E73 Information Object (part of a Text via P148 has component)" },
+    "Era": { "crm": "E52 Time-Span" },
+    "Concept": { "skos": "skos:Concept; prefLabel = source term, altLabel = transliteration + standard rendering" },
+    "Question": { "skos": "skos:Concept in the question scheme; domain = skos:broader" },
+    "Position": { "skos": "skos:Concept; answersQuestion = skos:broader" },
+    "Equivalence": {
+      "skos": "convergenceType maps onto SKOS mapping relations: genuine -> skos:closeMatch (never exactMatch: no two positions from unconnected traditions are identical), superficial -> skos:relatedMatch, translation_artifact -> skos:relatedMatch with an explicit caution. We deliberately never emit skos:exactMatch."
+    },
+    "HoldsRelation": { "crm": "reified as E13 Attribute Assignment: P14 carried out by (the scholarship), P141 assigned (the Position), P140 assigned attribute to (the Thinker). This is what carries qualification and epistemicStatus." }
+  },
+
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "$fragment": { "type": "string", "description": "Human-readable provenance note for this file. Ignored by the loader." },
+    "questions":     { "type": "array", "items": { "$ref": "#/$defs/Question" } },
+    "positions":     { "type": "array", "items": { "$ref": "#/$defs/Position" } },
+    "thinkers":      { "type": "array", "items": { "$ref": "#/$defs/Thinker" } },
+    "schools":       { "type": "array", "items": { "$ref": "#/$defs/School" } },
+    "traditions":    { "type": "array", "items": { "$ref": "#/$defs/Tradition" } },
+    "holds":         { "type": "array", "items": { "$ref": "#/$defs/HoldsRelation" } },
+    "arguments":     { "type": "array", "items": { "$ref": "#/$defs/Argument" } },
+    "objections":    { "type": "array", "items": { "$ref": "#/$defs/Objection" } },
+    "equivalences":  { "type": "array", "items": { "$ref": "#/$defs/Equivalence" } },
+    "influences":    { "type": "array", "items": { "$ref": "#/$defs/Influence" } },
+    "texts":         { "type": "array", "items": { "$ref": "#/$defs/Text" } },
+    "passages":      { "type": "array", "items": { "$ref": "#/$defs/Passage" } },
+    "concepts":      { "type": "array", "items": { "$ref": "#/$defs/Concept" } },
+    "cases":         { "type": "array", "items": { "$ref": "#/$defs/RealWorldCase" } },
+    "tracers":       { "type": "array", "items": { "$ref": "#/$defs/Tracer" } }
+  },
+
+  "$defs": {
+    "Id": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+$" },
+
+    "HoldingRef": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+(@[A-Za-z0-9_.-]+)?$",
+      "description": "A Position id (P_DCT), a position-as-held-by-a-thinker (P_DCT@al_Ashari), or — widened beyond research F.5 — a Question or Objection id. F.5 types both ends of an Equivalence as positions, but research B.2's third intersection relates Plato's Euthyphro *dilemma* to the ḥusn wa qubḥ *debate*: neither end is a position, and forcing them into position slots would have meant inventing two positions nobody holds. The loader resolves against positions first, then questions, then objections."
+    },
+
+    "LocalizedString": {
+      "description": "A plain string is treated as English. i18n is first-class (research I.4): EN and TR. A missing locale renders the English with a visible 'not yet translated' mark — never a machine guess.",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": { "en": { "type": "string" }, "tr": { "type": "string" } }
+        }
+      ]
+    },
+
+    "EpistemicStatus": {
+      "enum": ["settled", "contested", "uncertain"],
+      "description": "Research epistemic legend. settled = uncontroversial among specialists; contested = live scholarly disagreement with sides named; uncertain = could not be established."
+    },
+
+    "Side": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reading"],
+      "description": "One side of a scholarly dispute. Contested claims must surface the sides, not just the flag.",
+      "properties": {
+        "who": { "type": "string" },
+        "reading": { "$ref": "#/$defs/LocalizedString" },
+        "citation": { "type": "string" }
+      }
+    },
+
+    "SourceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["citation"],
+      "description": "A link-and-cite reference to a reference work or secondary source. Per research E, SEP/IEP/PhilPapers text is never ingested; only cited. 'url' is only ever populated with a URL that has been verified to resolve.",
+      "properties": {
+        "citation": { "type": "string" },
+        "kind": { "enum": ["reference-work", "journal-article", "monograph", "primary-text", "web", "survey"] },
+        "doi": { "type": "string" },
+        "url": { "type": "string" },
+        "urlVerified": { "type": "boolean" },
+        "perspectiveFlag": { "type": "string", "description": "Research G.5: flag the confessional/sectarian slant of a source (e.g. 'al-Islam.org is Shi'i-inflected')." }
+      }
+    },
+
+    "Question": {
+      "type": "object",
+      "required": ["id", "canonical", "plain", "domain"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "canonical": { "$ref": "#/$defs/LocalizedString" },
+        "plain": { "$ref": "#/$defs/LocalizedString" },
+        "technicalName": { "$ref": "#/$defs/LocalizedString" },
+        "whyItMatters": { "$ref": "#/$defs/LocalizedString" },
+        "domain": { "$ref": "#/$defs/LocalizedString" },
+        "wikidata": { "type": ["string", "null"], "pattern": "^Q[0-9]+$" },
+        "westernFramedMismatch": { "type": "boolean" },
+        "provenance": { "type": "array", "items": { "type": "string" } },
+        "completeness": { "enum": ["worked", "stub"], "description": "'worked' = fully instantiated from the research. 'stub' = real structure, honest gaps." },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Position": {
+      "type": "object",
+      "required": ["id", "label", "definition"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "label": { "$ref": "#/$defs/LocalizedString" },
+        "definition": { "$ref": "#/$defs/LocalizedString" },
+        "answersQuestion": { "$ref": "#/$defs/Id" },
+        "shortLabel": { "$ref": "#/$defs/LocalizedString" },
+        "sourceTerm": { "$ref": "#/$defs/ScriptTerm" },
+        "refusesQuestion": {
+          "type": "boolean",
+          "description": "true when the position does not answer the question but rejects its framing (research A.4). Drives the 'this tradition rejects the question' panel rather than an empty answer slot."
+        },
+        "epistemicStatus": { "$ref": "#/$defs/EpistemicStatus" },
+        "notYetWritten": { "type": "array", "items": { "type": "string" }, "description": "Field names deliberately left empty. Renders as an honest empty state." },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "ScriptTerm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["translit"],
+      "description": "Research D. Store source script + fully diacriticized transliteration + the standard English rendering, separately. Display is diacritic-light by default with a user toggle.",
+      "properties": {
+        "sourceScript": { "type": "string" },
+        "script": { "enum": ["Arab", "Deva", "Hani", "Grek", "Latn", "Hebr"] },
+        "lang": { "type": "string" },
+        "translit": { "type": "string", "description": "Fully diacriticized canonical form, e.g. 'ḥusn wa qubḥ'. The diacritic-light form is derived mechanically at render time, never stored." },
+        "standardRendering": { "type": "string" }
+      }
+    },
+
+    "Thinker": {
+      "type": "object",
+      "required": ["id", "name"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "name": { "type": "string", "description": "Fully diacriticized canonical form." },
+        "nameSourceScript": { "type": "string" },
+        "script": { "enum": ["Arab", "Deva", "Hani", "Grek", "Latn", "Hebr"] },
+        "died": { "type": "string", "description": "Free text so that hijri/CE double dates ('d. 324/936') survive." },
+        "born": { "type": "string" },
+        "tradition": { "$ref": "#/$defs/Id" },
+        "school": { "$ref": "#/$defs/Id" },
+        "wikidata": {
+          "type": ["string", "null"],
+          "pattern": "^Q[0-9]+$",
+          "description": "Research F.3: Wikidata Q-ID is the primary entity key. null means UNRESOLVED, never 'none'. Q-IDs are only ever written here after being resolved against wikidata.org — see scripts/resolve-wikidata.mjs."
+        },
+        "viaf": { "type": ["string", "null"] },
+        "summary": { "$ref": "#/$defs/LocalizedString" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "School":    { "type": "object", "required": ["id", "label"], "properties": {
+      "id": { "$ref": "#/$defs/Id" }, "label": { "$ref": "#/$defs/LocalizedString" },
+      "sourceTerm": { "$ref": "#/$defs/ScriptTerm" }, "within": { "$ref": "#/$defs/Id" },
+      "summary": { "$ref": "#/$defs/LocalizedString" } } },
+
+    "Tradition": { "type": "object", "required": ["id", "label"], "properties": {
+      "id": { "$ref": "#/$defs/Id" }, "label": { "$ref": "#/$defs/LocalizedString" },
+      "coverageFlag": { "enum": ["excellent", "good", "moderate", "moderate-to-good", "thin"],
+        "description": "Research C coverage-thinness flag, surfaced in the UI so thin coverage is never mistaken for completeness." },
+      "coverageNote": { "$ref": "#/$defs/LocalizedString" },
+      "dir": { "enum": ["ltr", "rtl"] } } },
+
+    "HoldsRelation": {
+      "type": "object",
+      "required": ["thinker", "position", "epistemicStatus"],
+      "description": "Research F.2: a REIFIED relation, never a bare edge. This object is what lets the UI say 'Ockham — contested: denied by much recent scholarship' instead of flatly asserting the attribution.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "thinker": { "$ref": "#/$defs/Id" },
+        "position": { "$ref": "#/$defs/Id" },
+        "qualification": { "$ref": "#/$defs/LocalizedString" },
+        "epistemicStatus": { "$ref": "#/$defs/EpistemicStatus" },
+        "careerPhase": { "$ref": "#/$defs/LocalizedString" },
+        "scholarlyDispute": { "$ref": "#/$defs/LocalizedString" },
+        "sides": { "type": "array", "items": { "$ref": "#/$defs/Side" } },
+        "sourcePassages": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Argument": {
+      "type": "object",
+      "required": ["id", "supports", "statement"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "supports": { "$ref": "#/$defs/Id" },
+        "label": { "$ref": "#/$defs/LocalizedString" },
+        "statement": { "$ref": "#/$defs/LocalizedString" },
+        "attributedTo": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+        "epistemicStatus": { "$ref": "#/$defs/EpistemicStatus" },
+        "sourcePassages": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Objection": {
+      "type": "object",
+      "required": ["id", "targets", "statement"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "targets": { "$ref": "#/$defs/Id", "description": "A Position id or an Argument id." },
+        "label": { "$ref": "#/$defs/LocalizedString" },
+        "statement": { "$ref": "#/$defs/LocalizedString" },
+        "strongest": { "type": "boolean", "description": "Marks the single best-attributed objection to the target — the one the confrontation step surfaces (research I.3b)." },
+        "attributedTo": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+        "epistemicStatus": { "$ref": "#/$defs/EpistemicStatus" },
+        "standardReplies": { "type": "array", "items": { "$ref": "#/$defs/LocalizedString" } },
+        "sourcePassages": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Equivalence": {
+      "type": "object",
+      "required": ["positionA", "positionB", "convergenceType", "evidence"],
+      "description": "Research F.2/B.2. The cross-tradition intersection edge. This is the platform's distinctive surface and its highest-error surface, so evidence is required and the verdict is never a bare boolean.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "positionA": { "$ref": "#/$defs/HoldingRef" },
+        "positionB": { "$ref": "#/$defs/HoldingRef" },
+        "convergenceType": { "enum": ["genuine", "superficial", "translation_artifact"] },
+        "evidence": { "$ref": "#/$defs/LocalizedString" },
+        "question": { "$ref": "#/$defs/Id" },
+        "title": { "$ref": "#/$defs/LocalizedString" },
+        "convergesOn": { "$ref": "#/$defs/LocalizedString", "description": "What genuinely coincides." },
+        "partsWaysOn": { "$ref": "#/$defs/LocalizedString", "description": "Where the two part company. Never omitted for a 'genuine' verdict." },
+        "verdict": { "$ref": "#/$defs/LocalizedString" },
+        "traditions": {
+          "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/Id" },
+          "description": "Explicit tradition pair, for intersections whose sides are not anchored to a thinker (and so cannot have their traditions derived from a holding)."
+        },
+        "transmissionLink": { "$ref": "#/$defs/EpistemicStatus", "description": "Whether any historical contact between the two is established. 'uncertain' for independent arrivals." },
+        "epistemicStatus": { "$ref": "#/$defs/EpistemicStatus" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Influence": {
+      "type": "object",
+      "required": ["from", "to"],
+      "properties": {
+        "from": { "$ref": "#/$defs/Id" }, "to": { "$ref": "#/$defs/Id" },
+        "disputed": { "type": "boolean" },
+        "note": { "$ref": "#/$defs/LocalizedString" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "Text": {
+      "type": "object",
+      "required": ["id", "title"],
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "title": { "type": "string" },
+        "titleSourceScript": { "type": "string" },
+        "author": { "$ref": "#/$defs/Id" },
+        "numbering": { "type": "string", "description": "Canonical locator scheme: Bekker / Stephanus / Diels-Kranz / sura:aya / print pagination." },
+        "license": { "type": "string" }
+      }
+    },
+
+    "Passage": {
+      "type": "object",
+      "required": ["id", "citation"],
+      "description": "Every displayed quotation traces to one of these. 'text' is absent when the locus could not be verified (research Open Questions #4) — in that case attested MUST be false and the UI renders 'locus not verified' rather than a quotation.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "text": { "type": "string" },
+        "textSourceScript": { "type": "string" },
+        "citation": { "type": "string" },
+        "locator": { "type": "string", "description": "Bekker / Stephanus / sura:aya / chapter / print page." },
+        "license": { "type": "string" },
+        "attested": { "type": "boolean", "default": true },
+        "locusUnverified": { "type": "boolean" },
+        "tier": { "enum": ["primary", "secondary", "reference-work"] },
+        "perspectiveFlag": { "type": "string" },
+        "partOf": { "$ref": "#/$defs/Id" }
+      },
+      "allOf": [
+        {
+          "$comment": "A passage with no text must say so explicitly rather than render an empty quotation.",
+          "if": { "not": { "required": ["text"] } },
+          "then": { "required": ["locusUnverified"], "properties": { "locusUnverified": { "const": true } } }
+        }
+      ]
+    },
+
+    "Concept": {
+      "type": "object",
+      "required": ["id", "term"],
+      "description": "Research D, the terminology equivalence map.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "term": { "$ref": "#/$defs/ScriptTerm" },
+        "commonRendering": { "type": "string", "description": "The standard English word, e.g. 'ethics' for akhlaq." },
+        "semanticRange": { "$ref": "#/$defs/LocalizedString" },
+        "distortion": { "$ref": "#/$defs/LocalizedString", "description": "Where the standard English rendering distorts." },
+        "interfaceRecommendation": { "$ref": "#/$defs/LocalizedString" },
+        "cluster": { "type": "array", "items": { "$ref": "#/$defs/Id" }, "description": "Concepts that must be shown as a unit (ren/yi/li)." },
+        "tradition": { "$ref": "#/$defs/Id" },
+        "sources": { "type": "array", "items": { "$ref": "#/$defs/SourceRef" } }
+      }
+    },
+
+    "RealWorldCase": {
+      "type": "object",
+      "required": ["id", "title", "scenario", "implications"],
+      "description": "Research I.3d. An ordinary decision that the position bears on. Authored by the editors as a pedagogical scenario — never presented as a historical or textual claim.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "title": { "$ref": "#/$defs/LocalizedString" },
+        "scenario": { "$ref": "#/$defs/LocalizedString" },
+        "question": { "$ref": "#/$defs/Id" },
+        "editorial": { "const": true, "description": "Always true. Cases are editorial constructions and are labelled as such in the UI." },
+        "implications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["position", "implication"],
+            "properties": {
+              "position": { "$ref": "#/$defs/Id" },
+              "implication": { "$ref": "#/$defs/LocalizedString" },
+              "cost": { "$ref": "#/$defs/LocalizedString" }
+            }
+          }
+        }
+      }
+    },
+
+    "Tracer": {
+      "type": "object",
+      "required": ["id", "question", "items"],
+      "description": "Research I.3a: a commitment tracer, not a personality quiz. Each item is a proposition; each answer records what the answer ENTAILS and what it CONFLICTS WITH, so the result is a consistency report over Position nodes rather than a score.",
+      "properties": {
+        "id": { "$ref": "#/$defs/Id" },
+        "question": { "$ref": "#/$defs/Id" },
+        "items": {
+          "type": "array",
+          "minItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["id", "prompt", "options"],
+            "properties": {
+              "id": { "$ref": "#/$defs/Id" },
+              "prompt": { "$ref": "#/$defs/LocalizedString" },
+              "note": { "$ref": "#/$defs/LocalizedString" },
+              "options": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["id", "label"],
+                  "properties": {
+                    "id": { "$ref": "#/$defs/Id" },
+                    "label": { "$ref": "#/$defs/LocalizedString" },
+                    "entails": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+                    "conflictsWith": { "type": "array", "items": { "$ref": "#/$defs/Id" } },
+                    "abstain": { "type": "boolean" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
